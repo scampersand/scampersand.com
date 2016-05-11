@@ -1,4 +1,4 @@
-GRAVATAR = img/gravatar/perkins-cove/bright.jpg
+ICON = site/img/granola.jpg
 JEKYLL_ARGS =
 COMPASS_ARGS = --sass-dir site/css --css-dir public/css --images-dir img --javascripts-dir js --relative-assets
 WATCH_EVENTS = create delete modify move
@@ -28,25 +28,17 @@ serve:
 dev:
 	$(MAKE) -j2 watch serve
 
-dream: production
-	rsync -az --exclude=.git --delete-before public/. agriffis@n01se.net:arongriffis.com/
+publish: production
+	rsync -az --exclude=.git --delete-before public/. scampersand@n01se.net:scampersand.com/
 
-ghp: production
-	cd public && \
-	git add -A && \
-	( ! git status --porcelain | grep -q . || git commit -m "Deploy from agriffis/arongriffis.com" ) && \
-	git push
-
-publish: dream ghp
-
-gravatar:
+icon:
 	for x in 144 114 72 57; do \
 	    geom=$${x}x$${x}; \
 	    img=site/apple-touch-icon-$$geom-precomposed.png; \
 	    rm -f $$img; \
-	    convert -scale $$geom $(GRAVATAR) $$img; \
+	    gm convert -scale $$geom $(ICON) $$img; \
 	done
 	cp -f site/apple-touch-icon-57x57-precomposed.png site/apple-touch-icon-precomposed.png
 	cp -f site/apple-touch-icon-57x57-precomposed.png site/apple-touch-icon.png
 
-.FAKE: all production jekyll sass watch serve dev publish gravatar
+.FAKE: all production jekyll sass watch serve dev publish icon
