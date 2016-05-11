@@ -1,0 +1,150 @@
+@import partials/normalize
+@import susyone
+
+$base-font-size: 1em
+
+@import partials/styles
+
+/*---------------------------------------------------------------
+  Mobile first grid, starts at 5 columns (500px but fluid),
+  scales up to 8 columns (800px) when it fits
+
+$total-columns: 5
+$column-width: 5em
+$gutter-width: 1.25em
+$grid-padding: $gutter-width / 2
+
+$break: 8
+
+.grid
+  min-width: 20em
+
+  .page
+    +container($total-columns, $break)
+  .nav-container, .main-container, .footer-container
+    +span-columns($total-columns omega)
+
+  +at-breakpoint($break)
+    .page
+      position: absolute
+      width: 100%
+      left: 50%
+      margin-left: -25em
+      top: 1em
+      @media screen and (min-height: 33em)
+        top: 2em
+      @media screen and (min-height: 45em)
+        top: 3em
+    .nav-container, .main-container, .footer-container
+      +span-columns($break omega, $break)
+
+/*---------------------------------------------------------------
+  Front page
+
+.landing
+  @extend .grid
+
+  .photo
+    +span-columns(2)
+    margin-bottom: 0.5em
+  .header
+    +span-columns(3 omega)
+  .content
+    +span-columns($total-columns omega)
+
+  .last-name
+    display: block
+    // Pull capital G left to line up with A
+    margin-left: -0.0625em // -3px
+  .copyright
+    display: none
+
+  +at-breakpoint($break)
+    .page
+      // proper vert center would be top: 50%; margin-top: -12.5em
+      @media screen and (min-height: 33em)
+        top: 10%
+      @media screen and (min-height: 45em)
+        top: 20%
+
+    .photo
+      +span-columns(4, $break)
+    .header
+      +span-columns(4 omega, $break)
+    .content
+      +span-columns(4 omega, $break)
+
+    .header, .content
+      text-align: right
+    .last-name
+      display: inline
+    .copyright
+      display: block
+      position: absolute
+      // bottom position matches copyright height
+      bottom: 0.75em
+      right: $grid-padding
+      text-align: right
+      vertical-align: bottom
+
+/*---------------------------------------------------------------
+  Nav
+
+.nav-container
+  @include clearfix
+  padding-bottom: 1em
+  margin-bottom: 1.5em
+  border-bottom: 0.0625em solid
+
+.nav-image
+  float: left
+  img
+    height: 3em
+
+.nav-list
+  padding-top: 1em
+
+.nav-list ul
+  list-style-type: none
+  margin: 0
+  padding: 0
+
+.nav-list li
+  display: inline
+  padding-left: 1em
+
+.nav-container a
+  text-decoration: none
+
+/*---------------------------------------------------------------
+  Blog index
+
+.blog-index
+  @extend .grid
+
+  table
+    td
+      height: 1.5em
+      vertical-align: middle
+      padding-left: 0.5em
+      padding-right: 0.5em
+      a
+        text-decoration: none
+    td:first-child
+      padding-left: 0
+    td:last-child
+      padding-right: 0
+
+/*---------------------------------------------------------------
+  Blog article
+
+.blog-article
+  @extend .grid
+
+  article header
+    @include pie-clearfix
+    margin-bottom: 1em
+    h4
+      float: left
+      margin-top: 1em
+      margin-left: -9em

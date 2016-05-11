@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "DejaVu Sans Mono for Powerline";
+    src: url("DejaVu-Sans-Mono-for-Powerline.ttf");
+}
+@font-face {
+    font-family: "DejaVu Sans Mono for Powerline";
+    src: url("DejaVu-Sans-Mono-Bold-for-Powerline.ttf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "DejaVu Sans Mono for Powerline";
+    src: url("DejaVu-Sans-Mono-Oblique-for-Powerline.ttf");
+    font-style: oblique;
+}
+@font-face {
+    font-family: "DejaVu Sans Mono for Powerline";
+    src: url("DejaVu-Sans-Mono-Bold-Oblique-for-Powerline.ttf");
+    font-weight: bold;
+    font-style: oblique;
+}

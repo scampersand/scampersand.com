@@ -1,0 +1,27 @@
+---
+layout: null
+---
+<?xml version="1.0" encoding="utf-8"?>
+{% assign date_format = '%a, %e %b %Y %T %Z' %}
+<rss version="2.0">
+  <channel>
+    <title>{{site.title|xml_escape}}</title>
+    <link>{{site.url}}/blog/</link>
+    <description>{{site.rss_description}}</description>
+    <lastBuildDate>{{site.time|date:date_format}}</lastBuildDate>
+    <docs>http://cyber.law.harvard.edu/rss/rss.html</docs>
+    {% for post in site.posts limit:10 %}
+    <item>
+      <title>{{post.title|xml_escape}}</title>
+      <link>{{site.url}}{{post.url}}</link>
+      <guid isPermaLink="true">{{site.url}}{{post.url}}</guid>
+      <description><![CDATA[{{post.content}}]]></description>
+      {% if post.updated %}
+      <pubDate>{{post.updated|date:date_format}}</pubDate>
+      {% else %}
+      <pubDate>{{post.date|date:date_format}}</pubDate>
+      {% endif %}
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

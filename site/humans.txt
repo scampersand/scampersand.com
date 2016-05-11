@@ -1,0 +1,13 @@
+# TEAM
+
+    Aron Griffis -- Principal -- @arongriffis
+
+# THANKS
+
+    Amy Griffis -- Partner and Designer -- @griffisamy
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3
+    jQuery, Modernizr
+    Python, StrangeCase

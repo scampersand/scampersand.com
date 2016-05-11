@@ -1,0 +1,17 @@
+source: ./site
+destination: ./public
+exclude: ['*.scss']
+include: ['.htaccess', '.nojekyll']
+name: Aron Griffis
+title: Aron Griffis
+email: aron@arongriffis.com
+url: http://arongriffis.com
+rss_description: Aron's notes and howtos
+gems:
+  - jekyll-redirect-from
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: default
