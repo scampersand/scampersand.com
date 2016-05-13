@@ -24,7 +24,7 @@ as_root() {
 
     install_packages
 
-    is_lxc && lxc_postinstall
+    (is_docker || is_lxc) && lxc_postinstall
     common_postinstall
 }
 
@@ -56,7 +56,7 @@ lxc_postinstall() {
         useradd -u $uid -g vagrant -G sudo -s /bin/bash vagrant \
             -p "$(perl -e "print crypt('vagrant', 'AG')")"
         find /home/vagrant -xdev -print0 | xargs -0r chown $uid:$gid
-        chown $uid:$gid /tmp/vagrant-shell
+        chown $uid:$gid /tmp/vagrant-shell 2>/dev/null ||:
     fi
 }
 
@@ -64,7 +64,7 @@ install_packages() {
     declare -a packages
     packages+=( python-software-properties ) # for add-apt-repository
     packages+=( curl rsync )
-    packages+=( python-pip python-virtualenv python-dev )
+    packages+=( python-pip python-virtualenv python-dev virtualenv )
     packages+=( ruby-dev bundler )
     packages+=( mercurial git )
     packages+=( sudo ssh )
@@ -72,9 +72,10 @@ install_packages() {
     packages+=( inotify-tools ) # inotifywait
     packages+=( nodejs ) # for jekyll
 
-    # Don't install extra stuff
+    # Don't install extra stuff.
+    # Suggests list is long; recommends list is short and sensible.
+    # To omit recommends, add APT::Install-Recommends "false";
     cat > /etc/apt/apt.conf.d/99vagrant <<EOT
-APT::Install-Recommends "false";
 APT::Install-Suggests "false";
 EOT
 
@@ -92,7 +93,9 @@ as_user() {
     if [[ $PWD == */vagrant ]]; then
         rm -f .profile
         cp -avf src/vagrant/skel/. .
-        cp -nv .ssh/{id_rsa.pub,authorized_keys}
+        if [[ -e .ssh/id_rsa.pub ]]; then
+            cp -nv .ssh/{id_rsa.pub,authorized_keys}
+        fi
         chmod -R go-rw .ssh
         source .bash_profile
     fi
@@ -138,6 +141,16 @@ die() {
     exit 1
 }
 
+is_docker() {
+    if [[ ! -d /home/vagrant ]]; then
+        echo "is_docker: running outside vagrant?" >&2
+        return 1
+    fi
+    sudo grep -q :/docker/ /proc/1/cgroup
+    eval "is_docker() { return $?; }"
+    is_docker
+}
+
 is_lxc() {
     if [[ ! -d /home/vagrant ]]; then
         echo "is_lxc: running outside vagrant?" >&2
@@ -162,7 +175,7 @@ is_vbox() {
 
 set_vagrant_user() {
     if [[ -z $VAGRANT_USER ]]; then
-        if is_lxc || is_vbox || getent passwd vagrant >/dev/null; then
+        if is_docker || is_lxc || is_vbox || getent passwd vagrant >/dev/null; then
             VAGRANT_USER=vagrant
         else
             VAGRANT_USER=$(stat -c %U "$(type -P "$0")")
