@@ -23,7 +23,7 @@ watch:
 	done
 
 serve:
-	jekyll serve --no-watch --skip-initial-build --host 0
+	jekyll serve --no-watch --skip-initial-build --host 0 --port 8000
 
 dev:
 	$(MAKE) -j2 watch serve
