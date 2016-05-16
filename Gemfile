@@ -1,5 +1,5 @@
 source "http://rubygems.org"
 gem "compass-blueprint"
-gem "jekyll"
+gem "jekyll", "~> 2"
 gem "jekyll-redirect-from"
 gem "susy"
