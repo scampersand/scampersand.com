@@ -1,0 +1,89 @@
+@import "susy";
+@import "partials/normalize";
+
+$susy: (
+    // debug: (image: show),
+    global-box-sizing: border-box,
+    columns: 12,
+);
+
+@include border-box-sizing;
+
+blockquote, h1, h2, h3, h4, h5, h6, li, p, ul {
+    margin: 0;  
+    padding: 0; 
+}   
+
+/**
+ - Columns
+ */
+
+.container {
+    @include container;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.main {
+    width: span(10);
+    margin-left: span(1);
+
+    @media screen and (min-width: 571px) { /* todo: convert to ems */
+        width: span(8);
+        margin-left: span(2 wide);
+    }
+
+    @media screen and (min-width: 1150px) { /* todo: convert to ems */
+        width: span(6);
+        margin-left: span(3 wide);
+    }
+}
+
+/**
+ - Typography
+ */
+
+html {
+    font-family: "foco", sans-serif;
+    font-size: 125%;    // 20px
+    line-height: 1.5;
+
+    font-variant-numeric: lining-nums;
+    -moz-font-feature-settings: "lnum";
+    -webkit-font-feature-settings: "lnum";
+    font-feature-settings: "lnum";
+}
+
+h1 {
+    font-size: 2.25rem; // 45px
+    line-height: 1.15;
+    margin-bottom: 1.3rem;
+}
+
+p.site-wordmark {
+    font-size: 1.25em;  // 25px
+}
+
+p.copyright {
+    font-size: .75rem;  // 15px
+}
+
+header {
+    margin-top: 0.65rem;
+}
+
+.content {
+    margin-top: 1.3rem;
+    margin-bottom: 2.6rem;  /* or 1.3 */
+
+    @media screen and (min-width: 571px) { /* todo: convert to ems */
+        margin-top: 25vh;
+        margin-bottom: 3.9rem;
+    }
+}
+
+footer {
+    margin-bottom: 1.95rem;
+}
+
