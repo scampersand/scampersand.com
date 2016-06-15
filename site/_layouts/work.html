@@ -1,8 +1,9 @@
 ---
+bodyclass: work
 layout: base
 ---
 
-<body class="{{page.bodyclass}}">
+<body class="{{page.bodyclass|default:layout.bodyclass}}">
     <div class="container">
         <header>
             <p class="site-wordmark">Scampersand</p>
