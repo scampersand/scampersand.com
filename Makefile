@@ -1,5 +1,4 @@
 SHELL = /bin/bash
-ICON = site/img/granola.jpg
 JEKYLL_ARGS ?=
 COMPASS_ARGS ?= --sass-dir site/css --css-dir public/css --images-dir img --javascripts-dir js --relative-assets
 WATCH_EVENTS = create delete modify move
@@ -41,19 +40,9 @@ draft dev:
 publish: production
 	rsync -az --exclude=.git --delete-before public/. scampersand@n01se.net:scampersand.com/
 
-icon:
-	for x in 144 114 72 57; do \
-	    geom=$${x}x$${x}; \
-	    img=site/apple-touch-icon-$$geom-precomposed.png; \
-	    rm -f $$img; \
-	    gm convert -scale $$geom $(ICON) $$img; \
-	done
-	cp -f site/apple-touch-icon-57x57-precomposed.png site/apple-touch-icon-precomposed.png
-	cp -f site/apple-touch-icon-57x57-precomposed.png site/apple-touch-icon.png
-
 .ONESHELL: clean
 clean:
 	shopt -s dotglob extglob nullglob
 	rm -rf public/!(.git|.|..)
 
-.FAKE: all production jekyll sass watch serve draft dev publish icon clean
+.FAKE: all production jekyll sass watch serve draft dev publish clean
