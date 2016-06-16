@@ -8,8 +8,7 @@ url: http://scampersand.com
 gems:
   - jekyll-redirect-from
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       layout: default
