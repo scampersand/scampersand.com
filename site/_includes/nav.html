@@ -1,0 +1,22 @@
+<nav class="menu">
+    <ul class="active">
+        {% assign nav_pages=site.pages|where_exp:"p","p.nav_prio"|sort:"nav_prio" %}
+        {% for p in nav_pages %}
+            <li {% if p == page %}class="current-item"{% endif %}>
+                <a href="{{p.url}}">{{p.nav.title|default:p.title}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a class="toggle-nav" href="#">&#9776;</a>
+</nav>
+
+<script>
+    $(function() {
+        $('.toggle-nav').click(function(e) {
+            e.preventDefault();
+            $(this).toggleClass('active');
+            $('.menu ul').toggleClass('active');
+        });
+    });
+</script>
