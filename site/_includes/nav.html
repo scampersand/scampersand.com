@@ -3,7 +3,7 @@
         {% assign nav_pages=site.pages|where_exp:"p","p.nav_prio"|sort:"nav_prio" %}
         {% for p in nav_pages %}
             <li {% if p == page %}class="current-item"{% endif %}>
-                <a href="{{p.url}}">{{p.nav.title|default:p.title}}</a>
+                <a href="{{p.url}}">{{p.nav_title|default:p.title}}</a>
             </li>
         {% endfor %}
     </ul>

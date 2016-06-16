@@ -3,10 +3,14 @@
     display: none;
 }
 
+.menu {
+    display: block;
+    float: right;
+}
+
 /*----- Menu -----*/
 @media screen and (min-width: 860px) {
     .menu {
-        width: 100%;
         padding: 10px 18px;
         box-shadow: 0px 1px 1px rgba(0,0,0,0.15);
         border-radius: 3px;
