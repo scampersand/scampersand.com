@@ -1,6 +1,7 @@
 @import "susy";
 @import "partials/normalize";
 @import "partials/nav";
+@import "partials/color";
 
 $susy: (
     // debug: (image: show),
@@ -84,63 +85,3 @@ header {
 footer {
     margin-bottom: 1.95rem;
 }
-
-/**
- - Color
- */
-
-$color-olive: rgb(130, 164, 58);
-$color-orange-dk: rgb(230, 130, 0);
-$color-orange-lt: rgb(236, 176, 54);
-$color-green-forest: rgb(0, 133, 104);
-$color-periwinkle: rgb(104, 127, 212);
-$color-navy: rgb(0, 46, 71);
-$color-navy2: rgb(0, 80, 122);
-$color-blue-grey: rgb(85, 125, 145);
-$color-peach: rgb(245, 153, 128);
-$color-gold: rgb(255, 188, 5);
-$color-blue-lt: rgb(161, 217, 232);
-$color-blue-lighter: rgb(177, 219, 231);
-$color-purple-dk: rgb(12, 0, 71);
-$color-purple-dk2: rgb(66, 61, 127);
-$color-red-dk: rgb(102, 0, 31);
-$color-beige: rgb(235, 233, 209);
-$color-cyan: rgb(64, 183, 191);
-$color-red: rgb(207, 38, 38);
-$color-red-orange: rgb(207, 69, 38);
-$color-blue-med: rgb(57, 146, 219);
-$color-blue-med2: rgb(52, 152, 219);
-$color-blue-grey2: rgb(59, 125, 145);
-$color-periwinkle-dk: rgb(72, 100, 203);
-$color-green-fresh: rgb(117, 205, 50);
-$color-mint: rgb(194, 235, 224);
-$color-mint2: rgb(217, 242, 235);
-$color-green-forest-dk: rgb(0, 112, 103);
-$color-gold-muted: rgb(181, 167, 44);
-$color-brown: rgb(47, 9, 3);
-
-$grey-75: rgb(64, 64, 64);
-$grey-40: rgb(102, 102, 102);
-$white: rgb(255, 255, 255);
-
-html {
-    background-color: $white;
-    color: $color-periwinkle-dk;
-}
-
-h1 {
-}
-
-p {
-    color: $grey-40;
-}
-
-p.site-wordmark {
-}
-
-p.copyright {
-}
-
-a {
-    color: $color-periwinkle-dk;
-} 

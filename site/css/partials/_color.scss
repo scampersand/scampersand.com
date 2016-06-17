@@ -1,0 +1,30 @@
+@import '../../node_modules/accoutrement-color/sass/color';
+
+$colors: (
+    'brand-red': hsl(358, 71%, 48%),   // rgb(210, 35, 42);
+    'brand-mint': hsl(173, 41%, 88%),  // rgb(212, 237, 234);
+    'brand-grey': hsl(240, 17%, 30%),  // rgb(64, 64, 90);
+    'pure-white': hsl(0, 100%, 100%),  // rgb(255, 255, 255);
+);
+
+
+html {
+    background-color: color('pure-white');
+    color: color('brand-grey');
+}
+
+header {
+    background-color: color('brand-mint');
+}
+
+.menu, .toggle-nav {
+    background-color: color('pure-white');
+}
+
+p.site-wordmark {
+    color: color('brand-red');
+}
+
+a, .menu a {
+    color: color('brand-red');
+} 
