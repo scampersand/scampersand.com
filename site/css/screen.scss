@@ -2,6 +2,7 @@
 @import "partials/normalize";
 @import "partials/nav";
 @import "partials/color";
+@import "partials/type";
 
 $susy: (
     // debug: (image: show),
@@ -33,14 +34,8 @@ blockquote, h1, h2, h3, h4, h5, h6, li, p, ul {
  */
 
 html {
-    font-family: "foco", sans-serif;
     font-size: 125%;    // 20px
     line-height: 1.5;
-
-    font-variant-numeric: lining-nums;
-    -moz-font-feature-settings: "lnum";
-    -webkit-font-feature-settings: "lnum";
-    font-feature-settings: "lnum";
 }
 
 h1 {
@@ -64,8 +59,6 @@ p.copyright {
 
 a {
     font-size: .75rem;
-    font-weight: bold;
-    text-decoration: none;
 }
 
 header {
