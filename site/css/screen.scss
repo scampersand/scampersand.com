@@ -3,11 +3,12 @@
 @import "partials/nav";
 @import "partials/color";
 @import "partials/type";
+@import "partials/scale";
 
 $susy: (
     // debug: (image: show),
     global-box-sizing: border-box,
-    columns: 1,
+    columns: 2,
     // column-width: 30em,
 );
 
@@ -29,52 +30,3 @@ header, section, footer {
     padding-right: 1em;
 }
 
-/**
- - Typography
- */
-
-html {
-    font-size: 125%;    // 20px
-    line-height: 1.5;
-}
-
-h1 {
-    font-size: 1.75rem; // 35px
-    line-height: 1.15;
-    margin-bottom: 1.3rem;
-
-    @media screen and (min-width: 321px) {
-        font-size: 2.25rem; // 45px
-    }
-}
-
-p.site-wordmark {
-    font-size: 1.25em;  // 25px
-}
-
-p.copyright {
-    font-size: .75rem;  // 15px
-    display: block;
-}
-
-a {
-    font-size: .75rem;
-}
-
-header {
-    margin-top: 0.65rem;
-}
-
-.content {
-    margin-top: 1.3rem;
-    margin-bottom: 2.6rem;  /* or 1.3 */
-
-    @media screen and (min-width: 571px) {
-        margin-top: 25vh;
-        margin-bottom: 3.9rem;
-    }
-}
-
-footer {
-    margin-bottom: 1.95rem;
-}
