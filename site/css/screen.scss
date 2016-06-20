@@ -8,7 +8,7 @@ $susy: (
     // debug: (image: show),
     global-box-sizing: border-box,
     columns: 1,
-    column-width: 30em,
+    // column-width: 30em,
 );
 
 @include border-box-sizing;
