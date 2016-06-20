@@ -22,7 +22,7 @@ blockquote, h1, h2, h3, h4, h5, h6, li, p, ul {
  - Columns
  */
 
-.container {
+header, section, footer {
     @include container;
 
     padding-left: 1em;
