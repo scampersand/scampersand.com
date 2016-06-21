@@ -35,6 +35,10 @@ vbox_preinstall() {
 }
 
 common_postinstall() {
+    # Set up the locale support files
+    sed -i '/en_US.UTF-8/s/^# *//' /etc/locale.gen
+    locale-gen
+
     # Set the timezone
     ln -sfn /usr/share/zoneinfo/EST5EDT /etc/localtime
 }
@@ -62,6 +66,7 @@ lxc_postinstall() {
 
 install_packages() {
     declare -a packages
+    packages+=( locales ) # for locale-gen
     packages+=( python-software-properties ) # for add-apt-repository
     packages+=( curl rsync )
     packages+=( python-pip python-virtualenv python-dev virtualenv )
