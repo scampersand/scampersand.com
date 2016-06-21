@@ -35,8 +35,11 @@
 
         <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
         <style>
-            /* workaround for typekit FOUT */
-            body { display: none }
+            /* Workaround for typekit FOUT.
+             * html.js is provided by modernizr and prevents this applying if JS
+             * is disabled (hi Ernie).
+             */
+            html.js body { display: none }
         </style>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
@@ -44,11 +47,14 @@
         <script src="https://use.typekit.net/don3dwd.js"></script>
         <script>
             !function() {
-                /* workaround for typekit FOUT */
                 function reveal() {
-                    $('body').fadeIn(300);
+                    // Make sure body is available when this runs.
+                    $(function() {
+                        $('body').fadeIn(300);  // default 400
+                    });
                 }
                 try {
+                    // https://helpx.adobe.com/typekit/using/font-events.html
                     Typekit.load({
                         async: true,
                         active: reveal,
