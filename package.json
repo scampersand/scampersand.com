@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "files": [],
   "dependencies": {
-    "browser-sync": "latest"
+    "browser-sync": "latest",
+    "accoutrement-color": "latest",
+    "accoutrement-scale": "latest"
   }
 }
