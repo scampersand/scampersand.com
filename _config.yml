@@ -5,8 +5,6 @@ include: ['.htaccess', '.nojekyll']
 title: Scampersand
 email: contact@scampersand.com
 url: http://scampersand.com
-gems:
-  - jekyll-redirect-from
 defaults:
   - scope:
       path: ""
