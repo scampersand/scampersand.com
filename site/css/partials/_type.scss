@@ -7,18 +7,31 @@ html {
     font-feature-settings: "lnum";
 }
 
+$f-light: 300;
+$f-regular: 400;
+$f-bold: 700;
+$f-black: 900;
+
+$a-thin: 100;
+$a-light: 300;
+$a-regular: 400;
+$a-semibold: 600;
+$a-bold: 700;
+$a-extrabold: 800;
+$a-heavy: 900;
+
 h1 {
     font-family: "adelle", serif;
-    font-weight: 400; // normal
+    font-weight: $a-regular;
 }
 
 h2 {
     font-family: "adelle", serif;
-    font-weight: 600; // semi-bold
+    font-weight: $a-semibold;
 }
 
 p.site-workmark {
-    font-weight: 900; // black
+    font-weight: $f-black;
 }
 
 p.lede {
@@ -26,7 +39,7 @@ p.lede {
 }
 
 a {
-    font-weight: bold;
+    font-weight: $f-bold;
     text-decoration: none;
 }
 
