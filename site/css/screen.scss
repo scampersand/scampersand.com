@@ -8,7 +8,7 @@
 $susy: (
     // debug: (image: show),
     global-box-sizing: border-box,
-    columns: 2,
+    columns: 3,
     // column-width: 30em,
 );
 
@@ -28,6 +28,34 @@ header, section, footer {
 
     padding-left: 1em;
     padding-right: 1em;
+
+    @media (min-width: 27.25em) {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+
+    @media (min-width: 48.062em) {
+        padding-left: 2em;
+        padding-right: 2em;
+    }
+}
+
+div.intro, div.bio-item, div.info-item, div.proj-desc {
+    @media (min-width: 48.062em) {
+        @include span(1);
+    }
+}
+
+div.bio-last, div.info-last {
+    @media (min-width: 48.062em) {
+        @include span(1 last);
+    }
+}
+
+ul.proj-list {
+    @media (min-width: 48.062em) {
+        @include span(2 last);
+    }
 }
 
 img {
