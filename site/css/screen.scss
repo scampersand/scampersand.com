@@ -9,7 +9,6 @@ $susy: (
     // debug: (image: show),
     global-box-sizing: border-box,
     columns: 3,
-    // column-width: 30em,
 );
 
 @include border-box-sizing;
@@ -23,7 +22,7 @@ blockquote, h1, h2, h3, h4, h5, h6, li, p, ul {
  - Columns
  */
 
-header, section, footer {
+header, section {
     @include container;
 
     padding-left: 1em;
@@ -38,6 +37,10 @@ header, section, footer {
         padding-left: 2em;
         padding-right: 2em;
     }
+}
+
+div.section-footer {
+    @include span(full);
 }
 
 div.intro, div.bio-item, div.info-item, div.proj-desc {
