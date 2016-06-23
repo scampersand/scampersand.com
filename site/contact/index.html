@@ -1,0 +1,35 @@
+---
+layout: default
+title: Contact
+bodyclass: landing
+nav_prio: 40
+#nav_title: Alternate title for nav
+---
+
+{% comment %}
+    see https://formspree.io/ for meaning of the various fields.
+{% endcomment %}
+
+<form action="https://formspree.io/{{site.email}}"
+      method="POST">
+    <label>Name: <input type="text" name="name" required autofocus></label>
+    <label>Email: <input type="email" name="_replyto" required></label>
+    <label>Content: <textarea name="body" required></textarea></label>
+    <input type="hidden" name="_subject" value="Hello!">
+    <input type="hidden" name="_next" value="{{site.url}}/contact/thanks.html">
+    <input type="text" name="_gotcha" style="display:none">
+    <input type="submit" value="Send">
+</form>
+
+<script>
+    // Replace https://scampersand.com with dev hostname
+    !function() {
+        var $input = $('input[name=_next]'),
+            parser = document.createElement('a');
+        parser.href = $input.val();
+        parser.host = location.host;
+        parser.protocol = location.protocol;
+        $input.val(parser.href);
+    }();
+</script>
+
