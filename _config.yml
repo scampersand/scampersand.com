@@ -3,7 +3,7 @@ destination: ./public
 exclude: ['*.scss']
 include: ['.htaccess', '.nojekyll']
 title: Scampersand
-email: contact@scampersand.com
+email: hello@scampersand.com
 url: http://scampersand.com
 defaults:
   - scope:
