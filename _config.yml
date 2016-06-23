@@ -10,3 +10,4 @@ defaults:
       path: ""
     values:
       layout: default
+      linky_tech: true
