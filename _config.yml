@@ -4,7 +4,7 @@ exclude: ['*.scss']
 include: ['.htaccess', '.nojekyll']
 title: Scampersand
 email: hello@scampersand.com
-url: http://scampersand.com
+url: https://scampersand.com
 defaults:
   - scope:
       path: ""
