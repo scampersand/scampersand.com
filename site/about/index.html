@@ -82,7 +82,8 @@ nav_prio: 20
     <div class="bio-item">
         <img srcset="/img/aron-1000.jpg 1000w,
                      /img/aron-500.jpg 500w"
-             src="/img/aron-500.jpg">
+             src="/img/aron-500.jpg"
+             height="500" width="500"><!-- height/width hints for fetching best image -->
         <h3>Aron</h3>
         <p>
             Aron loves Python and Django, OAuth and APIs, 12-factor apps and
@@ -92,7 +93,10 @@ nav_prio: 20
     </div>
 
     <div class="bio-item bio-last">
-        <img src="http://placehold.it/500x500">
+        <img srcset="//placehold.it/1000x1000 1000w,
+                     //placehold.it/500x500 500w"
+             src="//placehold.it/500x500"
+             height="500" width="500"><!-- height/width hints for fetching best image -->
         <h3>Amy</h3>
         <p>
             A bit about Amy. Mauris in turpis ac risus convallis faucibus. Praesent
