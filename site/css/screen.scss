@@ -8,7 +8,8 @@
 $susy: (
     // debug: (image: show),
     global-box-sizing: border-box,
-    columns: 3,
+    columns: 2,
+
 );
 
 @include border-box-sizing;
@@ -22,8 +23,20 @@ blockquote, h1, h2, h3, h4, h5, h6, li, p, ul {
  - Columns
  */
 
-header, section {
+header {
     @include container;
+
+    padding-left: 1em;
+    padding-right: 1em;  // TODO: nav currently has + 18px
+
+    @media (min-width: 27.25em) {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+}
+
+section {
+    @include container(40em);
 
     padding-left: 1em;
     padding-right: 1em;
@@ -32,32 +45,21 @@ header, section {
         padding-left: 1.5em;
         padding-right: 1.5em;
     }
-
-    @media (min-width: 48.062em) {
-        padding-left: 2em;
-        padding-right: 2em;
-    }
 }
 
-div.section-footer {
+div.intro, ul.proj-list, div.section-footer {
     @include span(full);
 }
 
-div.intro, div.bio-item, div.info-item, div.proj-desc {
-    @media (min-width: 48.062em) {
+div.bio-item {
+    @media (min-width: 30em) {
         @include span(1);
     }
 }
 
-div.bio-last, div.info-last {
-    @media (min-width: 48.062em) {
+div.bio-last {
+    @media (min-width: 30em) {
         @include span(1 last);
-    }
-}
-
-ul.proj-list {
-    @media (min-width: 48.062em) {
-        @include span(2 last);
     }
 }
 
