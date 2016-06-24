@@ -56,6 +56,16 @@ div.bio-item {
     @media (min-width: 30em) {
         @include span(1);
     }
+
+    /* bio images should always fill their container.
+     * This allows img sizes attribute to affect what image
+     * in the srcset is fetched, without affecting the
+     * presentation. Possibly this should be a handled
+     * globally somehow.
+     */
+    img {
+        width: 100%;
+    }
 }
 
 div.bio-last {
@@ -66,5 +76,7 @@ div.bio-last {
 
 img {
     max-width: 100%;
+
+    /* auto height preserves ratio when the image is scaled. */
     height: auto;
 }

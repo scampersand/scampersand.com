@@ -87,9 +87,9 @@ nav_prio: 20
 
 <div class="bio-item">
     <img srcset="/img/aron-1000.jpg 1000w,
-                    /img/aron-500.jpg 500w"
-            src="/img/aron-500.jpg"
-            height="500" width="500"><!-- height/width hints for fetching best image -->
+                 /img/aron-500.jpg 500w"
+         sizes="(min-width: 30em) 50vw, 100vw"
+         src="/img/aron-500.jpg">
     <h3>Aron</h3>
     <p>
         Aron loves Python and Django, OAuth and APIs, 12-factor apps and
@@ -99,10 +99,16 @@ nav_prio: 20
 </div>
 
 <div class="bio-item bio-last">
-    <img srcset="//placehold.it/1000x1000 1000w,
-                    //placehold.it/500x500 500w"
-            src="//placehold.it/500x500"
-            height="500" width="500"><!-- height/width hints for fetching best image -->
+    {% comment %}
+        2000/3000 sizes are for testing what browsers actually fetch.
+        When we have a real image, just use 500/1000 sizes like Aron's above.
+    {% endcomment %}
+    <img srcset="//placehold.it/3000x3000 3000w,
+                 //placehold.it/2000x2000 2000w,
+                 //placehold.it/1000x1000 1000w,
+                 //placehold.it/500x500 500w"
+         sizes="(min-width: 30em) 50vw, 100vw"
+         src="//placehold.it/500x500">
     <h3>Amy</h3>
     <p>
         A bit about Amy. Mauris in turpis ac risus convallis faucibus. Praesent
