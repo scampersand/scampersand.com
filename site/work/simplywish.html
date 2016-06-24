@@ -14,14 +14,30 @@ layout: default
         person they gave to last year and the year before?
     </p>
     <p>
-        <strong>Simply Wish</strong> was a fun project of Amy’s between
+        <strong>SimplyWish</strong> was a fun project of Amy’s between
         employment at HP and studying graphic design at RISD. It uses
         constraint programming to draw names from a virtual hat, tracks wish
         lists for the participants, and we continue to depend on it for our
         family gift swaps each Christmas.
     </p>
     <p>
-        Technologies: ...
+        Technologies:
+        {% comment %}
+            set linky_tech in _config.yml
+        {% endcomment %}
+        {% capture tech %}
+            <a href="https://www.python.org/">Python</a>/<a href="https://www.djangoproject.com/">Django</a>,
+            <a href="https://labix.org/python-constraint">Python-Constraint</a>,
+            <a href="https://docs.python.org/2/library/unittest.html">Unittest</a>,
+            <a href="https://www.mysql.com/">MySQL</a>,
+            <a href="https://en.wikipedia.org/wiki/Phusion_Passenger">Passenger WSGI</a>,
+            <a href="https://www.dreamhost.com/">Dreamhost</a>.
+        {% endcapture %}
+        {% if page.linky_tech %}
+            {{tech}}
+        {% else %}
+            {{tech|strip_html}}
+        {% endif %}
     </p>
 </div>
 

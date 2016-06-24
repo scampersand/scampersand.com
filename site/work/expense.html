@@ -17,7 +17,21 @@ layout: default
         we’re still quite proud of it.
     </p>
     <p>
-        Technologies: ...
+        Technologies:
+        {% comment %}
+            set linky_tech in _config.yml
+        {% endcomment %}
+        {% capture tech %}
+            <a href="https://www.perl.org/">Perl</a> <a href="http://perldoc.perl.org/CGI.html">CGI</a>,
+            <a href="http://search.cpan.org/~turnstep/DBD-Pg/Pg.pm">DBD::Pg</a>,
+            <a href="https://www.postgresql.org/">PostgreSQL</a>,
+            <a href="https://httpd.apache.org/">Apache</a>.
+        {% endcapture %}
+        {% if page.linky_tech %}
+            {{tech}}
+        {% else %}
+            {{tech|strip_html}}
+        {% endif %}
     </p>
 </div>
 
