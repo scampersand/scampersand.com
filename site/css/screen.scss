@@ -1,5 +1,11 @@
 @import "susy";
 @import "partials/normalize";
+
+blockquote, h1, h2, h3, h4, h5, h6, li, p, ul {
+    margin: 0;  
+    padding: 0; 
+}   
+
 @import "partials/nav";
 @import "partials/color";
 @import "partials/type";
@@ -13,11 +19,6 @@ $susy: (
 );
 
 @include border-box-sizing;
-
-blockquote, h1, h2, h3, h4, h5, h6, li, p, ul {
-    margin: 0;  
-    padding: 0; 
-}   
 
 /**
  - Columns
@@ -35,7 +36,7 @@ header {
     }
 }
 
-section {
+section.content {
     @include container(40em);
 
     padding-left: 1em;
@@ -47,7 +48,7 @@ section {
     }
 }
 
-div.intro, ul.proj-list, div.section-footer {
+div.blurb, ul.proj-list, div.section-footer {
     @include span(full);
 }
 

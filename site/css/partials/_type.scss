@@ -30,19 +30,14 @@ h2 {
     font-weight: $a-semibold;
 }
 
-p.site-workmark {
-    font-weight: $f-black;
-}
-
-p.lede {
-    font-family: "adelle", serif;
-}
-
 a {
-    font-weight: $f-bold;
     text-decoration: none;
 }
 
 ul {
     list-style-type: none;
+}
+
+p.site-wordmark {
+    font-weight: $f-bold;
 }
