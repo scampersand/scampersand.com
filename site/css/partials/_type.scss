@@ -30,6 +30,10 @@ h2 {
     font-weight: $a-semibold;
 }
 
+h4 {
+    font-weight: $f-bold;
+}
+
 a {
     text-decoration: none;
 }
@@ -40,4 +44,8 @@ ul {
 
 p.site-wordmark {
     font-weight: $f-bold;
+}
+
+p.technologies, p.social {
+    font-style: italic;
 }

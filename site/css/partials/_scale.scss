@@ -7,12 +7,14 @@ $ratios: (
 );
 
 $sizes: (
-    'root': 21px,
+    'root': 24px,
     'rhythm': 'root' ('fifth': 1), // determines line heights, overriding for now
 
-    'h1': 'root' ('my-ratio': 4),  // 44
-    'h2': 'root' ('my-ratio': 1),  // 25
-    'h3': 'root' ('my-ratio': 0),  // 21
+    'h1': 'root' ('my-ratio': 4),  // 50
+    'h2': 'root' ('my-ratio': 2),  // 35
+    'h3': 'root' ('my-ratio': 1),  // 29
+    'h4': 'root' ('my-ratio': 0),  // 24
+    'ps': 'root' ('my-ratio': -1), // 20
 );
 
 $lh-heading: 1.25;
@@ -45,7 +47,15 @@ p {
 }
 
 p.site-wordmark {
-    @include font-size('h2');
+    @include font-size('h3');
+}
+
+p.technologies, p.services, p.social {
+    @include font-size('ps');
+}
+
+.menu li {
+    @include font-size('ps');
 }
 
 /* section spacing */
@@ -67,9 +77,3 @@ div.blurb, ul.proj-list, ul.services-list {
 li.proj-list-item {
     margin-bottom: size('root') * $lh-text;
 }
-
-// project blurb
-// project image
-// proj-desc
-
-
