@@ -34,3 +34,23 @@ header {
 .menu a {
     color: color('brand-red');
 } 
+
+.menu ul {
+    @media (max-width: 860px) {
+        background: #303030;
+        border-radius: 3px;
+        box-shadow: 0px 1px 1px rgba(0,0,0,0.15);
+    }
+}
+
+/* active element */
+
+.menu a:hover, .toggle-nav:hover, .menu .current-item a, .toggle-nav.active {
+    color: #66a992;
+}
+
+/* animations */
+
+.menu a, .toggle-nav {
+    transition: color linear 0.15s;
+}
