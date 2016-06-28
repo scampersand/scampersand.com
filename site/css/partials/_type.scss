@@ -20,6 +20,9 @@ $a-bold: 700;
 $a-extrabold: 800;
 $a-heavy: 900;
 
+$as-regular: 400;
+$as-semibold: 600;
+
 h1 {
     font-family: "adelle", serif;
     font-weight: $a-regular;
@@ -48,4 +51,13 @@ p.site-wordmark {
 
 p.technologies, p.social {
     font-style: italic;
+}
+
+.section-footer p {
+    font-family: "adelle-sans", sans-serif;
+}
+
+.menu li {
+    font-family: "adelle-sans", sans-serif;
+    font-weight: $as-semibold;
 }
