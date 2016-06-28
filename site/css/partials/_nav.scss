@@ -24,7 +24,6 @@
 .menu li {
     margin: 0px 50px 0px 0px;
     float: left;
-    list-style: none;
 }
 
 .menu li:last-child {
@@ -36,7 +35,6 @@
 }
 
 .menu a:hover, .menu .current-item a {
-    text-decoration: none;
     color: #66a992;
 }
 
@@ -99,7 +97,6 @@
     }
 
     .toggle-nav:hover, .toggle-nav.active {
-        text-decoration: none;
         color: #66a992;
     }
 }
