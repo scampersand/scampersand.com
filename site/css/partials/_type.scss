@@ -20,44 +20,54 @@ $a-bold: 700;
 $a-extrabold: 800;
 $a-heavy: 900;
 
-$as-regular: 400;
-$as-semibold: 600;
-
-h1 {
-    font-family: "adelle", serif;
-    font-weight: $a-regular;
-}
-
-h2 {
-    font-family: "adelle", serif;
-    font-weight: $a-semibold;
-}
-
-h4 {
-    font-weight: $f-bold;
+ul {
+    list-style: none;
 }
 
 a {
     text-decoration: none;
 }
 
-ul {
-    list-style: none;
+h1 {
+    font-weight: $f-black;
 }
 
-p.site-wordmark {
+h2 {
+    font-weight: $f-black;
+    text-transform: uppercase;
+}
+
+h3 {
     font-weight: $f-bold;
 }
 
-p.technologies, p.social {
+h4 {
+    font-weight: $f-bold;
+}
+
+h5 {
+    font-family: "adelle", serif;
+    font-weight: $a-semibold;
+}
+
+p.site-wordmark {
+    font-weight: $f-black;
+}
+
+p.intro {
+    font-family: "adelle", serif;
+    font-weight: $a-regular;
+}
+
+p.social {
     font-style: italic;
 }
 
-.section-footer p {
-    font-family: "adelle-sans", sans-serif;
+.menu li {
+    font-weight: $f-bold;
+    text-transform: uppercase;
 }
 
-.menu li {
-    font-family: "adelle-sans", sans-serif;
-    font-weight: $as-semibold;
+label {
+    font-family: "adelle", serif;
 }
