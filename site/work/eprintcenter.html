@@ -4,32 +4,53 @@ layout: default
 ---
 
 <h3>EPRINTCENTER</h3>
-<p>lorem ipsum</p>
+
+<ul class="callout-list">
+    <li class="callout-list-item">
+        <h4>Django Development</h4>
+    </li>
+    <li class="callout-list-item">
+        <h4>Deployment, Scaling & Security</h4>
+    </li>
+    <li class="callout-list-item">
+        <h4>API Integration</h4>
+    </li>
+</ul>
+
+<p>
+    Praesent suscipit accumsan leo at feugiat. Sed euismod vel felis
+    a viverra. Cras pharetra eros sed neque laoreet scelerisque. Proin
+    volutpat nulla neque, sit amet.
+</p>
 
 <img src="http://placehold.it/840x571">
 
 <div class="proj-desc">
+    <h3>Problem</h3>
     <p>
-        HP’s ePrintCenter--the site and services to support
-        HP’s web-enabled printers—started small and needed to grow quickly.
-        While employed by HP, Aron and Amy joined the team to help confront the
-        challenges of scaling the project in multiple dimensions: customer
-        traffic was escalating, development was fragmented between remote
-        teams, deployments were infrequent and nerve-wracking, and data was
-        duplicated between servers.
+        Sed bibendum dui nec commodo imperdiet. Nullam vitae ultricies
+        nunc, vitae convallis nibh. Nam ut sem blandit, pretium urna vel,
+        congue elit. Vestibulum in dolor elit. Fusce tincidunt sem bibendum
+        aliquam eleifend. Donec convallis aliquet tellus, ut tincidunt
+        velit porttitor sit amet.
     </p>
+    <h3>Solution</h3>
     <p>
-        Aron built a cluster of virtual machines
-        with production parity so that remote teams could test integration with
-        ePrintCenter snapshots. Amy decoupled printer releases from site
-        updates using run-time configuration flags so that deployments could be
-        more frequent. Coordinating with the team in India, Aron built an app
-        provisioning service to de-duplicate data stores that were previously
-        kept in sync manually, while Amy ported the ePrintCenter application to
-        use the new service. Aron also added localized page delivery for the
-        ePrintCenter site using a CDN, to handle the increased customer
-        traffic.
+        Sed bibendum dui nec commodo imperdiet. Nullam vitae ultricies
+        nunc, vitae convallis nibh. Nam ut sem blandit, pretium urna vel,
+        congue elit. Vestibulum in dolor elit. Fusce tincidunt sem bibendum
+        aliquam eleifend. Donec convallis aliquet tellus, ut tincidunt
+        velit porttitor sit amet.
     </p>
+
+</div>
+
+<div class="section-footer" role="nav">
+    <p>
+        <a href="simplywish.html">Next project: SimplyWish</a>
+    </p>
+</div>
+    <!--
     <p class="technologies">
         Technologies:
         {% comment %}
@@ -52,10 +73,4 @@ layout: default
             {{tech|strip_html}}
         {% endif %}
     </p>
-</div>
-
-<div class="section-footer" role="nav">
-    <p>
-        <a href="simplywish.html">Next project: SimplyWish</a>
-    </p>
-</div>
+    -->

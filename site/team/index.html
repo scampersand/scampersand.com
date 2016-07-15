@@ -1,0 +1,62 @@
+---
+layout: default
+title: Team
+bodyclass: landing
+nav_prio: 30
+#nav_title: Alternate title for nav
+---
+
+<section id="who-we-are">
+<div class="blurb">
+    <h2>OUR TEAM</h2>
+    <p>
+        Aenean tristique sem et neque bibendum, id tempus urna luctus.
+    </p>
+</div>
+
+<div class="bio-item">
+    {% comment %}
+        2000/3000 sizes are for testing what browsers actually fetch.
+        When we have a real image, just use 500/1000 sizes like Aron's above.
+    {% endcomment %}
+    <img srcset="//placehold.it/3000x3000 3000w,
+                 //placehold.it/2000x2000 2000w,
+                 //placehold.it/1000x1000 1000w,
+                 //placehold.it/500x500 500w"
+         sizes="(min-width: 30em) 50vw, 100vw"
+         src="//placehold.it/500x500">
+    <h3>AMY GRIFFIS</h3>
+    <h4>DESIGNER & DEVELOPER</h4>
+    <p>
+        Mauris in turpis ac risus convallis faucibus. Praesent diam massa,
+        eleifend convallis lectus. Suspendisse aliquet finibus.
+    </p>
+    {% comment %}
+    <p class="social">
+        <a href="http://amygriffis.com">amygriffis.com</a>
+    </p>
+    {% endcomment %}
+</div>
+
+<div class="bio-item bio-last">
+    <img srcset="/img/aron-1000.jpg 1000w,
+                 /img/aron-500.jpg 500w"
+         sizes="(min-width: 30em) 50vw, 100vw"
+         src="/img/aron-500.jpg">
+    <h3>ARON GRIFFIS</h3>
+    <h4>DEVELOPER</h4>
+    <p>
+        In accumsan iaculis ante, eget suscipit eros commodo vel. Integer
+        vel pellentesque arcu. Maecenas nec molestie sem.
+    <p>
+    <p class="social">
+        <a href="https://arongriffis.com">arongriffis.com</a>
+    </p>
+</div>
+</section>
+
+<div class="section-footer" role="nav">
+    <p>
+        <a href="/contact/">Contact >></a>
+    </p>
+</div>
