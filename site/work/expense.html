@@ -6,12 +6,16 @@ layout: default
 <section class="content">
     <div class="section-header">
         <div class="section-container">
-            <h2>Expense Tracker</h2>
-            <ul class="callout-list">
-                <li class="callout-list-item">
-                    <h5>CGI Development</h5>
-                </li>
-            </ul>
+            <div class="proj-name">
+                <h2>Expense Tracker</h2>
+            </div>
+            <div class="proj-skills">
+                <ul>
+                    <li>
+                        <h5>CGI Development</h5>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div> <!-- .section-header -->
 
@@ -23,9 +27,11 @@ layout: default
                 volutpat nulla neque, sit amet.
             </p>
 
+            {% comment %}
             <img src="http://placehold.it/840x571">
+            {% endcomment %}
 
-            <div class="proj-desc">
+            <div class="proj-problem">
                 <h3>Problem</h3>
                 <p>
                     As a young couple fresh out of college, we were anxious to
@@ -33,15 +39,19 @@ layout: default
                     spending, but it was annoying to keep receipts and need to
                     enter them into the computer at home.
                 </p>
-                <h3>Solution</h3>
-                <p>
-                    Since <a herf="http://mint.com">mint.com</a> wouldn’t exist
-                    for another decade, so we built a web-based expense tracker
-                    so we could enter our own expenditures from our desk
-                    computers at work. It was our first collaboration on a web
-                    project—Perl CGI with a PostgreSQL database—and we’re still
-                    quite proud of it.
-                </p>
+            </div>
+            <div class="proj-solution">
+                <div class="solution-text">
+                    <h3>Solution</h3>
+                    <p>
+                        Since <a herf="http://mint.com">mint.com</a> wouldn’t exist
+                        for another decade, so we built a web-based expense tracker
+                        so we could enter our own expenditures from our desk
+                        computers at work. It was our first collaboration on a web
+                        project—Perl CGI with a PostgreSQL database—and we’re still
+                        quite proud of it.
+                    </p>
+                </div>
             </div>
         </div>
     </div> <!-- .section-content -->

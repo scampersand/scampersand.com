@@ -6,15 +6,21 @@ layout: default
 <section class="content">
     <div class="section-header">
         <div class="section-container">
-            <h2>Simply Wish</h2>
-            <ul class="callout-list">
-                <li class="callout-list-item">
-                    <h5>UX & UI Design</h5>
-                </li>
-                <li class="callout-list-item">
-                    <h5>Django Development</h5>
-                </li>
-            </ul>
+            <div class="proj-name">
+                <h2>Simply Wish</h2>
+            </div>
+            <div class="proj-skills">
+                <ul>
+                    {% comment %}
+                    <li>
+                        <h5>UX & UI Design</h5>
+                    </li>
+                    {% endcomment %}
+                    <li>
+                        <h5>Django Development</h5>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div> <!-- .section-header -->
 
@@ -26,9 +32,11 @@ layout: default
                 volutpat nulla neque, sit amet.
             </p>
 
+            {% comment %}
             <img src="http://placehold.it/840x571">
+            {% endcomment %}
 
-            <div class="proj-desc">
+            <div class="proj-problem">
                 <h3>Problem</h3>
                 <p>
                     Running a Secret Santa gift exchange among family members
@@ -38,14 +46,18 @@ layout: default
                     them? Or the name of the person they gave to last year and
                     the year before?
                 </p>
-                <h3>Solution</h3>
-                <p>
-                    Simply Wish was a fun project of Amy’s between employment
-                    at HP and studying graphic design at RISD. It uses
-                    constraint programming to draw names from a virtual hat,
-                    tracks wish lists for the participants, and we continue to
-                    depend on it for our family gift swaps each Christmas.
-                </p>
+            </div>
+            <div class="proj-solution">
+                <div class="solution-text">
+                    <h3>Solution</h3>
+                    <p>
+                        Simply Wish was a fun project of Amy’s between employment
+                        at HP and studying graphic design at RISD. It uses
+                        constraint programming to draw names from a virtual hat,
+                        tracks wish lists for the participants, and we continue to
+                        depend on it for our family gift swaps each Christmas.
+                    </p>
+                </div>
             </div>
         </div>
     </div> <!-- .section-content -->
