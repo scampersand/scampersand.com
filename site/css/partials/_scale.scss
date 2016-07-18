@@ -73,10 +73,10 @@ section.content {
     margin-bottom: size('h2') * $lh-heading * 2;
 }
 
-div.blurb, ul.proj-list, ul.services-list {
+div.blurb, ul.work-list, ul.services-list {
     margin-bottom: size('h2') * $lh-heading;
 }
 
-li.proj-list-item {
+li.work-item {
     margin-bottom: size('root') * $lh-text;
 }

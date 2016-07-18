@@ -15,10 +15,13 @@ $susy: (
     // debug: (image: show),
     global-box-sizing: border-box,
     columns: 2,
-
 );
 
 @include border-box-sizing;
+
+header {
+    height: 2.916em;
+}
 
 /**
  - Columns
@@ -39,19 +42,30 @@ div.section-container {
         padding-right: 1.5em;
     }
 }
-header {
-    height: 2.916em;
+
+form.contact {
+    @media (min-width: 30em) {
+        @include span(1.15);
+    }
 }
 
-//ul.proj-list {
-//    @include span(full);
-//}
-
-div.bio-item {
+div.bio-item,
+li.services-item,
+li.work-item {
     @media (min-width: 30em) {
         @include span(1);
     }
+}
 
+div.bio-last,
+li.services-last,
+li.work-last {
+    @media (min-width: 30em) {
+        @include span(1 last);
+    }
+}
+
+div.bio-item {
     /* bio images should always fill their container.
      * This allows img sizes attribute to affect what image
      * in the srcset is fetched, without affecting the
@@ -60,12 +74,6 @@ div.bio-item {
      */
     img {
         width: 100%;
-    }
-}
-
-div.bio-last {
-    @media (min-width: 30em) {
-        @include span(1 last);
     }
 }
 
