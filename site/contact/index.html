@@ -10,27 +10,41 @@ nav_prio: 40
     see https://formspree.io/ for meaning of the various fields.
 {% endcomment %}
 
-<section id="contact-us">
-<div class="blurb">
-    <h2>CONTACT US</h2>
-    <p class="intro">
-        Donec sit amet euismod justo, integer vel ultricies mauris, sed
-        luctus ante ut mauris imperdiet posuere. Nulla interdum velit eu
-        vestibulum fermentum nunc urna torto, sagittis nec orci eu.
-    </p>
-</div>
+<section class="content">
+    <div class="section-header">
+        <div class="section-container">
+            <h2>Contact Us</h2>
+        </div>
+    </div> <!-- .section-header -->
 
-<form action="https://formspree.io/{{site.email}}"
-      method="POST">
-    <label>Name: <input type="text" name="name" required autofocus></label>
-    <label>Email: <input type="email" name="_replyto" required></label>
-    <label>Content: <textarea name="body" required></textarea></label>
-    <input type="hidden" name="_subject" value="Hello!">
-    <input type="hidden" name="_next" value="{{site.url}}/contact/thanks.html">
-    <input type="text" name="_gotcha" style="display:none">
-    <input type="submit" value="Send">
-</form>
+    <div class="section-content">
+        <div class="section-container">
+            <p class="intro">
+                Donec sit amet euismod justo, integer vel ultricies mauris, sed
+                luctus ante ut mauris imperdiet posuere. Nulla interdum velit eu
+                vestibulum fermentum nunc urna torto, sagittis nec orci eu.
+            </p>
+            <form action="https://formspree.io/{{site.email}}"
+                method="POST">
+                <label>Name: <input type="text" name="name" required autofocus></label>
+                <label>Email: <input type="email" name="_replyto" required></label>
+                <label>Content: <textarea name="body" required></textarea></label>
+                <input type="hidden" name="_subject" value="Hello!">
+                <input type="hidden" name="_next" value="{{site.url}}/contact/thanks.html">
+                <input type="text" name="_gotcha" style="display:none">
+                <input type="submit" value="Send">
+            </form>
+        </div>
+    </div> <!-- .section-content -->
 </section>
+
+<footer role="nav">
+    <div class="section-container">
+        <p>
+            <a href="/">???</a>
+        </p>
+    </div>
+</footer>
 
 <script>
     // Replace https://scampersand.com with dev hostname

@@ -24,35 +24,28 @@ $susy: (
  - Columns
  */
 
+main {
+    @include container(65em);
+}
+
+div.section-container {
+    @include container(50em);
+
+    padding-left: 1em;
+    padding-right: 1em;
+
+    @media (min-width: 27.25em) {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+}
 header {
-    @include container;
-
     height: 2.916em;
-
-    padding-left: 1em;
-    padding-right: 1em;
-
-    @media (min-width: 27.25em) {
-        padding-left: 1.5em;
-        padding-right: 1.5em;
-    }
 }
 
-section.content {
-    @include container(35em);
-
-    padding-left: 1em;
-    padding-right: 1em;
-
-    @media (min-width: 27.25em) {
-        padding-left: 1.5em;
-        padding-right: 1.5em;
-    }
-}
-
-div.blurb, ul.proj-list, div.section-footer {
-    @include span(full);
-}
+//ul.proj-list {
+//    @include span(full);
+//}
 
 div.bio-item {
     @media (min-width: 30em) {

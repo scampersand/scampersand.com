@@ -3,16 +3,15 @@ layout: base
 ---
 
 <body class="{{page.bodyclass}}">
-    <header>
-        {% include nav.html %}
-        <p class="site-wordmark"><a href="/">Scampersand</a></p>
-    </header>
+    <main role="main">
+        <header>
+            <div class="section-container">
+                {% include nav.html %}
+                <p class="site-wordmark"><a href="/">Scampersand</a></p>
+            </div>
+        </header>
 
-    <section class="content" role="main">
         {{content|pants}}
-    </section>
 
-    <!-- <footer>
-        <p class="copyright">&copy; 2016 Scampersand</p>
-    </footer> -->
+    </main>
 </body>
