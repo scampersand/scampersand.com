@@ -1,82 +1,107 @@
-@import '../../node_modules/accoutrement-scale/sass/scale';
-
-$default-units: 'rem';
-
-$ratios: (
-    'my-ratio': 1.2,
-);
-
-$sizes: (
-    'root': 24px,
-    'rhythm': 'root' ('fifth': 1), // determines line heights, overriding for now
-
-    'h1': 'root' ('my-ratio': 4),  // 50
-    'h2': 'root' ('my-ratio': 2),  // 35
-    'h3': 'root' ('my-ratio': 1),  // 29
-    'h4': 'root' ('my-ratio': 0),  // 24
-    'ps': 'root' ('my-ratio': -1), // 20
-);
-
-$lh-heading: 1.25;
-$lh-text: 1.5;
-
 html {
-    @include baseline();
-    line-height: $lh-text;
+    font-size: 100%;
 }
 
-h1 {
-    @include font-size('h1');
-    line-height: $lh-heading;
-}
+h1, h2 {
+    font-size: 2.5rem;
+    line-height: 1.25;
 
-h2 {
-    @include font-size('h2');
-    line-height: $lh-heading;
-    margin-bottom: size('h2') * $lh-heading / 2;
+    @media (min-width: 30em) {
+        font-size: 5rem;
+    }
 }
 
 h3 {
-    @include font-size('h3');
-    line-height: $lh-heading;
-    margin-bottom: size('h3') * $lh-heading / 2;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    margin-bottom: 0.25em;
+
+    @media (min-width: 30em) {
+        font-size: 2rem;
+    }
 }
 
-p {
-    margin-bottom: size('root') * $lh-text / 2;
+h3.lrg {
+    font-size: 1.625rem;
+    line-height: 1.25;
+
+    @media (min-width: 30em) {
+        font-size: 2.5rem;
+    }
+}
+
+h4, p {
+    font-size: 1.125rem;
+    line-height: 1.3;
+    margin-bottom: 0.65em;
+
+    @media (min-width: 30em) {
+        font-size: 1.5rem;
+    }
+}
+
+h5, li {
+    font-size: 1.125rem;
+
+    @media (min-width: 30em) {
+        font-size: 1.375rem;
+    }
+}
+
+p.intro {
+    font-size: 1.25rem;
+    line-height: 1.3;
+
+    @media (min-width: 30em) {
+        font-size: 1.625rem;
+    }
 }
 
 p.site-wordmark {
-    @include font-size('h3');
-    margin-bottom: 0;
-    padding-top: 0.5em;
-    padding-top: 0.5em;
-}
+    font-size: 1.5rem;
 
-p.technologies, p.services, p.social {
-    @include font-size('ps');
+    line-height: 1.25;
+    margin-bottom: 0;
+
+    @media (min-width: 30em) {
+        font-size: 2rem;
+    }
 }
 
 .menu li {
-    @include font-size('ps');
+    font-size: 1.125rem;
+
 }
+
 
 /* section spacing */
 
-section.content {
-    margin-top: size('h2') * $lh-heading * 1.5;
-    margin-bottom: size('h2') * $lh-heading;
+//section.content {
+//    margin-top: size('h2') * $lh-heading * 1.5;
+//    margin-bottom: size('h2') * $lh-heading;
+//}
+//
+//// TODO- need a clearfix?
+//#our-work, #what-we-do, #how-we-do-it, #who-we-are {
+//    margin-bottom: size('h2') * $lh-heading * 2;
+//}
+//
+//div.blurb, ul.work-list, ul.services-list {
+//    margin-bottom: size('h2') * $lh-heading;
+//}
+//
+//li.work-item {
+//    margin-bottom: size('root') * $lh-text;
+//}
+
+/**
+ - Heights
+ */
+
+header {
+    height: 2.916em;
 }
 
-// TODO- need a clearfix?
-#our-work, #what-we-do, #how-we-do-it, #who-we-are {
-    margin-bottom: size('h2') * $lh-heading * 2;
-}
-
-div.blurb, ul.work-list, ul.services-list {
-    margin-bottom: size('h2') * $lh-heading;
-}
-
-li.work-item {
-    margin-bottom: size('root') * $lh-text;
+div.section-header {
+    padding-bottom: 4.625em;
 }

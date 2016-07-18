@@ -19,20 +19,18 @@ $susy: (
 
 @include border-box-sizing;
 
-header {
-    height: 2.916em;
-}
-
 /**
  - Columns
  */
 
 main {
-    @include container(65em);
+    // from 16 base font size
+    @include container(97.5em);
 }
 
 div.section-container {
-    @include container(50em);
+    // from 16 base font size
+    @include container(75em);
 
     padding-left: 1em;
     padding-right: 1em;
