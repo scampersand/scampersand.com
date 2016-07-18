@@ -9,7 +9,7 @@
 }
 
 /*----- Menu -----*/
-@media screen and (min-width: 861px) {
+@media screen and (min-width: 65em) {
     .menu {
         padding-left: 1em;
         padding-top: 0.5em;
@@ -31,7 +31,7 @@
 }
 
 /*----- Responsive -----*/
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 64em) {
     .menu {
         position: relative;
         display: inline-block;
@@ -72,8 +72,6 @@
     }
 
     .toggle-nav {
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
         float: left;
         display: inline-block;
     }

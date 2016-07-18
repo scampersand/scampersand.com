@@ -35,7 +35,7 @@ div.section-container {
     padding-left: 1em;
     padding-right: 1em;
 
-    @media (min-width: 27.25em) {
+    @media (min-width: 30em) {
         padding-left: 1.5em;
         padding-right: 1.5em;
     }
@@ -49,14 +49,14 @@ div.proj-name,
 div.proj-problem,
 div.solution-text,
 form.contact {
-    @media (min-width: 30em) {
+    @media (min-width: 48em) {
         @include span(1.15);
     }
 }
 
 div.solution-features,
 div.proj-skills {
-    @media (min-width: 30em) {
+    @media (min-width: 48em) {
         @include span(0.85 last);
     }
 }
@@ -64,7 +64,7 @@ div.proj-skills {
 div.bio-item,
 li.services-item,
 li.work-item {
-    @media (min-width: 30em) {
+    @media (min-width: 48em) {
         @include span(1);
     }
 }
@@ -72,7 +72,7 @@ li.work-item {
 div.bio-last,
 li.services-last,
 li.work-last {
-    @media (min-width: 30em) {
+    @media (min-width: 48em) {
         @include span(1 last);
     }
 }
