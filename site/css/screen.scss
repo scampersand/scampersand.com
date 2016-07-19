@@ -14,7 +14,7 @@ blockquote, h1, h2, h3, h4, h5, h6, li, p, ul {
 $susy: (
     // debug: (image: show),
     global-box-sizing: border-box,
-    columns: 2,
+    columns: 4,
 );
 
 @include border-box-sizing;
@@ -48,16 +48,22 @@ div.proj-solution {
 div.proj-name,
 div.proj-problem,
 div.solution-text,
+p.intro,
 form.contact {
     @media (min-width: 48em) {
-        @include span(1.15);
+        @include span(3);
     }
+}
+
+div.proj-problem p,
+div.solution-text p {
+    max-width: 28em;  // avoid long lines
 }
 
 div.solution-features,
 div.proj-skills {
     @media (min-width: 48em) {
-        @include span(0.85 last);
+        @include span(1 last);
     }
 }
 
@@ -65,7 +71,7 @@ div.bio-item,
 li.services-item,
 li.work-item {
     @media (min-width: 48em) {
-        @include span(1);
+        @include span(2);
     }
 }
 
@@ -73,7 +79,7 @@ div.bio-last,
 li.services-last,
 li.work-last {
     @media (min-width: 48em) {
-        @include span(1 last);
+        @include span(2 last);
     }
 }
 
