@@ -5,9 +5,11 @@ html {
 h1, h2 {
     font-size: 2.5rem;
     line-height: 1.25;
+    margin-top: 1em;
 
     @media (min-width: 30em) {
         font-size: 5rem;
+        margin-top: 3em;
     }
 }
 
@@ -73,35 +75,25 @@ p.site-wordmark, a.toggle-nav {
 
 }
 
-
-/* section spacing */
-
-//section.content {
-//    margin-top: size('h2') * $lh-heading * 1.5;
-//    margin-bottom: size('h2') * $lh-heading;
-//}
-//
-//// TODO- need a clearfix?
-//#our-work, #what-we-do, #how-we-do-it, #who-we-are {
-//    margin-bottom: size('h2') * $lh-heading * 2;
-//}
-//
-//div.blurb, ul.work-list, ul.services-list {
-//    margin-bottom: size('h2') * $lh-heading;
-//}
-//
-//li.work-item {
-//    margin-bottom: size('root') * $lh-text;
-//}
-
 /**
- - Heights
+ - Sections
  */
 
 header {
     height: 2.916em;
 }
 
-div.section-header {
-    padding-bottom: 4.625em;
+div.section-header,
+div.section-content {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+    @media (min-width: 30em) {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+}
+
+div.section-sub {
+    margin-bottom: 2.5rem;
 }

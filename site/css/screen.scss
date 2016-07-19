@@ -95,3 +95,9 @@ img {
     /* auto height preserves ratio when the image is scaled. */
     height: auto;
 }
+
+div.section-sub:after {
+    content: '';
+    clear: both;
+    display: block;
+}
