@@ -1,28 +1,49 @@
 @import '../../node_modules/accoutrement-color/sass/color';
 
 $colors: (
+    'val-lite': hsl(0, 0%, 100%),      // white
+    'val-mliter': hsl(0, 0%, 88%),
+    'val-mlite': hsl(0, 0%, 75%),
+    'val-med': hsl(0, 0%, 50%),         // medium-grey
+    'val-mdark': hsl(0, 0%, 25%),
+    'val-dark': hsl(0, 0%, 0%),         // black
+
     'brand-red': hsl(358, 71%, 48%),   // rgb(210, 35, 42);
     'brand-mint': hsl(173, 41%, 88%),  // rgb(212, 237, 234);
     'brand-grey': hsl(240, 17%, 30%),  // rgb(64, 64, 90);
     'pure-white': hsl(0, 100%, 100%),  // rgb(255, 255, 255);
 );
 
-
 html {
-    background-color: color('pure-white');
-    color: color('brand-grey');
+    color: color('val-dark');
 }
 
-p.site-wordmark {
-    color: color('brand-red');
-}
-
-a {
-    color: color('brand-red');
+body {
+    background-color: color('val-mliter');
 }
 
 header {
-    background-color: color('brand-mint');
+    background-color: color('val-lite');
+}
+
+div.section-header {
+    background-color: color('val-mlite');
+}
+
+div.section-content {
+    background-color: color('val-lite');
+}
+
+footer {
+    background-color: color('val-med');
+}
+
+p.site-wordmark {
+    color: color('val-dark');
+}
+
+a {
+    color: color('val-dark');
 }
 
 /* -------------------- nav -------------------- */
@@ -32,7 +53,7 @@ header {
 }
 
 .menu a {
-    color: color('brand-red');
+    color: color('val-med');
 } 
 
 .menu ul {
@@ -46,7 +67,7 @@ header {
 /* active element */
 
 .menu a:hover, .toggle-nav:hover, .menu .current-item a, .toggle-nav.active {
-    color: #66a992;
+    color: color('val-dark');
 }
 
 /* animations */
