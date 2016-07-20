@@ -89,6 +89,31 @@ li.bio-item {
     }
 }
 
+div.bio-photo {
+    position: relative;
+
+    /*
+    aron {
+        background-image: url('/img/aron-1000.jpg');
+        background-image: -webkit-image-set(url('/img/aron-500.jpg') 1x,
+                                            url('/img/aron-1000.jpg') 2x);
+    }
+    amy {
+        background-image: url('//placehold.it/1000x1000');
+        background-image: -webkit-image-set(url('//placehold.it/500x500') 1x,
+                                            url('//placehold.it/1000x1000') 2x,
+                                            url('//placehold.it/1500x1500') 3x,
+                                            url('//placehold.it/2000x2000') 4x);
+    }
+   */
+}
+
+div.bio-overlay {
+    position: absolute;
+    bottom: 0;
+    &, a { color: white; }
+}
+
 img {
     max-width: 100%;
 
