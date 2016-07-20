@@ -101,6 +101,7 @@ img {
     height: auto;
 }
 
+/* clear any floated children in galleries */
 div.section-sub:after {
     content: '';
     clear: both;
