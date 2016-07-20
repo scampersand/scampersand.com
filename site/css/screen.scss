@@ -7,6 +7,7 @@ blockquote, h1, h2, h3, h4, h5, h6, li, p, ul {
 }   
 
 @import "partials/nav";
+@import "partials/cards";
 @import "partials/color";
 @import "partials/type";
 @import "partials/scale";
@@ -67,23 +68,16 @@ div.proj-skills {
     }
 }
 
-div.bio-item,
+li.bio-item,
 li.services-item,
 li.work-item {
     @media (min-width: 48em) {
-        @include span(2);
+        @include gallery(2);
     }
+    margin-bottom: gutter(4);
 }
 
-div.bio-last,
-li.services-last,
-li.work-last {
-    @media (min-width: 48em) {
-        @include span(2 last);
-    }
-}
-
-div.bio-item {
+li.bio-item {
     /* bio images should always fill their container.
      * This allows img sizes attribute to affect what image
      * in the srcset is fetched, without affecting the

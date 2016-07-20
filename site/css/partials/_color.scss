@@ -46,6 +46,13 @@ a {
     color: color('val-dark');
 }
 
+/* ----------------- work item ----------------- */
+
+li.work-item a,
+li.work-item p {
+    color: color('val-lite');
+}
+
 /* -------------------- nav -------------------- */
 
 .menu, .toggle-nav {
