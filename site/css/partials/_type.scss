@@ -58,7 +58,8 @@ p.site-wordmark {
     font-weight: $f-black;
 }
 
-p.intro {
+p.intro,
+footer p {
     font-family: "adelle", serif;
     font-weight: $a-regular;
 }
