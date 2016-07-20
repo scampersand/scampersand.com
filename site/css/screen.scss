@@ -49,10 +49,15 @@ div.proj-solution {
 div.proj-name,
 div.proj-problem,
 div.solution-text,
-p.intro,
-form.contact {
+p.intro {
     @media (min-width: 48em) {
         @include span(3);
+    }
+}
+
+form.contact {
+    @media (min-width: 48em) {
+        @include span(2);
     }
 }
 
