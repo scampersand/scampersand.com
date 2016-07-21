@@ -65,7 +65,7 @@ li.work-item p {
 
 .menu ul {
     @media (max-width: 64em) {
-        background: #303030;
+        background: color('val-mdark');
         border-radius: 3px;
         box-shadow: 0px 1px 1px rgba(0,0,0,0.15);
     }
