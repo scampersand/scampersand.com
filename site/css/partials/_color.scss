@@ -41,6 +41,10 @@ footer {
     background-color: color('val-5');
 }
 
+input[type="submit"] {
+    background-color: color('val-4');
+}
+
 /* --- text ------------------------------------ */
 
 html {
@@ -59,7 +63,11 @@ a {
     color: color('val-3');
 }
 
-/* --- card components ------------------------- */
+input[type="submit"] {
+    color: color('val-10');
+}
+
+/* --- ui components --------------------------- */
 
 li.bio-item, li.services-item {
     border-color: color('val-7');
@@ -74,6 +82,14 @@ div.work-overlay {
 div.bio-overlay a,
 div.work-overlay a {
     color: color('val-9');
+}
+
+fieldset {
+    border-color: transparent;
+}
+
+input, textarea {
+    border-color: color('val-7');
 }
 
 /* --- nav ------------------------------------- */
