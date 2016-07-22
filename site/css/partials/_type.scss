@@ -50,8 +50,8 @@ h4 {
 }
 
 h5 {
-    font-family: "adelle", serif;
     font-weight: $a-semibold;
+    text-transform: uppercase;
 }
 
 p.site-wordmark {
@@ -71,6 +71,11 @@ p.social {
 .menu li {
     font-weight: $f-bold;
     text-transform: uppercase;
+}
+
+.proj-skills li {
+    font-family: "adelle", serif;
+    font-weight: $a-semibold;
 }
 
 label {
