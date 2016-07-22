@@ -50,6 +50,10 @@ h5, li {
     }
 }
 
+.proj-skills li {
+    font-size: 1.125rem;
+}
+
 p.intro {
     font-size: 1.25rem;
     line-height: 1.3;
@@ -70,9 +74,18 @@ p.site-wordmark, a.toggle-nav {
     }
 }
 
+p.copyright,
 .menu li {
     font-size: 1.125rem;
 
+}
+
+fieldset {
+    margin-bottom: 0.75em;
+}
+
+label {
+    margin-bottom: 0.25em;
 }
 
 /**
@@ -83,6 +96,7 @@ header {
     height: 2.916em;
 }
 
+footer,
 div.section-header,
 div.section-content {
     padding-top: 1.5rem;

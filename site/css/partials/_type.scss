@@ -50,15 +50,16 @@ h4 {
 }
 
 h5 {
-    font-family: "adelle", serif;
     font-weight: $a-semibold;
+    text-transform: uppercase;
 }
 
 p.site-wordmark {
     font-weight: $f-black;
 }
 
-p.intro {
+p.intro,
+footer p {
     font-family: "adelle", serif;
     font-weight: $a-regular;
 }
@@ -72,7 +73,16 @@ p.social {
     text-transform: uppercase;
 }
 
+.proj-skills li {
+    font-family: "adelle", serif;
+    font-weight: $a-semibold;
+}
+
 label {
     font-family: "adelle", serif;
     display: block;
+}
+
+input[type="submit"] {
+    text-transform: uppercase;
 }

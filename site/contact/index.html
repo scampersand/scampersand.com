@@ -21,54 +21,60 @@ nav_prio: 40
         <div class="section-container">
             <div class="section-sub">
                 <p class="intro">
-                    Donec sit amet euismod justo, integer vel ultricies mauris, sed
-                    luctus ante ut mauris imperdiet posuere. Nulla interdum velit eu
-                    vestibulum fermentum nunc urna torto, sagittis nec orci eu.
+                    Tell us about your project, ask us questions, figure
+                    out if we’re the right fit. We’d love to be in touch,
+                    by email or over a cup of coffee.
                 </p>
             </div>
             <div class="section-sub">
+                <ul class="content-items">
+                    <li class="contact-item">
+                        <div class="contact-form">
+                            <form class="contact" action="https://formspree.io/{{site.email}}"
+                                method="POST">
+                                <input type="hidden" name="_subject" value="Hello!">
+                                <input type="hidden" name="_next" value="{{site.url}}/contact/thanks.html">
+                                <div class="form-block">
+                                    <fieldset class="form-element">
+                                        <label>Name</label>
+                                        <input type="text" name="name" required autofocus>
+                                    </fieldset>
+                                    <fieldset class="form-element">
+                                        <label>Email</label>
+                                        <input type="email" name="_replyto" required>
+                                    </fieldset>
+                                    <fieldset class="form-element">
+                                        <label>Your Message</label>
+                                        <textarea name="body" rows="5" required></textarea>
+                                    </fieldset>
+                                </div> <!-- .form-block -->
+                                <input type="text" name="_gotcha" style="display:none">
+                                <input type="submit" value="Send">
+                            </form>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <div class="contact-location">
+                            <h3>Our Location</h3>
 
-                <form class="contact" action="https://formspree.io/{{site.email}}"
-                    method="POST">
-                    <input type="hidden" name="_subject" value="Hello!">
-                    <input type="hidden" name="_next" value="{{site.url}}/contact/thanks.html">
-                    <div class="form-block">
-                        <fieldset class="form-element">
-                            <label>Name:</label>
-                            <input type="text" name="name" required autofocus>
-                        </fieldset>
-                        <fieldset class="form-element">
-                            <label>Email:</label>
-                            <input type="email" name="_replyto" required>
-                        </fieldset>
-                        <fieldset class="form-element">
-                            <label>Content:</label>
-                            <textarea name="body" required></textarea>
-                        </fieldset>
-                    </div> <!-- .form-block -->
-                    <input type="text" name="_gotcha" style="display:none">
-                    <input type="submit" value="Send">
-                </form>
+                        </div>
+                    </li>
+                    <li class="contact-item">
+                        <div class="contact-social">
+                            <h3>Follow Us</h3>
 
-                <div class="contact-location">
-                    <h3>Our Location</h3>
-
-                </div>
-
-                <div class="contact-social">
-                    <h3>Follow Us</h3>
-
-                </div>
-            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div> <!-- .section-sub -->
         </div> <!-- .section-container -->
     </div> <!-- .section-content -->
 </section>
 
 <footer role="nav">
     <div class="section-container">
-        <p>
-            <a href="/">???</a>
-        </p>
+        <h3>Scampersand</h3>
+        <p class="copyright">&copy; Scampersand LLC, All Rights Reserved</p>
     </div>
 </footer>
 

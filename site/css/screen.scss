@@ -1,10 +1,25 @@
 @import "susy";
 @import "partials/normalize";
 
-blockquote, h1, h2, h3, h4, h5, h6, li, p, ul {
+blockquote, h1, h2, h3, h4, h5, h6, p, ul, li, fieldset {
     margin: 0;  
     padding: 0; 
 }   
+
+img {
+    max-width: 100%;
+
+    /* auto height preserves ratio when the image is scaled. */
+    height: auto;
+}
+
+input, textarea {
+    width: 100%;
+}
+
+input[type="submit"] {
+    width: 33%;
+}
 
 @import "partials/nav";
 @import "partials/cards";
@@ -55,10 +70,11 @@ p.intro {
     }
 }
 
-form.contact {
+div.contact-form {
     @media (min-width: 48em) {
         @include span(2);
     }
+    margin-bottom: gutter(4);
 }
 
 div.proj-problem p,
@@ -82,7 +98,8 @@ li.work-item {
     margin-bottom: gutter(4);
 }
 
-li.bio-item {
+li.bio-item,
+li.work-item {
     /* bio images should always fill their container.
      * This allows img sizes attribute to affect what image
      * in the srcset is fetched, without affecting the
@@ -94,22 +111,16 @@ li.bio-item {
     }
 }
 
-div.bio-photo {
+div.bio-photo,
+div.work-photo {
     position: relative;
 }
 
-div.bio-overlay {
+div.bio-overlay,
+div.work-overlay {
     position: absolute;
     left: 1.5rem;
     bottom: 1.5rem;
-    &, a { color: white; }
-}
-
-img {
-    max-width: 100%;
-
-    /* auto height preserves ratio when the image is scaled. */
-    height: auto;
 }
 
 /* clear any floated children in galleries */

@@ -1,12 +1,17 @@
 @import '../../node_modules/accoutrement-color/sass/color';
 
 $colors: (
-    'val-lite': hsl(0, 0%, 100%),      // white
-    'val-mliter': hsl(0, 0%, 88%),
-    'val-mlite': hsl(0, 0%, 75%),
-    'val-med': hsl(0, 0%, 50%),         // medium-grey
-    'val-mdark': hsl(0, 0%, 25%),
-    'val-dark': hsl(0, 0%, 0%),         // black
+    'val-10': hsl(0, 0%, 100%),
+    'val-9': hsl(0, 0%, 90%),
+    'val-8': hsl(0, 0%, 80%),
+    'val-7': hsl(0, 0%, 70%),
+    'val-6': hsl(0, 0%, 60%),
+    'val-5': hsl(0, 0%, 50%),
+    'val-4': hsl(0, 0%, 40%),
+    'val-3': hsl(0, 0%, 30%),
+    'val-2': hsl(0, 0%, 20%),
+    'val-1': hsl(0, 0%, 10%),
+    'val-0': hsl(0, 0%, 0%),
 
     'brand-red': hsl(358, 71%, 48%),   // rgb(210, 35, 42);
     'brand-mint': hsl(173, 41%, 88%),  // rgb(212, 237, 234);
@@ -14,58 +19,92 @@ $colors: (
     'pure-white': hsl(0, 100%, 100%),  // rgb(255, 255, 255);
 );
 
-html {
-    color: color('val-dark');
-}
+/* --- backgrounds ----------------------------- */
 
 body {
-    background-color: color('val-mliter');
+    background-color: color('val-9');
 }
 
 header {
-    background-color: color('val-lite');
+    background-color: color('val-10');
 }
 
 div.section-header {
-    background-color: color('val-mlite');
+    background-color: color('val-7');
 }
 
 div.section-content {
-    background-color: color('val-lite');
+    background-color: color('val-10');
 }
 
 footer {
-    background-color: color('val-med');
+    background-color: color('val-5');
 }
 
-p.site-wordmark {
-    color: color('val-dark');
+input[type="submit"] {
+    background-color: color('val-4');
+}
+
+/* --- text ------------------------------------ */
+
+html {
+    color: color('val-3');
+}
+
+h1, h2 {
+    color: color('val-3');
 }
 
 a {
-    color: color('val-dark');
+    color: color('val-8');
 }
 
-/* ----------------- work item ----------------- */
-
-li.work-item a,
-li.work-item p {
-    color: color('val-lite');
+.site-wordmark a {
+    color: color('val-3');
 }
 
-/* -------------------- nav -------------------- */
+input[type="submit"] {
+    color: color('val-10');
+}
+
+/* --- ui components --------------------------- */
+
+li.bio-item, li.services-item {
+    border-color: color('val-7');
+}
+
+div.bio-overlay,
+div.work-overlay {
+    // &, a { color: white; }
+    color: color('val-10');
+}
+
+div.bio-overlay a,
+div.work-overlay a {
+    color: color('val-9');
+}
+
+fieldset {
+    border-color: transparent;
+}
+
+input, textarea {
+    border-color: color('val-7');
+}
+
+/* --- nav ------------------------------------- */
 
 .menu, .toggle-nav {
     background-color: transparent;
 }
 
 .menu a {
-    color: color('val-med');
+    color: color('val-6');
 } 
 
 .menu ul {
     @media (max-width: 64em) {
-        background: #303030;
+        background: color('val-0');
         border-radius: 3px;
         box-shadow: 0px 1px 1px rgba(0,0,0,0.15);
     }
@@ -74,7 +113,7 @@ li.work-item p {
 /* active element */
 
 .menu a:hover, .toggle-nav:hover, .menu .current-item a, .toggle-nav.active {
-    color: color('val-dark');
+    color: color('val-3');
 }
 
 /* animations */
