@@ -50,9 +50,6 @@ next: production
 	echo 'Disallow: /' >> public/robots.txt
 	rsync -az --exclude=.git --delete-before public/. scampersand@n01se.net:next.scampersand.com/
 
-nonext:
-	ssh scampersand@n01se.net rm -rf next.scampersand.com/\*
-
 publish: production
 	rsync -az --exclude=.git --delete-before public/. scampersand@n01se.net:scampersand.com/
 
