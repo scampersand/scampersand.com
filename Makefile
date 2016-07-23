@@ -47,6 +47,7 @@ draft dev:
 	$(MAKE) -j2 watch sync_serve
 
 next: production
+	echo 'Disallow: /' >> public/robots.txt
 	rsync -az --exclude=.git --delete-before public/. scampersand@n01se.net:next.scampersand.com/
 
 nonext:
