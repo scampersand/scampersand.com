@@ -1,78 +1,60 @@
-/*----- Toggle Button -----*/
-.toggle-nav {
-    display: none;
-}
-
-.menu {
-    display: block;
-    float: right;
-}
-
-/*----- Menu -----*/
-@media screen and (min-width: 65em) {
+@media screen and (max-width: 64.99999em) {
     .menu {
-        padding-left: 1em;
-        padding-top: 0.5em;
-        padding-bottom: 0.5em;
-    }
-}
-
-.menu ul {
-    display: inline-block;
-}
-
-.menu li {
-    margin: 0px 50px 0px 0px;
-    float: left;
-}
-
-.menu li:last-child {
-    margin-right: 0px;
-}
-
-/*----- Responsive -----*/
-@media screen and (max-width: 64em) {
-    .menu {
-        position: relative;
-        display: inline-block;
-    }
-
-    .menu ul.active {
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgb(0,0,0);
+        background-color: rgba(0,0,0, 0.9);
+        overflow-x: hidden;
         display: none;
     }
 
     .menu ul {
+        position: relative;
+        top: 25%;
         width: 100%;
-        position: absolute;
-        top: 120%;
-        left: 0px;
+        text-align: center;
+        margin-top: 30px;
     }
 
-    .menu ul:after {
-        width: 0px;
-        height: 0px;
-        position: absolute;
-        top: 0%;
-        left: 22px;
-        content: '';
-        transform: translate(0%, -100%);
-        border-left: 7px solid transparent;
-        border-right: 7px solid transparent;
-        border-bottom: 7px solid #303030;
+    .menu-toggle {
+        display: inline-block;
+        float: right;
+        outline: 0;
+
+        &.close {
+            display: none;
+            margin-right: 16px; /* hack to match section-container */
+        }
+    }
+}
+
+@media screen and (min-width: 65em) {
+    .menu {
+        display: block;
+        float: right;
+        padding-left: 1em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .menu ul {
+        display: inline-block;
     }
 
     .menu li {
-        margin: 5px 0px 5px 0px;
-        float: none;
-        display: block;
-    }
-
-    .menu a {
-        display: block;
-    }
-
-    .toggle-nav {
+        margin: 0px 50px 0px 0px;
         float: left;
-        display: inline-block;
+    }
+
+    .menu li:last-child {
+        margin-right: 0px;
+    }
+
+    .menu-toggle {
+        display: none;
     }
 }

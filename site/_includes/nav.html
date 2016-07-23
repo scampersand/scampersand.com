@@ -1,5 +1,7 @@
 <nav class="menu">
-    <ul class="active">
+    <a class="menu-toggle close" href="#" tabindex="-1"><i class="fa fa-times" aria-hidden="true"></i></a>
+
+    <ul>
         {% assign nav_pages=site.pages|where_exp:"p","p.nav_prio"|sort:"nav_prio" %}
         {% for p in nav_pages %}
             <li {% if p == page %}class="current-item"{% endif %}>
@@ -7,16 +9,21 @@
             </li>
         {% endfor %}
     </ul>
-
-    <a class="toggle-nav" href="#">&#9776;</a>
 </nav>
+
+<a class="menu-toggle open" href="#" tabindex="-1"><i class="fa fa-bars" aria-hidden="true"></i></a>
 
 <script>
     $(function() {
-        $('.toggle-nav').click(function(e) {
+        $('.menu-toggle').click(function(e) {
             e.preventDefault();
-            $(this).toggleClass('active');
-            $('.menu ul').toggleClass('active');
+            $('.menu').toggle();
+            $('.menu-toggle').toggle();
         });
+    });
+
+    $(window).resize(function() {
+        $('.menu').removeAttr('style');
+        $('.menu-toggle').removeAttr('style');
     });
 </script>

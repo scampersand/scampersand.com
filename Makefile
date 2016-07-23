@@ -17,6 +17,7 @@ production: export COMPASS_ARGS += -e production
 production:
 	$(MAKE) clean
 	$(MAKE) all
+	./post-process.bash
 
 jekyll:
 	jekyll build $(JEKYLL_ARGS)
@@ -44,6 +45,12 @@ draft: export JEKYLL_ARGS += --drafts
 draft dev:
 	rm -f .sync
 	$(MAKE) -j2 watch sync_serve
+
+next: production
+	rsync -az --exclude=.git --delete-before public/. scampersand@n01se.net:next.scampersand.com/
+
+nonext:
+	ssh scampersand@n01se.net rm -rf next.scampersand.com/\*
 
 publish: production
 	rsync -az --exclude=.git --delete-before public/. scampersand@n01se.net:scampersand.com/
