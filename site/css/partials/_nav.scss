@@ -50,6 +50,10 @@
         float: left;
     }
 
+    .menu li:first-child {
+        display: none;
+    }
+
     .menu li:last-child {
         margin-right: 0px;
     }

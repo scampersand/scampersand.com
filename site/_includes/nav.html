@@ -2,6 +2,10 @@
     <a class="menu-toggle close" href="#" tabindex="-1"><i class="fa fa-times" aria-hidden="true"></i></a>
 
     <ul>
+        <li {% if page.url == '/' %}class="current-item"{% endif %}>
+            <a href="/">Home</a>
+        </li>
+
         {% assign nav_pages=site.pages|where_exp:"p","p.nav_prio"|sort:"nav_prio" %}
         {% for p in nav_pages %}
             <li {% if p == page %}class="current-item"{% endif %}>
