@@ -115,12 +115,12 @@ input, textarea {
 
 /* active element */
 
-.menu a:hover, .toggle-nav:hover, .menu .current-item a, .toggle-nav.active {
+.menu a:hover, .menu-toggle:hover, .menu .current-item a {
     color: color('val-3');
 }
 
 /* animations */
 
-.menu a, .toggle-nav {
+.menu a, .menu-toggle {
     transition: color linear 0.15s;
 }
