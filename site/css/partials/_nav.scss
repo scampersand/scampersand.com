@@ -18,14 +18,29 @@
         margin-top: 30px;
     }
 
+    .menu li {
+        margin-bottom: 10px;
+
+        &.current-item {
+            margin-bottom: 13px;
+
+            a {
+                border-bottom: 3px dotted;
+            }
+        }
+    }
+
     .menu-toggle {
-        display: inline-block;
+        display: block;
         float: right;
         outline: 0;
 
         &.close {
+            /* fixed position because floating right pushes the
+             * first list item left */
+            position: fixed;
+            right: 16px;
             display: none;
-            margin-right: 16px; /* hack to match section-container */
         }
     }
 }
