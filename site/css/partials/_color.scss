@@ -13,10 +13,12 @@ $colors: (
     'val-1': hsl(0, 0%, 10%),
     'val-0': hsl(0, 0%, 0%),
 
-    'brand-red': hsl(358, 71%, 48%),   // rgb(210, 35, 42);
-    'brand-mint': hsl(173, 41%, 88%),  // rgb(212, 237, 234);
-    'brand-grey': hsl(240, 17%, 30%),  // rgb(64, 64, 90);
-    'pure-white': hsl(0, 100%, 100%),  // rgb(255, 255, 255);
+    'dk-blue': hsl(219, 75%, 35%),
+    'md-blue': hsl(200, 75%, 80%),
+    'red': hsl(349, 85%, 51%),
+    'green': hsl(128, 52%, 47%),
+    'off-white-1': hsl(55, 32%, 93%),
+    'off-white-2': hsl(53, 36%, 96%),
 );
 
 /* --- backgrounds ----------------------------- */
@@ -25,16 +27,17 @@ body {
     background-color: color('val-9');
 }
 
-header {
-    background-color: color('val-10');
+header,
+div.section-content {
+    background-color: color('off-white-2');
 }
 
 div.section-header {
-    background-color: color('val-7');
+    background-color: color('dk-blue');
 }
 
-div.section-content {
-    background-color: color('val-10');
+li.bio-item, li.services-item {
+    background-color: white;
 }
 
 footer {
@@ -42,7 +45,7 @@ footer {
 }
 
 input[type="submit"] {
-    background-color: color('val-4');
+    background-color: color('red');
 }
 
 /* --- text ------------------------------------ */
@@ -52,25 +55,27 @@ html {
 }
 
 h1, h2 {
-    color: color('val-3');
+    color: color('md-blue');
+}
+
+h3.highlight {
+    color: color('green');
+}
+
+.proj-skills li {
+    color: color('off-white-2');
 }
 
 a {
-    color: color('val-8');
+    color: color('red');
 }
+
+//footer a {
+//    color: color('green');
+//}
 
 .site-wordmark a {
     color: color('val-3');
-}
-
-input[type="submit"] {
-    color: color('val-10');
-}
-
-/* --- ui components --------------------------- */
-
-li.bio-item, li.services-item {
-    border-color: color('val-7');
 }
 
 div.bio-overlay,
@@ -84,12 +89,27 @@ div.work-overlay a {
     color: color('val-9');
 }
 
+input[type="submit"] {
+    color: white;
+}
+
+/* --- ui components --------------------------- */
+
+li.bio-item, li.services-item {
+    border-color: color('val-7');
+}
+
 fieldset {
     border-color: transparent;
 }
 
 input, textarea {
     border-color: color('val-7');
+}
+
+.solution-features h5,
+.features-list li {
+    border-bottom-color: color('green');
 }
 
 /* --- nav ------------------------------------- */
