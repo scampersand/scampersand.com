@@ -11,15 +11,10 @@ layout: default
             </div>
             <div class="proj-skills">
                 <ul>
-                    <li>
-                        Django Development
-                    </li>
-                    <li>
-                        Deployment, Scaling &amp; Security
-                    </li>
-                    <li>
-                        API Integration
-                    </li>
+                    <li>Django Development</li>
+                    <li>Front-End Development</li>
+                    <li>API Integration</li>
+                    <li>Deployment & Scaling</li>
                 </ul>
             </div>
         </div>
@@ -29,8 +24,7 @@ layout: default
         <div class="section-container">
             <div class="section-sub">
                 <p class="intro">
-                    Praesent suscipit accumsan leo at feugiat sed euismod vel felis
-                    a viverra, cras pharetra eros sed neque.
+                    HP's customer-facing site for managing web-enabled printers
                 </p>
             </div>
 
@@ -50,6 +44,32 @@ layout: default
                         aliquam eleifend. Donec convallis aliquet tellus, ut tincidunt
                         velit porttitor sit amet.
                     </p>
+                    <p>
+                        HP's web-enabled printers receive print jobs over the
+                        Internet and run apps similar to a phone or tablet.
+                        These features can be configured by customers at the
+                        ePrintCenter website. After signing in, one can change
+                        settings such as print quality and duplex, configure
+                        cloud services such as the ePrint email address, and
+                        load apps from the catalog.
+                    </p>
+                    <p>
+                        Scampersand founders Aron & Amy--employed by HP at the
+                        time--joined the ePrintCenter team shortly after the
+                        initial release. Schedule pressure had forced
+                        compromises such as copying data manually between
+                        servers, and this was coming back to bite in the form of
+                        customer-visible bugs. Integration testing was
+                        non-existent because teams hadn't built staging servers
+                        for other teams to develop against. Site deployments
+                        were synchronized with printer hardware releases, taking
+                        a toll on the developers in the form of late-night
+                        “deployment parties.” Meanwhile the servers struggled as
+                        traffic surged.
+                    </p>
+                    <p>
+                        It was an exciting time to jump in.
+                    </p>
                 </div>
             </div>
 
@@ -58,20 +78,49 @@ layout: default
                     <div class="solution-text">
                         <h3>Solution</h3>
                         <p>
-                            Sed bibendum dui nec commodo imperdiet. Nullam vitae ultricies
-                            nunc, vitae convallis nibh. Nam ut sem blandit, pretium urna vel,
-                            congue elit. Vestibulum in dolor elit. Fusce tincidunt sem bibendum
-                            aliquam eleifend. Donec convallis aliquet tellus, ut tincidunt
-                            velit porttitor sit amet.
+                            We contributed to numerous feature releases during
+                            our year and a half on the team. Here are some of
+                            the highlights:
                         </p>
+                        <ul>
+                            <li>
+                                Coordinating with a team in India, we built the
+                                prototype of an app provisioning service to act
+                                as a central authority governing which apps were
+                                available and installed on a printer. This would
+                                eventually replace manually copied data with an
+                                API designed to meet the needs of the various
+                                stakeholders. Among those was ePrintCenter
+                                itself, which we ported to use the new
+                                service.
+                            </li>
+                            <li>
+                                We built a cluster of virtual machines so that
+                                remote teams could run integration tests against
+                                ePrintCenter snapshots with production
+                                parity.
+                            </li>
+                            <li>
+                                To decouple site updates from printer hardware
+                                releases, we added run-time configuration flags
+                                with date triggers so that deployments could
+                                proceed on their own schedule.
+                            </li>
+                            <li>
+                                We added localized page delivery for the
+                                ePrintCenter site using Akamai, to handle the
+                                increased customer traffic taking country and
+                                language into account.
+                            </li>
+                        </ul>
                     </div>
                     <div class="solution-features">
                         <h5>Unique Features</h5>
                         <ul class="features-list">
-                            <li>Etiam pretium</li>
-                            <li>Vestibulum justo</li>
-                            <li>Aliquam oric</li>
-                            <li>Proin vitae</li>
+                            <li>Site translated into 26 languages</li>
+                            <li>Restricted content by country and printer model</li>
+                            <li>Red Hat Cluster for integration VMs</li>
+                            <li>Global development collaboration</li>
                         </ul>
                     </div>
                 </div>
