@@ -5,6 +5,8 @@ include: ['.htaccess', '.nojekyll']
 title: Scampersand
 email: hello@scampersand.com
 url: https://scampersand.com
+kramdown:
+  smart_quotes: ["apos", "apos", "quot", "quot"]
 defaults:
   - scope:
       path: ""
