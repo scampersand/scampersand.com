@@ -57,11 +57,23 @@ div.section-container {
     }
 }
 
+div.proj-name {
+    @media (min-width: 48em) {
+        display: inline-block;
+        width: span(3);
+    }
+}
+
+div.proj-skills {
+    @media (min-width: 48em) {
+        display: inline-block;
+    }
+}
+
 div.proj-solution {
     @include span(full);
 }
 
-div.proj-name,
 div.proj-problem,
 div.solution-text,
 p.intro {
@@ -88,8 +100,7 @@ div.solution-text p {
     max-width: 28em;  // avoid long lines
 }
 
-div.solution-features,
-div.proj-skills {
+div.solution-features {
     @media (min-width: 48em) {
         @include span(1 last);
     }
