@@ -29,6 +29,8 @@ GEM
       pathutil (~> 0.9)
       rouge (~> 1.7)
       safe_yaml (~> 1.0)
+    jekyll-pants (0.1.0)
+      rubypants
     jekyll-redirect-from (0.10.0)
       jekyll (>= 2.0)
     jekyll-sass-converter (1.4.0)
@@ -61,7 +63,7 @@ PLATFORMS
 DEPENDENCIES
   compass-blueprint
   jekyll (= 3.2.0.pre.beta1)
+  jekyll-pants
   jekyll-redirect-from
   jekyll-sitemap
-  rubypants
   susy
