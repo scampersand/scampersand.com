@@ -11,7 +11,12 @@ layout: base
             </div>
         </header>
 
-        {{content|pants}}
+        {% comment %}
+            kramdown replaces double-dash with en-dash but we want em-dash.
+            There's no option to control this behavior, so just put them back
+            and let pants handle it.
+        {% endcomment %}
+        {{content|replace:'–','--'|pants}}
 
     </main>
 </body>
