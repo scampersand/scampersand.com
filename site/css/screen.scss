@@ -89,7 +89,8 @@ div.contact-form {
     margin-bottom: gutter(4);
 }
 
-div.contact-location {
+div.contact-location,
+div.contact-social {
     @media (min-width: 48em) {
         @include span(2 last);
     }

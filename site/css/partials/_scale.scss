@@ -116,3 +116,15 @@ div.bio-text {
     padding: 1.5rem;
     padding-top: 1rem;
 }
+
+
+div.contact-location,
+div.contact-social {
+    margin-top: 0.75em;
+}
+
+div.contact-location {
+    @media (min-width: 48em) {
+        margin-top: 0;
+    }
+}
