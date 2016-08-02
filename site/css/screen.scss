@@ -30,7 +30,7 @@ input[type="submit"] {
 $susy: (
     // debug: (image: show),
     global-box-sizing: border-box,
-    columns: 4,
+    columns: 8,
 );
 
 @include border-box-sizing;
@@ -60,7 +60,7 @@ div.section-container {
 div.proj-name {
     @media (min-width: 48em) {
         display: inline-block;
-        width: span(3);
+        width: span(6);
     }
 }
 
@@ -78,31 +78,27 @@ div.proj-problem,
 div.solution-text,
 p.intro {
     @media (min-width: 48em) {
-        @include span(3);
+        @include span(5);
     }
 }
 
 div.contact-form {
     @media (min-width: 48em) {
-        @include span(2);
+        @include span(4);
     }
-    margin-bottom: gutter(4);
+    margin-bottom: gutter(8);
 }
 
-div.contact-location {
+div.contact-location,
+div.contact-social {
     @media (min-width: 48em) {
-        @include span(2 last);
+        @include span(4 last);
     }
-}
-
-div.proj-problem p,
-div.solution-text p {
-    max-width: 28em;  // avoid long lines
 }
 
 div.solution-features {
     @media (min-width: 48em) {
-        @include span(1 last);
+        @include span(2 last);
     }
 }
 
@@ -110,9 +106,9 @@ li.bio-item,
 li.services-item,
 li.work-item {
     @media (min-width: 48em) {
-        @include gallery(2);
+        @include gallery(4);
     }
-    margin-bottom: gutter(4);
+    margin-bottom: gutter(8);
 }
 
 li.bio-item,
