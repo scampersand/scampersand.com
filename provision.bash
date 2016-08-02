@@ -87,7 +87,17 @@ EOT
     # This should prevent apt-get install/upgrade from asking ANY questions
     export DEBIAN_FRONTEND=noninteractive
 
+    # Update package list
     apt-get update
+
+    # Upgrade ssh server first to avoid killing the running server
+    apt-get install -y ssh \
+            -o 'PackageManager::Configure=no' \
+            -o 'DPkg::ConfigurePending=no'
+    chmod -x /etc/init.d/ssh  # prevents restart
+    dpkg --configure -a
+
+    # Now the rest
     apt-get install -y "${packages[@]}"
     apt-get upgrade -y "${packages[@]}"
 
