@@ -13,14 +13,15 @@ $colors: (
     'val-1': hsl(0, 0%, 10%),
     'val-0': hsl(0, 0%, 0%),
 
-    'dk-blue': hsl(219, 75%, 35%),
-    'md-blue': hsl(200, 75%, 80%),
+    'dk-blue': hsl(238, 75%, 14%),
+    'md-blue': hsl(219, 75%, 35%),
+    'lt-blue': hsl(200, 75%, 80%),
     'red': hsl(349, 85%, 51%),
     'green': hsl(128, 52%, 47%),
     'off-white-1': hsl(55, 32%, 93%),
     'off-white-2': hsl(53, 36%, 96%),
 
-    'dk-blue-tl': hsla(219, 75%, 35%, 0.9),
+    'md-blue-tl': hsla(219, 75%, 35%, 0.9),
 );
 
 /* --- backgrounds ----------------------------- */
@@ -35,7 +36,7 @@ div.section-content {
 }
 
 div.section-header {
-    background-color: color('dk-blue');
+    background-color: color('md-blue');
 }
 
 li.bio-item, li.services-item {
@@ -43,7 +44,7 @@ li.bio-item, li.services-item {
 }
 
 footer {
-    background-color: color('val-5');
+    background-color: color('dk-blue');
 }
 
 input[type="submit"] {
@@ -58,7 +59,7 @@ html {
 }
 
 h1, h2 {
-    color: color('md-blue');
+    color: color('lt-blue');
 }
 
 h3.highlight {
@@ -66,7 +67,7 @@ h3.highlight {
 }
 
 p.landing {
-    color: color('md-blue');
+    color: color('lt-blue');
 }
 
 .proj-skills li {
@@ -127,8 +128,8 @@ input, textarea {
 
 @media screen and (max-width: 64.99999em) {
     .menu {
-        background-color: color('dk-blue');
-        background-color: color('dk-blue-tl');
+        background-color: color('md-blue');
+        background-color: color('md-blue-tl');
     }
 }
 
@@ -145,8 +146,8 @@ a.menu-toggle.open {
 
 .menu ul {
     @media (max-width: 64.99999em) {
-        background-color: color('dk-blue');
-        background: color('dk-blue-tl');
+        background-color: color('md-blue');
+        background: color('md-blue-tl');
     }
 }
 
