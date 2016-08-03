@@ -129,7 +129,6 @@ input, textarea {
 @media screen and (max-width: 64.99999em) {
     .menu {
         background-color: color('md-blue');
-        background-color: color('md-blue-tl');
     }
 }
 
@@ -147,7 +146,6 @@ a.menu-toggle.open {
 .menu ul {
     @media (max-width: 64.99999em) {
         background-color: color('md-blue');
-        background: color('md-blue-tl');
     }
 }
 
