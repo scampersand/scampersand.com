@@ -123,7 +123,11 @@ input, textarea {
 
 .menu a {
     color: color('val-6');
-} 
+}
+
+a.menu-toggle.open {
+    color: color('val-3');  // same as wordmark
+}
 
 .menu ul {
     @media (max-width: 64em) {
