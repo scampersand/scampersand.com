@@ -69,6 +69,7 @@ p.landing {
 }
 
 .menu li {
+    // see _nav.scss for spacing between elements
     font-size: 2.5rem;
 
     @media (min-width: 65em) {

@@ -19,10 +19,11 @@
     }
 
     .menu li {
-        margin-bottom: 10px;
+        // 27px is 1.5 times the font-size
+        margin-bottom: 27px;
 
         &.current-item {
-            margin-bottom: 13px;
+            margin-bottom: 24px;
 
             a {
                 border-bottom: 3px dotted;
