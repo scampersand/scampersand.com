@@ -19,6 +19,8 @@ $colors: (
     'green': hsl(128, 52%, 47%),
     'off-white-1': hsl(55, 32%, 93%),
     'off-white-2': hsl(53, 36%, 96%),
+
+    'dk-blue-tl': hsla(219, 75%, 35%, 0.9),
 );
 
 /* --- backgrounds ----------------------------- */
@@ -121,13 +123,16 @@ input, textarea {
 
 @media screen and (max-width: 64.99999em) {
     .menu {
-        background-color: rgb(0,0,0);
-        background-color: rgba(0,0,0, 0.9);
+        background-color: color('dk-blue');
+        background-color: color('dk-blue-tl');
     }
 }
 
 .menu a {
     color: color('val-6');
+    @media (max-width: 64.99999em) {
+        color: color('off-white-2');
+    }
 }
 
 a.menu-toggle.open {
@@ -135,16 +140,23 @@ a.menu-toggle.open {
 }
 
 .menu ul {
-    @media (max-width: 64em) {
-        background: color('val-0');
-        border-radius: 3px;
-        box-shadow: 0px 1px 1px rgba(0,0,0,0.15);
+    @media (max-width: 64.99999em) {
+        background-color: color('dk-blue');
+        background: color('dk-blue-tl');
     }
 }
 
 /* active element */
 
-.menu a:hover, .menu-toggle:hover, .menu .current-item a {
+.menu .current-item a {
+    color: color('val-3');
+
+    @media (max-width: 64.99999em) {
+        color: color('off-white-2');
+    }
+}
+
+.menu a:hover, .menu-toggle:hover {
     color: color('val-3');
 }
 
