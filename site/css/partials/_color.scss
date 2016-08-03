@@ -45,7 +45,8 @@ footer {
 }
 
 input[type="submit"] {
-    background-color: color('red');
+    //background-color: color('red');
+    background-color: color('green');
 }
 
 /* --- text ------------------------------------ */
@@ -68,6 +69,10 @@ h3.highlight {
 
 a {
     color: color('red');
+}
+
+.contact-icons a {
+    color: color('val-6');
 }
 
 //footer a {
