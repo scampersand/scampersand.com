@@ -64,6 +64,14 @@ h5, li {
     }
 }
 
+.menu li {
+    font-size: 2.5rem;
+
+    @media (min-width: 65em) {
+        font-size: 1.125rem;
+    }
+}
+
 p.intro {
     font-size: 1.25rem;
     line-height: 1.3;
@@ -84,10 +92,8 @@ p.site-wordmark, a.menu-toggle {
     }
 }
 
-p.copyright,
-.menu li {
+p.copyright {
     font-size: 1.125rem;
-
 }
 
 fieldset {
