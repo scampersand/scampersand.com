@@ -125,16 +125,17 @@ p.intro {
     }
 }
 
-.services-list {
+.services-list,
+.work-list {
     @extend .cards;
 }
 
-.services-item {
+.services-item,
+.work-item {
     @extend .card;
 }
 
-li.bio-item,
-li.work-item {
+li.bio-item {
     margin-bottom: gutter(8);
     @media (min-width: 56em) {
         @include gallery(4);
