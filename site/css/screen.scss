@@ -107,8 +107,33 @@ p.intro {
     }
 }
 
+.cards {
+    display: block;
+    @media (min-width: 56em) {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: stretch;  /* default */
+        justify-content: space-between;  /* equals gutter() */
+    }
+}
+
+.card {
+    display: block;
+    margin-bottom: gutter();
+    @media (min-width: 56em) {
+        width: span(4);
+    }
+}
+
+.services-list {
+    @extend .cards;
+}
+
+.services-item {
+    @extend .card;
+}
+
 li.bio-item,
-li.services-item,
 li.work-item {
     margin-bottom: gutter(8);
     @media (min-width: 56em) {
