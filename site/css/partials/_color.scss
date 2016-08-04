@@ -27,6 +27,15 @@ body {
     background-color: color('lt-grey');
 }
 
+main {
+    // same as div.section-content
+    background-color: color('off-white-2');
+}
+
+body.landing main {
+    background-color: color('md-blue');
+}
+
 header,
 div.section-content {
     background-color: color('off-white-2');
