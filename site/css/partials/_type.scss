@@ -60,7 +60,7 @@ h5 {
 }
 
 p.site-wordmark {
-    font-weight: $f-black;
+    font-weight: $f-bold;
 }
 
 p.intro,
@@ -74,8 +74,11 @@ p.contact-icons {
 }
 
 .menu li {
-    font-weight: $f-bold;
     text-transform: uppercase;
+    font-weight: $f-black;
+    @media (min-width: 65em) {
+        font-weight: $f-regular;
+    }
 }
 
 .proj-skills li {

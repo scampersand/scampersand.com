@@ -74,6 +74,7 @@ p.landing {
 
     @media (min-width: 65em) {
         font-size: 1.125rem;
+        padding-top: 0.5625rem;
     }
 }
 
@@ -93,7 +94,7 @@ p.site-wordmark, a.menu-toggle {
     margin-bottom: 0;
 
     @media (min-width: 30em) {
-        font-size: 2rem;
+        font-size: 1.6875rem;
     }
 }
 
@@ -114,7 +115,8 @@ label {
  */
 
 header {
-    height: 2.916em;
+    padding-top: 1em;
+    padding-bottom: 0.5em;
 }
 
 footer,
