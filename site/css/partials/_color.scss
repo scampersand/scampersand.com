@@ -88,10 +88,6 @@ a {
     color: color('val-6');
 }
 
-//footer a {
-//    color: color('green');
-//}
-
 .site-wordmark a {
     color: color('val-3');
 }
@@ -99,11 +95,15 @@ a {
 div.bio-overlay,
 div.work-overlay {
     &, a { color: white; }
-    color: color('val-10');
+    color: white;
 }
 
 input[type="submit"] {
     color: white;
+}
+
+footer {
+    color: color('val-6');
 }
 
 /* --- ui components --------------------------- */
