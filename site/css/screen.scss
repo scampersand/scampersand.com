@@ -32,9 +32,10 @@ input[type="submit"] {
 /* Force main to take at least the height of the viewport,
  * especially for applying a background color on the landing.
  * See http://stackoverflow.com/a/17555766/347386
- * but we're using body height 100% because it wasn't working otherwise.
- * The SO answer says this will "leave a gap beneath the fold, which is usually
- * undesirable" but I couldn't find anything wrong.
+ * but we're using body height 100% because nesting min-height doesn't work, see
+ * http://stackoverflow.com/q/16043519/347386
+ * The SO answer says using body height 100% will "leave a gap beneath the fold,
+ * which is usually undesirable" but I couldn't find anything wrong.
  */
 html, body {
     height: 100%;
