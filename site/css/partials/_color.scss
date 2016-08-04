@@ -1,33 +1,24 @@
 @import '../../node_modules/accoutrement-color/sass/color';
 
 $colors: (
-    'val-10': hsl(0, 0%, 100%),
-    'val-9': hsl(0, 0%, 90%),
-    'val-8': hsl(0, 0%, 80%),
-    'val-7': hsl(0, 0%, 70%),
-    'val-6': hsl(0, 0%, 60%),
-    'val-5': hsl(0, 0%, 50%),
-    'val-4': hsl(0, 0%, 40%),
-    'val-3': hsl(0, 0%, 30%),
-    'val-2': hsl(0, 0%, 20%),
-    'val-1': hsl(0, 0%, 10%),
-    'val-0': hsl(0, 0%, 0%),
+    'lt-grey': hsl(0, 0%, 90%),
+    'md-grey-soft': hsl(0, 0%, 70%),
+    'md-grey': hsl(0, 0%, 60%),
+    'dk-grey': hsl(0, 0%, 30%),
 
-    'dk-blue': hsl(238, 75%, 14%),
-    'md-blue': hsl(219, 75%, 35%),
     'lt-blue': hsl(200, 75%, 80%),
+    'md-blue': hsl(219, 75%, 35%),
+    'dk-blue': hsl(238, 75%, 14%),
     'red': hsl(349, 85%, 51%),
     'green': hsl(128, 52%, 47%),
     'off-white-1': hsl(55, 32%, 93%),
     'off-white-2': hsl(53, 36%, 96%),
-
-    'md-blue-tl': hsla(219, 75%, 35%, 0.9),
 );
 
 /* --- backgrounds ----------------------------- */
 
 body {
-    background-color: color('val-9');
+    background-color: color('lt-grey');
 }
 
 header,
@@ -55,7 +46,7 @@ input[type="submit"] {
 /* --- text ------------------------------------ */
 
 html {
-    color: color('val-3');
+    color: color('dk-grey');
 }
 
 h1, h2 {
@@ -79,11 +70,11 @@ a {
 }
 
 .contact-icons a {
-    color: color('val-6');
+    color: color('md-grey');
 }
 
 .site-wordmark a {
-    color: color('val-3');
+    color: color('dk-grey');
 }
 
 div.bio-overlay,
@@ -97,13 +88,13 @@ input[type="submit"] {
 }
 
 footer {
-    color: color('val-6');
+    color: color('md-grey');
 }
 
 /* --- ui components --------------------------- */
 
 li.bio-item, li.services-item {
-    border-color: color('val-7');
+    border-color: color('md-grey-soft');
 }
 
 fieldset {
@@ -111,7 +102,7 @@ fieldset {
 }
 
 input, textarea {
-    border-color: color('val-7');
+    border-color: color('md-grey-soft');
 }
 
 .solution-features h5,
@@ -128,14 +119,14 @@ input, textarea {
 }
 
 .menu a {
-    color: color('val-3');
+    color: color('dk-grey');
     @media (max-width: 64.99999em) {
         color: color('off-white-2');
     }
 }
 
 a.menu-toggle.open {
-    color: color('val-3');  // same as wordmark
+    color: color('dk-grey');  // same as wordmark
 }
 
 .menu ul {
@@ -147,7 +138,7 @@ a.menu-toggle.open {
 /* hovers */
 
 .menu a:hover, .menu-toggle:hover {
-    color: color('val-3');
+    color: color('dk-grey');
 }
 
 /* animations */
