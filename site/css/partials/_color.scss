@@ -128,7 +128,7 @@ input, textarea {
 }
 
 .menu a {
-    color: color('val-6');
+    color: color('val-3');
     @media (max-width: 64.99999em) {
         color: color('off-white-2');
     }
@@ -144,15 +144,7 @@ a.menu-toggle.open {
     }
 }
 
-/* active element */
-
-.menu .current-item a {
-    color: color('val-3');
-
-    @media (max-width: 64.99999em) {
-        color: color('off-white-2');
-    }
-}
+/* hovers */
 
 .menu a:hover, .menu-toggle:hover {
     color: color('val-3');
