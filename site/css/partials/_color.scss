@@ -118,27 +118,26 @@ input, textarea {
 
 /* --- nav ------------------------------------- */
 
-@media screen and (max-width: 64.99999em) {
-    .menu {
-        background-color: color('md-blue');
+.menu {
+    background-color: color('md-blue');
+    @media (min-width: 65em) {
+        background-color: transparent;
     }
 }
 
+.menu ul {
+    background-color: transparent;
+}
+
 .menu a {
-    color: color('dk-grey');
-    @media (max-width: 64.99999em) {
-        color: color('off-white-2');
+    color: color('off-white-2');
+    @media (min-width: 65em) {
+        color: color('dk-grey');
     }
 }
 
 a.menu-toggle.open {
     color: color('dk-grey');  // same as wordmark
-}
-
-.menu ul {
-    @media (max-width: 64.99999em) {
-        background-color: color('md-blue');
-    }
 }
 
 /* --- hovers ---------------------------------- */
