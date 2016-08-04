@@ -13,6 +13,12 @@ $colors: (
     'green': hsl(128, 52%, 47%),
     'off-white-1': hsl(55, 32%, 93%),
     'off-white-2': hsl(53, 36%, 96%),
+
+    'md-grey-RT': hsl(0, 0%, 65%),
+    'dk-grey-RT': hsl(0, 0%, 40%),
+    'red-RT': hsl(349, 85%, 41%),
+    'green-RT': hsl(128, 52%, 37%),
+    'off-white-2-RT': hsl(200, 36%, 86%),
 );
 
 /* --- backgrounds ----------------------------- */
@@ -135,13 +141,32 @@ a.menu-toggle.open {
     }
 }
 
-/* hovers */
+/* --- hovers ---------------------------------- */
 
-.menu a:hover, .menu-toggle:hover {
-    color: color('dk-grey');
+a:hover {
+    color: color('red-RT');
 }
 
-/* animations */
+.contact-icons a:hover {
+    color: color('md-grey-RT');
+}
+
+.site-wordmark a:hover, .menu-toggle.open:hover {
+    color: color('dk-grey-RT');
+}
+
+.menu a:hover {
+    color: color('off-white-2-RT');
+    @media (min-width: 65em) {
+        color: color('dk-grey-RT');
+    }
+}
+
+input[type="submit"]:hover {
+    background-color: color('green-RT');
+}
+
+/* --- animations ------------------------------ */
 
 .menu a, .menu-toggle {
     transition: color linear 0.15s;
