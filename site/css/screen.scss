@@ -107,13 +107,34 @@ p.intro {
     }
 }
 
-li.bio-item,
-li.services-item,
-li.work-item {
-    margin-bottom: gutter(8);
+.cards {
+    display: block;
     @media (min-width: 56em) {
-        @include gallery(4);
+        display: flex;
+        flex-flow: row wrap;
+        align-items: stretch;  /* default */
+        justify-content: space-between;  /* equals gutter() */
     }
+}
+
+.card {
+    display: block;
+    margin-bottom: gutter();
+    @media (min-width: 56em) {
+        width: span(4);
+    }
+}
+
+.bio-list,
+.services-list,
+.work-list {
+    @extend .cards;
+}
+
+.bio-item,
+.services-item,
+.work-item {
+    @extend .card;
 }
 
 li.bio-item,
