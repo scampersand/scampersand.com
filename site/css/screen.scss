@@ -125,21 +125,16 @@ p.intro {
     }
 }
 
+.bio-list,
 .services-list,
 .work-list {
     @extend .cards;
 }
 
+.bio-item,
 .services-item,
 .work-item {
     @extend .card;
-}
-
-li.bio-item {
-    margin-bottom: gutter(8);
-    @media (min-width: 56em) {
-        @include gallery(4);
-    }
 }
 
 li.bio-item,
