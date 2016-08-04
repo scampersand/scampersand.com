@@ -13,7 +13,13 @@ input[type="submit"] {
 
 li.bio-item,
 li.services-item {
-    padding: 2.5rem;
+    padding: 1.5rem;
+    @media (min-width: 36em) and (max-width: 55.9999em) {
+        padding: 4rem;
+    }
+    @media (min-width: 56em) {
+        padding: 2.5rem;
+    }
 }
 
 input,

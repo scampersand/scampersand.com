@@ -106,16 +106,6 @@ li.bio-item,
 li.services-item,
 li.work-item {
     margin-bottom: gutter(8);
-}
-
-li.bio-item,
-li.services-item {
-    @media (min-width: 48em) {
-        @include gallery(4);
-    }
-}
-
-li.work-item {
     @media (min-width: 56em) {
         @include gallery(4);
     }
