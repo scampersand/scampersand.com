@@ -1,19 +1,9 @@
 @import "susy";
 @import "partials/normalize";
 
-/* Force main to take at least the height of the viewport,
- * especially for applying a background color on the landing.
- * See http://stackoverflow.com/a/17555766/347386
- * but we're using body height 100% because it wasn't working otherwise.
- * The SO answer says this will "leave a gap beneath the fold, which is usually
- * undesirable" but I couldn't find anything wrong.
+/**
+ - Reset
  */
-html, body {
-    height: 100%;
-}
-main {
-    min-height: 100%;  /* of body */
-}
 
 blockquote, h1, h2, h3, h4, h5, h6, p, ul, li, fieldset {
     margin: 0;  
@@ -33,6 +23,25 @@ input, textarea {
 
 input[type="submit"] {
     width: 33%;
+}
+
+/**
+ - Vertical layout
+ */
+
+/* Force main to take at least the height of the viewport,
+ * especially for applying a background color on the landing.
+ * See http://stackoverflow.com/a/17555766/347386
+ * but we're using body height 100% because it wasn't working otherwise.
+ * The SO answer says this will "leave a gap beneath the fold, which is usually
+ * undesirable" but I couldn't find anything wrong.
+ */
+html, body {
+    height: 100%;
+}
+
+main {
+    min-height: 100%;  // of body
 }
 
 @import "partials/nav";
