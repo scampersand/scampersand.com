@@ -1,8 +1,9 @@
 ---
 layout: base
+body_class: ""
 ---
 
-<body class="{{page.bodyclass}}">
+<body class="{{page.body_class|default:layout.body_class}}">
     <main role="main">
         <header>
             <div class="section-container">

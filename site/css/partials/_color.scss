@@ -30,6 +30,12 @@ body {
     background-color: color('val-9');
 }
 
+html.landing {
+    background-color: color('md-blue');
+    /* override body explicitly, since it's set above */
+    body { background-color: color('md-blue'); }
+}
+
 header,
 div.section-content {
     background-color: color('off-white-2');
