@@ -92,13 +92,8 @@ a {
 
 div.bio-overlay,
 div.work-overlay {
-    // &, a { color: white; }
+    &, a { color: white; }
     color: color('val-10');
-}
-
-div.bio-overlay a,
-div.work-overlay a {
-    color: color('val-9');
 }
 
 input[type="submit"] {
