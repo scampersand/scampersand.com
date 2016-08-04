@@ -30,6 +30,15 @@ body {
     background-color: color('val-9');
 }
 
+main {
+    // same as footer, extends to bottom of viewport
+    background-color: color('dk-blue');
+}
+
+body.landing main {
+    background-color: color('md-blue');
+}
+
 header,
 div.section-content {
     background-color: color('off-white-2');
