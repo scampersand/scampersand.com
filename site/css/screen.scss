@@ -75,8 +75,7 @@ div.proj-solution {
 }
 
 div.proj-problem,
-div.solution-text,
-p.intro {
+div.solution-text {
     @media (min-width: 48em) {
         @include span(5);
     }
@@ -99,6 +98,12 @@ div.contact-social {
 div.solution-features {
     @media (min-width: 48em) {
         @include span(2 last);
+    }
+}
+
+p.intro {
+    @media (min-width: 56em) {
+        @include span(5);
     }
 }
 
