@@ -49,12 +49,12 @@ h5, li {
     }
 }
 
-p.landing {
-    margin-top: 0.65em;
-}
-
 .proj-skills li {
-    font-size: 1.125rem;
+    font-size: 1rem;
+
+    @media (min-width: 30em) {
+        font-size: 1.125rem;
+    }
 }
 
 .solution-list li {
@@ -80,6 +80,10 @@ p.landing {
         font-size: 1.125rem;
         padding-top: 0.5625rem; // align horizontally with wordmark
     }
+}
+
+p.landing {
+    margin-top: 0.65em;
 }
 
 p.intro {
@@ -115,7 +119,12 @@ fieldset {
 }
 
 label {
+    font-size: 1rem;
     margin-bottom: 0.25em;
+
+    @media (min-width: 30em) {
+        font-size: 1.375rem;
+    }
 }
 
 /**
