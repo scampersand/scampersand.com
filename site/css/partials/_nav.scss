@@ -8,14 +8,15 @@
         width: 100%;
         overflow-x: hidden;
         display: none;
+        flex-flow: column nowrap;
+        justify-content: center;
+        &.show {  // jquery .toggleClass()
+            display: flex;
+        }
     }
 
     .menu ul {
-        position: relative;
-        top: 25%;
-        width: 100%;
         text-align: center;
-        margin-top: 30px;
     }
 
     .menu li {
@@ -38,11 +39,12 @@
         outline: 0;
 
         &.close {
-            /* fixed position because floating right pushes the
+            /* absolute position because floating right pushes the
              * first list item left */
-            position: fixed;
+            position: absolute;
+            top: 16px;
             right: 16px;
-            display: none;
+            display: none;  // jquery .toggle()
         }
     }
 }
