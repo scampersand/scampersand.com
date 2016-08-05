@@ -186,7 +186,7 @@ div.bio-text {
 
 // HACK: varying height footers result in too much whitespace for mobile
 div.mobile-shrink {
-    @media (max-width: 64.99999em) {
+    @media (max-width: 47.99999em) {
         margin-bottom: 0;
         padding-bottom: 0;
     }
