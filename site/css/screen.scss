@@ -113,6 +113,12 @@ div.solution-text {
     }
 }
 
+div.solution-features {
+    @media (min-width: 48em) {
+        @include span(2 wide last);
+    }
+}
+
 div.contact-form {
     @media (min-width: 48em) {
         @include span(4);
@@ -124,12 +130,6 @@ div.contact-location,
 div.contact-social {
     @media (min-width: 48em) {
         @include span(4 last);
-    }
-}
-
-div.solution-features {
-    @media (min-width: 48em) {
-        @include span(2 last);
     }
 }
 
