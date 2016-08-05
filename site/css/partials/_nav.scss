@@ -19,15 +19,16 @@
     }
 
     .menu li {
-        // 27px is 1.5 times the font-size
-        margin-bottom: 27px;
+        // 27px is 1.5 times the font-size, minus 3px for border
+        margin-bottom: 24px;
 
-        &.current-item {
-            margin-bottom: 24px;
+        a {
+            border-width: 3px;
+            border-style: none;
+        }
 
-            a {
-                border-bottom: 3px dotted;
-            }
+        &.current-item a {
+            border-bottom: dotted;
         }
     }
 
