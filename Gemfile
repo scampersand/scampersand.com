@@ -7,3 +7,4 @@ group :jekyll_plugins do
   gem "jekyll-pants"
 end
 gem "susy"
+gem "autoprefixer-rails"
