@@ -5,12 +5,15 @@ html {
 h1, h2 {
     font-size: 2.5rem;
     line-height: 1.25;
-    margin-top: 1em;
+    margin-top: 3em;
 
     @media (min-width: 30em) {
         font-size: 5rem;
-        margin-top: 3em;
     }
+}
+
+h1.landing {
+    max-width: 12em;
 }
 
 h3 {
@@ -50,12 +53,16 @@ h5, li {
     }
 }
 
-p.landing {
-    margin-top: 0.65em;
+footer h5 {
+    margin-bottom: 0.25em;
 }
 
 .proj-skills li {
-    font-size: 1.125rem;
+    font-size: 1rem;
+
+    @media (min-width: 30em) {
+        font-size: 1.125rem;
+    }
 }
 
 .solution-list li {
@@ -79,8 +86,13 @@ p.landing {
 
     @media (min-width: 65em) {
         font-size: 1.125rem;
-        padding-top: 0.5625rem;
+        padding-top: 0.5625rem; // align horizontally with wordmark
     }
+}
+
+p.landing {
+    max-width: 32em;
+    margin-top: 0.65em;
 }
 
 p.intro {
@@ -104,15 +116,24 @@ p.site-wordmark, a.menu-toggle {
 }
 
 p.copyright {
-    font-size: 1.125rem;
+    font-size: 1rem;
 }
 
 fieldset {
     margin-bottom: 0.75em;
+
+    @media (min-width: 30em) {
+        margin-bottom: 1rem;
+    }
 }
 
 label {
+    font-size: 1rem;
     margin-bottom: 0.25em;
+
+    @media (min-width: 30em) {
+        font-size: 1.375rem;
+    }
 }
 
 /**
@@ -124,20 +145,40 @@ header {
     padding-bottom: 0.5em;
 }
 
-footer,
 div.section-header,
 div.section-content {
     padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 2rem;
 
     @media (min-width: 30em) {
-        padding-top: 4rem;
+        padding-top: 3rem;
         padding-bottom: 4rem;
     }
 }
 
+footer {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+
+    @media (min-width: 30em) {
+        padding-top: 2.25rem;
+        padding-bottom: 3rem;
+    }
+}
+
 div.section-sub {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+div.solution-text,
+div.contact-form,
+div.contact-location,
+div.contact-social {
+    margin-bottom: 2rem;
+}
+
+div.ref-services {
+    margin-bottom: 1.5rem;
 }
 
 div.bio-text {
@@ -145,14 +186,12 @@ div.bio-text {
     padding-top: 1rem;
 }
 
+// see screen.css for main padding for footer layer
 
-div.contact-location,
-div.contact-social {
-    margin-top: 0.75em;
-}
-
-div.contact-location {
-    @media (min-width: 48em) {
-        margin-top: 0;
+// HACK: varying height footers result in too much whitespace for mobile
+div.mobile-shrink {
+    @media (max-width: 47.99999em) {
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
 }
