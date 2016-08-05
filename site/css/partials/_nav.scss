@@ -8,26 +8,28 @@
         width: 100%;
         overflow-x: hidden;
         display: none;
+        flex-flow: column nowrap;
+        justify-content: center;
+        &.show {  // jquery .toggleClass()
+            display: flex;
+        }
     }
 
     .menu ul {
-        position: relative;
-        top: 25%;
-        width: 100%;
         text-align: center;
-        margin-top: 30px;
     }
 
     .menu li {
-        // 27px is 1.5 times the font-size
-        margin-bottom: 27px;
+        // 27px is 1.5 times the font-size, minus 3px for border
+        margin-bottom: 24px;
 
-        &.current-item {
-            margin-bottom: 24px;
+        a {
+            border-width: 3px;
+            border-style: none;
+        }
 
-            a {
-                border-bottom: 3px dotted;
-            }
+        &.current-item a {
+            border-bottom: dotted;
         }
     }
 
@@ -37,11 +39,12 @@
         outline: 0;
 
         &.close {
-            /* fixed position because floating right pushes the
+            /* absolute position because floating right pushes the
              * first list item left */
-            position: fixed;
+            position: absolute;
+            top: 16px;
             right: 16px;
-            display: none;
+            display: none;  // jquery .toggle()
         }
     }
 }

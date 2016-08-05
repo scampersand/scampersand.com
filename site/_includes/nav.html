@@ -8,7 +8,9 @@
 
         {% assign nav_pages=site.pages|where_exp:"p","p.nav_prio"|sort:"nav_prio" %}
         {% for p in nav_pages %}
-            <li {% if p == page %}class="current-item"{% endif %}>
+            {% assign p_size=p.url|size %}
+            {% assign page_url_root=page.url|slice:0,p_size %}
+            <li {% if p == page or p.url == page_url_root %}class="current-item"{% endif %}>
                 <a href="{{p.url}}">{{p.nav_title|default:p.title}}</a>
             </li>
         {% endfor %}
@@ -21,7 +23,7 @@
     $(function() {
         $('.menu-toggle').click(function(e) {
             e.preventDefault();
-            $('.menu').toggle();
+            $('.menu').toggleClass('show');
             $('.menu-toggle').toggle();
         });
     });
