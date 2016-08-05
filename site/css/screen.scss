@@ -44,7 +44,7 @@ html, body {
 main {
     position: relative;
     min-height: 100%;  // of body
-    padding-bottom: 13em;  // sufficient for footer
+    padding-bottom: 12em;  // sufficient for footer
 }
 
 footer {
@@ -119,9 +119,16 @@ div.solution-features {
     }
 }
 
-div.contact-form,
-div.ref-services {
+div.contact-form {
     @media (min-width: 48em) {
+        @include span(4);
+    }
+}
+
+div.ref-services {
+    display: none;
+    @media (min-width: 48em) {
+        display: block;
         @include span(4);
     }
 }
