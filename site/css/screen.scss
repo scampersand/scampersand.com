@@ -107,7 +107,8 @@ div.proj-solution {
 }
 
 div.proj-problem,
-div.solution-text {
+div.solution-text,
+div.proj-image {
     @media (min-width: 48em) {
         @include span(5);
     }
