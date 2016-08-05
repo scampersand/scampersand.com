@@ -119,15 +119,16 @@ div.solution-features {
     }
 }
 
-div.contact-form {
+div.contact-form,
+div.ref-services {
     @media (min-width: 48em) {
         @include span(4);
-        margin-bottom: gutter(8);
     }
 }
 
 div.contact-location,
-div.contact-social {
+div.contact-social, 
+div.ref-copyright {
     @media (min-width: 48em) {
         @include span(4 last);
     }
