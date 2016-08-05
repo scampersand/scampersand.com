@@ -183,3 +183,11 @@ div.bio-text {
 }
 
 // see screen.css for main padding for footer layer
+
+// HACK: varying height footers result in too much whitespace for mobile
+div.mobile-shrink {
+    @media (max-width: 64.99999em) {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}
