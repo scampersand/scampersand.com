@@ -5,11 +5,10 @@ html {
 h1, h2 {
     font-size: 2.5rem;
     line-height: 1.25;
-    margin-top: 1em;
+    margin-top: 3em;
 
     @media (min-width: 30em) {
         font-size: 5rem;
-        margin-top: 3em;
     }
 }
 
@@ -79,7 +78,7 @@ p.landing {
 
     @media (min-width: 65em) {
         font-size: 1.125rem;
-        padding-top: 0.5625rem;
+        padding-top: 0.5625rem; // align horizontally with wordmark
     }
 }
 
@@ -109,6 +108,10 @@ p.copyright {
 
 fieldset {
     margin-bottom: 0.75em;
+
+    @media (min-width: 30em) {
+        margin-bottom: 1rem;
+    }
 }
 
 label {
@@ -124,20 +127,30 @@ header {
     padding-bottom: 0.5em;
 }
 
-footer,
+footer {
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+}
+
 div.section-header,
 div.section-content {
     padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-bottom: 2rem;
 
     @media (min-width: 30em) {
-        padding-top: 4rem;
+        padding-top: 3rem;
         padding-bottom: 4rem;
     }
 }
 
 div.section-sub {
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+div.contact-form,
+div.contact-location,
+div.contact-social {
+    margin-bottom: 2rem;
 }
 
 div.bio-text {
@@ -145,14 +158,4 @@ div.bio-text {
     padding-top: 1rem;
 }
 
-
-div.contact-location,
-div.contact-social {
-    margin-top: 0.75em;
-}
-
-div.contact-location {
-    @media (min-width: 48em) {
-        margin-top: 0;
-    }
-}
+// see screen.css for main padding for footer layer

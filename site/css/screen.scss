@@ -44,7 +44,7 @@ html, body {
 main {
     position: relative;
     min-height: 100%;  // of body
-    padding-bottom: 10em;  // sufficient for footer
+    padding-bottom: 13em;  // sufficient for footer
 }
 
 footer {
@@ -116,8 +116,8 @@ div.solution-text {
 div.contact-form {
     @media (min-width: 48em) {
         @include span(4);
+        margin-bottom: gutter(8);
     }
-    margin-bottom: gutter(8);
 }
 
 div.contact-location,
