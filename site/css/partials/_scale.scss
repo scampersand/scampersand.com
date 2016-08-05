@@ -12,6 +12,10 @@ h1, h2 {
     }
 }
 
+h1.landing {
+    max-width: 12em;
+}
+
 h3 {
     font-size: 1.5rem;
     line-height: 1.25;
@@ -83,6 +87,7 @@ h5, li {
 }
 
 p.landing {
+    max-width: 32em;
     margin-top: 0.65em;
 }
 
