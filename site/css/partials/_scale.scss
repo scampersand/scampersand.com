@@ -72,6 +72,11 @@ p.landing {
     // see _nav.scss for spacing between elements
     font-size: 2.5rem;
 
+    // this is for small phones in landscape mode
+    @media (max-height: 24em) {
+        font-size: 1.125rem;
+    }
+
     @media (min-width: 65em) {
         font-size: 1.125rem;
         padding-top: 0.5625rem;
