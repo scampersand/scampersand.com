@@ -14,6 +14,7 @@ h1, h2 {
 
 h1.landing {
     max-width: 12em;
+    margin-top: 0;  // enable flexbox-based vert centering
 }
 
 h3 {

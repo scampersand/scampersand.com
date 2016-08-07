@@ -59,6 +59,24 @@ footer {
 @import "partials/type";
 @import "partials/scale";
 
+body.landing section.content {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    min-height: 100vh;
+    min-height: calc(100vh - 54px);
+    padding-top: 2em;  // 2x nav top
+    padding-bottom: 2em;  // maintains centering
+}
+
+body.landing main {
+    padding-bottom: 0px;  // no footer on landing
+}
+
+/**
+ - Columns
+ */
+
 $susy: (
     // debug: (image: show),
     global-box-sizing: border-box,
@@ -66,10 +84,6 @@ $susy: (
 );
 
 @include border-box-sizing;
-
-/**
- - Columns
- */
 
 main {
     // from 16 base font size
