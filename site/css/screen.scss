@@ -59,6 +59,12 @@ footer {
 @import "partials/type";
 @import "partials/scale";
 
+// https://github.com/philipwalton/flexbugs#3-min-height-on-a-flex-container-wont-apply-to-its-flex-items
+.flex-ie-hack {
+    display: flex;
+    flex-direction: column;
+}
+
 body.landing .flex-center {
     display: flex;
     flex-flow: column;
