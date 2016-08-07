@@ -15,6 +15,7 @@ h1, h2 {
 h1.landing {
     max-width: 12em;
     margin-top: 0;  // enable flexbox-based vert centering
+    margin-bottom: 0.625em;
 }
 
 h3 {
@@ -93,7 +94,7 @@ footer h5 {
 
 p.landing {
     max-width: 32em;
-    margin-top: 0.65em;
+    line-height: 1.5;
 }
 
 p.intro {
