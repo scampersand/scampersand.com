@@ -19,4 +19,19 @@ body_class: ""
         {% endcomment %}
         {{content|replace:'–','--'|pants}}
     </main>
+
+    <script>
+        $(function() {
+            var $main = $('main'),
+                $footer = $('footer'),
+                emSize = parseFloat($('html').css('font-size'));
+            if ($footer.length) {
+                function adjustMainPadding() {
+                    var footerHeight = $('footer').height();
+                    $main.css('padding-bottom', footerHeight + emSize * 2)
+                }
+                setInterval(adjustMainPadding, 300);
+            }
+        });
+    </script>
 </body>
