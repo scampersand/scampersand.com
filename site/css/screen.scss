@@ -69,10 +69,13 @@ body.landing .flex-center {
     display: flex;
     flex-flow: column;
     justify-content: center;
-    min-height: 100vh;  // in case calc() doesn't work
-    min-height: calc(100vh - 54px);
     padding-top: 2em;  // 2x nav top
     padding-bottom: 2em;  // maintains centering
+    min-height: 100vh;  // in case calc() doesn't work
+    min-height: calc(100vh - 54px);  // 54px is mobile nav header
+    @media screen and (min-width: 65em) {
+        min-height: calc(100vh - 59px);  // 59px is desktop nav header
+    }
 }
 
 body.landing main {
