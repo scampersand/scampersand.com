@@ -1,0 +1,102 @@
+---
+title: SimplyWish
+---
+
+<section class="content">
+    <div class="section-header">
+        <div class="section-container">
+            <div class="proj-name">
+                <h2>Simply Wish</h2>
+            </div>
+            <div class="proj-skills">
+                <ul>
+                    {% comment %}
+                    <li>
+                        UX &amp; UI Design
+                    </li>
+                    {% endcomment %}
+                    <li>
+                        Django Development
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div> <!-- .section-header -->
+
+    <div class="section-content mobile-shrink">
+        <div class="section-container">
+            <div class="section-sub">
+                <p class="intro">
+                    Our own solution for family gift swaps.
+                </p>
+            </div>
+
+            {% comment %}
+            <div class="section-sub">
+                <img src="http://placehold.it/840x571">
+            </div>
+            {% endcomment %}
+
+            <div class="section-sub">
+                <div class="proj-problem">
+                    <h3>Problem</h3>
+                    <p>
+                        Running a Secret Santa gift exchange among family
+                        members is harder than you might guess. Sure, we could
+                        draw names from a hat, but how do we avoid someone
+                        picking their own name? Or the name of their significant
+                        other? How about preventing direct swaps, to avoid gift
+                        comparisons? While we're at it, can we mix things up
+                        from year to year?
+                    </p>
+                </div>
+            </div>
+
+            <div class="section-sub mobile-shrink">
+                <div class="proj-solution">
+                    <div class="solution-text">
+                        <h3>Solution</h3>
+                        <p>
+                            SimplyWish uses constraint programming to draw names
+                            from a virtual hat, shares wish lists anonymously
+                            between participants, and can manage multiple
+                            overlapping groups and events simultaneously. It
+                            started as a spare-time project of Amy's, and we
+                            continue to depend on it for family gift swaps each
+                            Christmas.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div> <!-- .section-container -->
+    </div> <!-- .section-content -->
+</section>
+
+<footer role="nav">
+    <div class="section-container">
+        <h3><a href="/work/expense">Next Project: Expense Tracker&nbsp;&rarr;</a></h3>
+    </div>
+</footer>
+
+{% comment %}
+<p class="technologies">
+    Technologies:
+    {% comment %}
+        set linky_tech in _config.yml
+    {% endcomment %}
+    {% capture tech %}
+        <a href="https://www.python.org/">Python</a>/<a href="https://www.djangoproject.com/">Django</a>,
+        <a href="https://labix.org/python-constraint">Python-Constraint</a>,
+        <a href="https://docs.python.org/2/library/unittest.html">Unittest</a>,
+        <a href="https://www.mysql.com/">MySQL</a>,
+        <a href="https://en.wikipedia.org/wiki/Phusion_Passenger">Passenger WSGI</a>,
+        <a href="https://www.dreamhost.com/">Dreamhost</a>.
+    {% endcapture %}
+    {% if page.linky_tech %}
+        {{tech}}
+    {% else %}
+        {{tech|strip_html}}
+    {% endif %}
+</p>
+{% endcomment %}

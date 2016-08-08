@@ -1,0 +1,37 @@
+li.bio-item,
+li.services-item,
+input,
+textarea {
+    border-radius: 5px;
+    border-style: dotted;
+    border-width: 3px;
+}
+
+input[type="submit"] {
+    border-width: 0;
+}
+
+li.bio-item,
+li.services-item {
+    padding: 1.5rem;
+    @media (min-width: 36em) and (max-width: 55.9999em) {
+        padding: 4rem;
+    }
+    @media (min-width: 56em) {
+        padding: 2.5rem;
+    }
+}
+
+input,
+textarea {
+    padding: 1rem;
+}
+
+.solution-features h5,
+.features-list li {
+    border: 0;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+}

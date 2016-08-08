@@ -1,13 +1,43 @@
-# Apache configuration file
-# httpd.apache.org/docs/2.2/mod/quickreference.html
+# ----------------------------------------------------------------------
+# Start rewrite engine
+# ----------------------------------------------------------------------
 
-# Note .htaccess files are an overhead, this logic should be in your Apache
-# config if possible: httpd.apache.org/docs/2.2/howto/htaccess.html
+# Turning on the rewrite engine is necessary for the following rules and
+# features. FollowSymLinks must be enabled for this to work.
 
-# Techniques in here adapted from all over, including:
-#   Kroc Camen: camendesign.com/.htaccess
-#   perishablepress.com/press/2006/01/10/stupid-htaccess-tricks/
-#   Sample .htaccess file of CMS MODx: modxcms.com
+# Some cloud hosting services require RewriteBase to be set: goo.gl/HOcPN
+# If using the h5bp in a subdirectory, use `RewriteBase /foo` instead where
+# 'foo' is your directory.
+
+# If your web host doesn't allow the FollowSymlinks option, you may need to
+# comment it out and use `Options +SymLinksOfOwnerMatch`, but be aware of the
+# performance impact: http://goo.gl/Mluzd
+
+<IfModule mod_rewrite.c>
+  Options +FollowSymlinks
+# Options +SymLinksIfOwnerMatch
+  RewriteEngine On
+# RewriteBase /
+</IfModule>
+
+
+# ----------------------------------------------------------------------
+# Disallow access to next.scampersand.com except from home
+# ----------------------------------------------------------------------
+
+# This would work if Dreamhost were running Apache 2.4 instead of 2.2
+#<If "%{HTTP_HOST} =~ /next\.scampersand\.com$/i">
+#  Require host jupiter.arongriffis.com
+#</If>
+
+<IfModule mod_rewrite.c>
+  RewriteCond %{HTTP_HOST} next\.scampersand\.com$
+  # home IP
+  RewriteCond %{REMOTE_ADDR} !=100.40.40.249
+  # crossbrowsertesting.com
+  RewriteCond %{REMOTE_ADDR} !=216.37.72.238
+  RewriteRule .* - [F]
+</IfModule>
 
 
 # ----------------------------------------------------------------------
@@ -190,49 +220,9 @@ AddType text/vtt                            vtt
 # Expires headers (for better cache control)
 # ----------------------------------------------------------------------
 
-# These are pretty far-future expires headers.
-# They assume you control versioning with filename-based cache busting
-# Additionally, consider that outdated proxies may miscache
-#   www.stevesouders.com/blog/2008/08/23/revving-filenames-dont-use-querystring/
-
-# If you don't use filenames to version, lower the CSS and JS to something like
-# "access plus 1 week".
-
 <IfModule mod_expires.c>
   ExpiresActive on
-
-# Perhaps better to whitelist expires rules? Perhaps.
-  ExpiresDefault                          "access plus 1 month"
-
-# cache.appcache needs re-requests in FF 3.6 (thanks Remy ~Introducing HTML5)
-  ExpiresByType text/cache-manifest       "access plus 0 seconds"
-
-# Your document html
-  ExpiresByType text/html                 "access plus 0 seconds"
-
-# Data
-  ExpiresByType text/xml                  "access plus 0 seconds"
-  ExpiresByType application/xml           "access plus 0 seconds"
-  ExpiresByType application/json          "access plus 0 seconds"
-
-# Feed
-  ExpiresByType application/rss+xml       "access plus 1 hour"
-  ExpiresByType application/atom+xml      "access plus 1 hour"
-
-# Favicon (cannot be renamed)
-  ExpiresByType image/x-icon              "access plus 1 week"
-
-# Media: images, video, audio
-  ExpiresByType image/gif                 "access plus 1 month"
-  ExpiresByType image/png                 "access plus 1 month"
-  ExpiresByType image/jpeg                "access plus 1 month"
-  ExpiresByType video/ogg                 "access plus 1 month"
-  ExpiresByType audio/ogg                 "access plus 1 month"
-  ExpiresByType video/mp4                 "access plus 1 month"
-  ExpiresByType video/webm                "access plus 1 month"
-
-# HTC files  (css3pie)
-  ExpiresByType text/x-component          "access plus 1 month"
+  ExpiresDefault "access plus 1 hour"
 
 # Webfonts
   ExpiresByType application/x-font-ttf    "access plus 1 month"
@@ -240,11 +230,6 @@ AddType text/vtt                            vtt
   ExpiresByType application/x-font-woff   "access plus 1 month"
   ExpiresByType image/svg+xml             "access plus 1 month"
   ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
-
-# CSS and JavaScript
-  ExpiresByType text/css                  "access plus 1 year"
-  ExpiresByType application/javascript    "access plus 1 year"
-
 </IfModule>
 
 
@@ -297,9 +282,9 @@ FileETag None
 # TCP-connection. Be aware of possible disadvantages of this setting. Turn on
 # if you serve a lot of static content.
 
-# <IfModule mod_headers.c>
-#   Header set Connection Keep-Alive
-# </IfModule>
+<IfModule mod_headers.c>
+  Header set Connection Keep-Alive
+</IfModule>
 
 
 # ----------------------------------------------------------------------
@@ -312,29 +297,6 @@ FileETag None
 # <IfModule mod_headers.c>
 #   Header set P3P "policyref=\"/w3c/p3p.xml\", CP=\"IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT\""
 # </IfModule>
-
-
-# ----------------------------------------------------------------------
-# Start rewrite engine
-# ----------------------------------------------------------------------
-
-# Turning on the rewrite engine is necessary for the following rules and
-# features. FollowSymLinks must be enabled for this to work.
-
-# Some cloud hosting services require RewriteBase to be set: goo.gl/HOcPN
-# If using the h5bp in a subdirectory, use `RewriteBase /foo` instead where
-# 'foo' is your directory.
-
-# If your web host doesn't allow the FollowSymlinks option, you may need to
-# comment it out and use `Options +SymLinksOfOwnerMatch`, but be aware of the
-# performance impact: http://goo.gl/Mluzd
-
-<IfModule mod_rewrite.c>
-  Options +FollowSymlinks
-# Options +SymLinksIfOwnerMatch
-  RewriteEngine On
-# RewriteBase /
-</IfModule>
 
 
 # ----------------------------------------------------------------------
@@ -408,6 +370,27 @@ FileETag None
 #   RewriteCond %{SERVER_PORT} !^443
 #   RewriteRule ^ https://example-domain-please-change-me.com%{REQUEST_URI} [R=301,L]
 # </IfModule>
+
+
+# ----------------------------------------------------------------------
+# Rewrite to preferred URL formats
+# ----------------------------------------------------------------------
+
+<IfModule mod_dir.c>
+  DirectorySlash off
+</IfModule>
+
+<IfModule mod_rewrite.c>
+  RewriteCond %{THE_REQUEST} " .*(./|\.html) "
+  RewriteCond %{REQUEST_URI} (.+?)(/|/index\.html|\.html)$
+  RewriteRule .* %1 [R=302,L]
+
+  RewriteCond %{REQUEST_FILENAME}/index.html -f
+  RewriteRule .* %{REQUEST_URI}/index.html [L]
+
+  RewriteCond %{REQUEST_FILENAME}.html -f
+  RewriteRule .* %{REQUEST_URI}.html [L]
+</IfModule>
 
 
 # ----------------------------------------------------------------------

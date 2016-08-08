@@ -1,0 +1,123 @@
+---
+title: Contact
+nav_prio: 40
+#nav_title: Alternate title for nav
+---
+
+{% comment %}
+    see https://formspree.io/ for meaning of the various fields.
+{% endcomment %}
+
+<section class="content">
+    <div class="section-header">
+        <div class="section-container">
+            <h2>Contact Us</h2>
+        </div>
+    </div> <!-- .section-header -->
+
+    <div class="section-content mobile-shrink">
+        <div class="section-container">
+            <div class="section-sub">
+                <p class="intro">
+                    Tell us about your project, ask us questions, figure
+                    out if we're the right fit. We'd love to be in touch,
+                    by email or over a cup of coffee.
+                </p>
+            </div>
+            <div class="section-sub mobile-shrink">
+                <div class="contact-form">
+                    <form class="contact" action="https://formspree.io/{{site.email}}"
+                        method="POST">
+                        <input type="hidden" name="_subject" value="Hello!">
+                        <input type="hidden" name="_next" value="{{site.url}}/contact/thanks.html">
+                        <div class="form-block">
+                            <fieldset class="form-element">
+                                <label>Name</label>
+                                <input type="text" name="name" required>
+                            </fieldset>
+                            <fieldset class="form-element">
+                                <label>Email</label>
+                                <input type="email" name="_replyto" required>
+                            </fieldset>
+                            <fieldset class="form-element">
+                                <label>Your Message</label>
+                                <textarea name="body" rows="5" required></textarea>
+                            </fieldset>
+                        </div> <!-- .form-block -->
+                        <input type="text" name="_gotcha" style="display:none">
+                        <input type="submit" value="Send">
+                    </form>
+                </div>
+                <div class="contact-location">
+                    <h3 class="section">Our Location</h3>
+                    <div class="contact-map">
+                        <!-- width/height default to desktop display, esp since we can't predict values for mobile -->
+                        <iframe class="map" width="409" height="272" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d23783.397594153605!2d-71.40536676172846!3d41.82991957640625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e4452c0f379927%3A0x66674268c29bea06!2sWayland+Square!5e0!3m2!1sen!2sus!4v1469459815643" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    </div>
+                    <script>
+                        $(function() {
+                            var $body = $('body'),
+                                $div = $('.contact-map'),
+                                $iframe = $('iframe.map'),
+                                oldAttrs = {};
+                            function resizeMap() {
+                                var bodyWidth = $body.width(),
+                                    divWidth = $div.width(),
+                                    ratio = divWidth > bodyWidth / 2 ? 1 : 1,
+                                    mapWidth = Math.floor(divWidth * ratio),
+                                    mapHeight = Math.floor(mapWidth * 1 / 2),
+                                    newAttrs = {
+                                        width: mapWidth,
+                                        height: mapHeight,
+                                    };
+                                if (! R.equals(newAttrs, oldAttrs)) {
+                                    $iframe.attr(newAttrs);
+                                    oldAttrs = newAttrs;
+                                }
+                            }
+                            setInterval(resizeMap, 300);
+                        });
+                    </script>
+                </div>
+                <div class="contact-social mobile-shrink">
+                    <h3 class="section">Follow Us</h3>
+                    <p class="contact-icons">
+                        <a href="https://twitter.com/scampersandco"><i class="fa fa-twitter-square"></i></a>
+                        <a href="https://github.com/scampersand"><i class="fa fa-github-square"></i></a>
+                        <a href="https://www.linkedin.com/company/scampersand"><i class="fa fa-linkedin-square"></i></a>
+                        <a href="https://www.facebook.com/Scampersand-591986937626712/"><i class="fa fa-facebook-square"></i></a>
+                    </p>
+                </div>
+            </div> <!-- .section-sub -->
+        </div> <!-- .section-container -->
+    </div> <!-- .section-content -->
+</section>
+
+<footer>
+    <div class="section-container">
+        <div class="ref-services">
+            <h5>Services</h5>
+            <ul>
+                <li>Web Application Development</li>
+                <li>Design &amp; User Experience</li>
+                <li>API Integration</li>
+                <li>Deployment, Scaling &amp; Security</li>
+            </ul>
+        </div>
+        <div class="ref-copyright">
+            <p class="copyright">&copy; Scampersand LLC 2016</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Replace https://scampersand.com with dev hostname
+    !function() {
+        var $input = $('input[name=_next]'),
+            parser = document.createElement('a');
+        parser.href = $input.val();
+        parser.host = location.host;
+        parser.protocol = location.protocol;
+        $input.val(parser.href);
+    }();
+</script>

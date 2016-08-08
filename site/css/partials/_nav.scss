@@ -1,0 +1,87 @@
+@media screen and (max-width: 64.99999em) {
+    .menu {
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+        display: none;
+        flex-flow: column nowrap;
+        justify-content: center;
+        &.show {  // jquery .toggleClass()
+            display: flex;
+        }
+    }
+
+    .menu ul {
+        text-align: center;
+    }
+
+    .menu li {
+        // 27px is 1.5 times the font-size, minus 3px for border
+        margin-bottom: 24px;
+
+        a {
+            border-width: 3px;
+            border-style: none;
+        }
+
+        &.current-item a {
+            border-bottom: dotted;
+        }
+    }
+
+    .menu-toggle {
+        display: block;
+        float: right;
+        outline: 0;
+
+        &.close {
+            /* absolute position because floating right pushes the
+             * first list item left */
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            display: none;  // jquery .toggle()
+        }
+    }
+}
+
+@media screen and (min-width: 65em) {
+    .menu {
+        display: block;
+        float: right;
+        padding-left: 1em;
+    }
+
+    .menu ul {
+        display: inline-block;
+    }
+
+    .menu li {
+        float: left;
+        margin: 0px 50px 0px 0px;
+        padding-left: 8px;
+
+        &.current-item {
+            a {
+                padding-left: 8px;
+                border-left: 3px dotted;
+            }
+        }
+    }
+
+    .menu li:first-child {
+        display: none;
+    }
+
+    .menu li:last-child {
+        margin-right: 0px;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+}

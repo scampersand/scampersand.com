@@ -1,0 +1,203 @@
+html {
+    font-size: 100%;
+}
+
+h1, h2 {
+    font-size: 2.5rem;
+    line-height: 1.25;
+    margin-top: 3em;
+
+    @media (min-width: 30em) {
+        font-size: 5rem;
+    }
+}
+
+h1.landing {
+    max-width: 12em;
+    margin-top: 0;  // enable flexbox-based vert centering
+    margin-bottom: 0.625em;
+}
+
+h3 {
+    font-size: 1.5rem;
+    line-height: 1.25;
+    margin-bottom: 0.25em;
+
+    @media (min-width: 30em) {
+        font-size: 2rem;
+    }
+}
+
+h3.lrg {
+    font-size: 1.625rem;
+    line-height: 1.25;
+
+    @media (min-width: 30em) {
+        font-size: 2.5rem;
+    }
+}
+
+h4, p {
+    font-size: 1.125rem;
+    line-height: 1.3;
+    margin-bottom: 0.65em;
+
+    @media (min-width: 30em) {
+        font-size: 1.5rem;
+    }
+}
+
+h5, li {
+    font-size: 1.125rem;
+
+    @media (min-width: 30em) {
+        font-size: 1.375rem;
+    }
+}
+
+footer h5 {
+    margin-bottom: 0.25em;
+}
+
+.proj-skills li {
+    font-size: 1rem;
+
+    @media (min-width: 30em) {
+        font-size: 1.125rem;
+    }
+}
+
+.solution-list li {
+    font-size: 1.125rem;
+    line-height: 1.3;
+    margin-bottom: 0.65em;
+
+    @media (min-width: 30em) {
+        font-size: 1.5rem;
+    }
+}
+
+.menu li {
+    // see _nav.scss for spacing between elements
+    font-size: 2.5rem;
+
+    // this is for small phones in landscape mode
+    @media (max-height: 24em) {
+        font-size: 1.125rem;
+    }
+
+    @media (min-width: 65em) {
+        font-size: 1.125rem;
+        padding-top: 0.5625rem; // align horizontally with wordmark
+    }
+}
+
+p.landing {
+    max-width: 32em;
+    line-height: 1.5;
+}
+
+p.intro {
+    font-size: 1.25rem;
+    line-height: 1.3;
+
+    @media (min-width: 30em) {
+        font-size: 1.625rem;
+    }
+}
+
+p.thanks {
+    margin-bottom: 3.9em;
+}
+
+p.site-wordmark, a.menu-toggle {
+    font-size: 1.5rem;
+
+    line-height: 1.25;
+    margin-bottom: 0;
+
+    @media (min-width: 30em) {
+        font-size: 1.6875rem;
+    }
+}
+
+p.copyright {
+    font-size: 1rem;
+}
+
+fieldset {
+    margin-bottom: 0.75em;
+
+    @media (min-width: 30em) {
+        margin-bottom: 1rem;
+    }
+}
+
+label {
+    font-size: 1rem;
+    margin-bottom: 0.25em;
+
+    @media (min-width: 30em) {
+        font-size: 1.375rem;
+    }
+}
+
+/**
+ - Sections
+ */
+
+header {
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
+
+div.section-header,
+div.section-content {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+
+    @media (min-width: 30em) {
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+    }
+}
+
+footer {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+
+    @media (min-width: 30em) {
+        padding-top: 2.25rem;
+        padding-bottom: 3rem;
+    }
+}
+
+div.section-sub {
+    margin-bottom: 2rem;
+}
+
+div.solution-text,
+div.contact-form,
+div.contact-location,
+div.contact-social {
+    margin-bottom: 2rem;
+}
+
+div.ref-services {
+    margin-bottom: 1.5rem;
+}
+
+div.bio-text {
+    padding: 1.5rem;
+    padding-top: 1rem;
+}
+
+// see screen.css for main padding for footer layer
+
+// HACK: varying height footers result in too much whitespace for mobile
+div.mobile-shrink {
+    @media (max-width: 47.99999em) {
+        margin-bottom: 0;
+        padding-bottom: 0;
+    }
+}

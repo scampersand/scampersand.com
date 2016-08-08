@@ -1,6 +1,6 @@
 *.py[cod]
-.vagrant
-.sass-cache
-
+/.sass-cache
+/.vagrant
+/.sync
 /node_modules
 /public

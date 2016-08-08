@@ -1,5 +1,8 @@
+---
+---
+
 <!DOCTYPE html>
-<html>
+<html class="no-js"><!-- modernizr rewrites to class="js" -->
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -31,12 +34,43 @@
         <meta content="/img/logo-high-resolution.png" property="og:image">
         {% endcomment %}
 
-        <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+        <script src="/js/vendor/modernizr-3.3.1-custom.min.js"></script>
 
-        <script src="/js/vendor/modernizr-2.6.1-respond-1.1.0.min.js"></script>
+        <link href="/css/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+        <style>
+            /* Workaround for typekit FOUT.
+             * html.js is provided by modernizr and prevents this applying if JS
+             * is disabled (hi Ernie).
+             */
+            html.js body { display: none }
+        </style>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/ramda/0.21.0/ramda.min.js"></script>
 
         <script src="https://use.typekit.net/don3dwd.js"></script>
-        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+        <script>
+            !function() {
+                function reveal() {
+                    // Make sure body is available when this runs.
+                    $(function() {
+                        $('body').fadeIn(300);  // default 400
+                    });
+                }
+                try {
+                    // https://helpx.adobe.com/typekit/using/font-events.html
+                    Typekit.load({
+                        async: true,
+                        active: reveal,
+                        inactive: reveal
+                    });
+                } catch(e) {
+                    reveal();
+                }
+            }();
+        </script>
+
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
 
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

@@ -3,13 +3,16 @@ destination: ./public
 exclude: ['*.scss']
 include: ['.htaccess', '.nojekyll']
 title: Scampersand
-email: contact@scampersand.com
-url: http://scampersand.com
-gems:
-  - jekyll-redirect-from
+email: hello@scampersand.com
+url: https://scampersand.com
+links:
+  aron: https://arongriffis.com
+  amy: https://www.linkedin.com/in/amygriffis
+kramdown:
+  smart_quotes: ["apos", "apos", "quot", "quot"]
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       layout: default
+      linky_tech: true

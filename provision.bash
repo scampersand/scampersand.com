@@ -35,6 +35,10 @@ vbox_preinstall() {
 }
 
 common_postinstall() {
+    # Set up the locale support files
+    sed -i '/en_US.UTF-8/s/^# *//' /etc/locale.gen
+    locale-gen
+
     # Set the timezone
     ln -sfn /usr/share/zoneinfo/EST5EDT /etc/localtime
 }
@@ -62,6 +66,7 @@ lxc_postinstall() {
 
 install_packages() {
     declare -a packages
+    packages+=( locales ) # for locale-gen
     packages+=( python-software-properties ) # for add-apt-repository
     packages+=( curl rsync )
     packages+=( python-pip python-virtualenv python-dev virtualenv )
@@ -82,7 +87,17 @@ EOT
     # This should prevent apt-get install/upgrade from asking ANY questions
     export DEBIAN_FRONTEND=noninteractive
 
+    # Update package list
     apt-get update
+
+    # Upgrade ssh server first to avoid killing the running server
+    apt-get install -y ssh \
+            -o 'PackageManager::Configure=no' \
+            -o 'DPkg::ConfigurePending=no'
+    chmod -x /etc/init.d/ssh  # prevents restart
+    dpkg --configure -a
+
+    # Now the rest
     apt-get install -y "${packages[@]}"
     apt-get upgrade -y "${packages[@]}"
 

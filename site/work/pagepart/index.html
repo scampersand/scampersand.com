@@ -1,0 +1,132 @@
+---
+title: PagePart
+---
+
+<section class="content">
+    <div class="section-header">
+        <div class="section-container">
+            <div class="proj-name">
+                <h2>PagePart</h2>
+            </div>
+            <div class="proj-skills">
+                <ul>
+                    <li>Django Development</li>
+                    <li>API Integration</li>
+                    <li>Deployment, Scaling &amp; Security</li>
+                </ul>
+            </div>
+        </div>
+    </div> <!-- .section-header -->
+
+    <div class="section-content mobile-shrink">
+        <div class="section-container">
+            <div class="section-sub">
+                <p class="intro">
+                    PagePart provides mobile-friendly sites for small
+                    business. The sites are easy to customize with
+                    pluggable parts.
+                </p>
+            </div>
+
+            <div class="section-sub">
+                <div class="proj-problem">
+                    <h3>Problem</h3>
+                    <p>
+                        For many small businesses, the shift to mobile happened
+                        shortly after they'd invested in a website designed for
+                        a desktop. The business owner was caught between two bad
+                        options: on the one hand, sinking money into a new site;
+                        on the other hand, alienating customers trying to view
+                        the site on their phones. PagePart sought to provide a
+                        third option whereby the small business could have a
+                        mobile-friendly site without disrupting their existing
+                        site investment.
+                    </p>
+                </div>
+            </div>
+
+            <div class="section-sub">
+                <div class="proj-solution">
+                    <div class="solution-text">
+                        <h3>Solution</h3>
+                        <p>
+                            PagePart contracted Aron to build a custom content
+                            management system for creating mobile sites. The
+                            system provided one-click importing of structured
+                            data from Facebook to generate an initial site. The
+                            business owner could then customize their site using
+                            a catalog of pluggable "parts" including Google
+                            Maps, Google Calendar, Twitter, OpenTable, Yelp, RSS
+                            feed, and others. A JavaScript snippet redirected
+                            mobile browsers from the original desktop site to
+                            the new mobile-friendly rendering. Alternatively the
+                            business owner could switch entirely to their
+                            PagePart site for desktop as well.
+                        </p>
+                        <p>
+                            As people started using the system, something
+                            unexpected happened: small web agencies started
+                            using PagePart to provide a mobile site to their
+                            clients. To meet the needs of this market, Aron
+                            added a partner dashboard for managing multiple
+                            sites, along with the ability to white label the
+                            editor, so that an agency could provide branded
+                            access to its clients on a custom domain.
+                        </p>
+                    </div>
+                    <div class="solution-features">
+                        <h5>Unique Features</h5>
+                        <ul class="features-list">
+                            <li>Facebook sign in</li>
+                            <li>Themeable mobile sites</li>
+                            <li>Pluggable integrations</li>
+                            <li>White-label product</li>
+                            <li>Analytics &amp; Reporting</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-sub mobile-shrink">
+                <div class="proj-image">
+                    <img srcset="/work/pagepart/pagepart-1417.png 1417w,
+                                 /work/pagepart/pagepart-708.png 708w"
+                         src="/work/pagepart/pagepart-708.png">
+                </div>
+            </div>
+
+        </div> <!-- .section-container -->
+    </div> <!-- .section-content -->
+</section>
+
+<footer role="nav">
+    <div class="section-container">
+        <h3><a href="/work/eprintcenter">Next Project: ePrintCenter&nbsp;&rarr;</a></h3>
+    </div>
+</footer>
+
+{% comment %}
+<p class="technologies">
+    Technologies:
+    {% comment %}
+        set linky_tech in _config.yml
+    {% endcomment %}
+    {% capture tech %}
+        <a href="https://www.python.org/">Python</a>/<a href="https://www.djangoproject.com/">Django</a>,
+        <a href="http://www.intenct.nl/projects/django-allauth/">Django-Allauth</a>,
+        <a href="https://developers.facebook.com/docs/graph-api">Facebook Graph API</a>,
+        <a href="https://jquery.com/">jQuery</a>,
+        <a href="http://www.celeryproject.org/">Celery</a>,
+        <a href="http://redis.io/">Redis</a>,
+        <a href="https://mixpanel.com/">Mixpanel</a>,
+        <a href="https://www.postgresql.org/">PostgreSQL</a>,
+        <a href="http://nginx.org/">NGINX</a>,
+        <a href="https://cloud.docker.com">dotCloud</a>.
+    {% endcapture %}
+    {% if page.linky_tech %}
+        {{tech}}
+    {% else %}
+        {{tech|strip_html}}
+    {% endif %}
+</p>
+{% endcomment %}

@@ -1,0 +1,35 @@
+<nav class="menu">
+    <a class="menu-toggle close" href="#" tabindex="-1"><i class="fa fa-times" aria-hidden="true"></i></a>
+
+    <ul>
+        <li {% if page.url == '/' %}class="current-item"{% endif %}>
+            <a href="/">Home</a>
+        </li>
+
+        {% assign nav_pages=site.pages|where_exp:"p","p.nav_prio"|sort:"nav_prio" %}
+        {% for p in nav_pages %}
+            {% assign p_size=p.url|size %}
+            {% assign page_url_root=page.url|slice:0,p_size %}
+            <li {% if p == page or p.url == page_url_root %}class="current-item"{% endif %}>
+                <a href="{{p.url}}">{{p.nav_title|default:p.title}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</nav>
+
+<a class="menu-toggle open" href="#" tabindex="-1"><i class="fa fa-bars" aria-hidden="true"></i></a>
+
+<script>
+    $(function() {
+        $('.menu-toggle').click(function(e) {
+            e.preventDefault();
+            $('.menu').toggleClass('show');
+            $('.menu-toggle').toggle();
+        });
+    });
+
+    $(window).resize(function() {
+        $('.menu').removeAttr('style');
+        $('.menu-toggle').removeAttr('style');
+    });
+</script>
