@@ -11,7 +11,9 @@
         <!--===========================================================
              site and page titles, with open graph
         =============================================================-->
-        {% if page.title != site.title %}
+        {% if page.title|downcase|slice:0,11 == site.title|downcase %}
+            <title>{{page.title}}</title>
+        {% elsif page.title %}
             <title>{{page.title}} &bull; {{site.title}}</title>
         {% else %}
             <title>{{site.title}}</title>
