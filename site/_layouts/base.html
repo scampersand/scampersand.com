@@ -8,9 +8,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width">
 
-        <!-------------------------------------------------------------
+        <!--===========================================================
              site and page titles, with open graph
-        --------------------------------------------------------------->
+        =============================================================-->
         {% if page.title != site.title %}
             <title>{{page.title}} &bull; {{site.title}}</title>
         {% else %}
@@ -19,18 +19,18 @@
         <meta property="og:site_name" content="{{site.title}}">
         <meta property="og:title" content="{{page.title}}">
 
-        <!-------------------------------------------------------------
+        <!--===========================================================
              page description
-        --------------------------------------------------------------->
+        =============================================================-->
         {% if page.description %}
             <meta name="description" content="{{page.description}}">
             <meta property="og:description" content="{{page.description}}">
         {% endif %}
 
         {% comment %}
-        <!-------------------------------------------------------------
+        <!--===========================================================
              page image for social sharing
-        --------------------------------------------------------------->
+        =============================================================-->
         <meta content="/img/logo-high-resolution.png" property="og:image">
         {% endcomment %}
 
