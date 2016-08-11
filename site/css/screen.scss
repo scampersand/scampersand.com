@@ -195,10 +195,15 @@ p.intro {
     @extend .cards;
 }
 
-.bio-item,
 .services-item,
 .work-item {
     @extend .card;
+}
+
+.bio-item {
+    @extend .card;
+    display: flex;  // so .bio-text can fill to bottom
+    flex-direction: column;
 }
 
 .bio-item,
@@ -224,6 +229,10 @@ p.intro {
     position: absolute;
     left: 1.5rem;
     bottom: 1.5rem;
+}
+
+.bio-text {
+    flex-grow: 1;  // fill gray to bottom
 }
 
 /* clear any floated children in galleries */
