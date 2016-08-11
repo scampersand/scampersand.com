@@ -54,6 +54,11 @@ h4 {
     font-weight: $f-bold;
 }
 
+.bio-overlay h3,
+.bio-overlay h4 {
+    text-align: center;
+}
+
 h5 {
     font-weight: $a-semibold;
     text-transform: uppercase;
