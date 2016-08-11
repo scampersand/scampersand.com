@@ -45,8 +45,13 @@ div.section-header {
     background-color: color('md-blue');
 }
 
-li.bio-item, li.services-item {
+li.bio-item,
+li.services-item {
     background-color: white;
+}
+
+div.bio-text {
+    background-color: color('md-grey');
 }
 
 footer {
@@ -92,9 +97,16 @@ a {
     color: color('dk-grey');
 }
 
-div.bio-overlay,
 div.work-overlay {
     &, a { color: white; }
+    color: white;
+}
+
+div.bio-overlay {
+    color: color('dk-grey');
+}
+
+li.bio-item {
     color: white;
 }
 
