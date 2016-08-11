@@ -201,8 +201,8 @@ p.intro {
     @extend .card;
 }
 
-li.bio-item,
-li.work-item {
+.bio-item,
+.work-item {
     /* bio images should always fill their container.
      * This allows img sizes attribute to affect what image
      * in the srcset is fetched, without affecting the
@@ -214,13 +214,13 @@ li.work-item {
     }
 }
 
-div.bio-photo,
-div.work-photo {
+.bio-photo,
+.work-photo {
     position: relative;
 }
 
-div.bio-overlay,
-div.work-overlay {
+.bio-overlay,
+.work-overlay {
     position: absolute;
     left: 1.5rem;
     bottom: 1.5rem;
