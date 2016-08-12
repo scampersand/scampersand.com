@@ -61,7 +61,7 @@
     }
 
     .menu li {
-        float: left;
+        display: inline-block;
         margin: 0px 50px 0px 0px;
         padding-left: 8px;
 
@@ -73,7 +73,7 @@
         }
     }
 
-    .menu li:first-child {
+    .menu li:first-child {  // "Home"
         display: none;
     }
 

@@ -73,8 +73,10 @@ body.landing .flex-center {
     padding-bottom: 2em;  // maintains centering
     min-height: 100vh;  // in case calc() doesn't work
     min-height: calc(100vh - 54px);  // 54px is mobile nav header
-    @media screen and (min-width: 65em) {
-        min-height: calc(100vh - 59px);  // 59px is desktop nav header
+    @media screen and (min-width: 30em) {
+        // 57.75px is desktop nav header.
+        // This doesn't change at 65em when the menu items are revealed.
+        min-height: calc(100vh - 57.75px);
     }
 }
 
@@ -184,6 +186,14 @@ p.intro {
 .card {
     display: block;
     margin-bottom: gutter();
+    /* gutter() is a percentage which doesn't work on Firefox for vertical
+     * margin on a flex item. This hack applies a different margin on Firefox.
+     * https://bugzilla.mozilla.org/show_bug.cgi?id=958714
+     * http://browserhacks.com/#hack-b660126302b8b5360308ecedb06f468c
+     */
+    @media screen and (-moz-images-in-menus:0) {
+        margin-bottom: 29.531px;  // from Chrome's computed result
+    }
     @media (min-width: 56em) {
         width: span(4);
     }
