@@ -187,6 +187,14 @@ p.intro {
 .card {
     display: block;
     margin-bottom: gutter();
+    /* gutter() is a percentage which doesn't work on Firefox for vertical
+     * margin on a flex item. This hack applies a different margin on Firefox.
+     * https://bugzilla.mozilla.org/show_bug.cgi?id=958714
+     * http://browserhacks.com/#hack-b660126302b8b5360308ecedb06f468c
+     */
+    @media screen and (-moz-images-in-menus:0) {
+        margin-bottom: 29.531px;  // from Chrome's computed result
+    }
     @media (min-width: 56em) {
         width: span(4);
     }
