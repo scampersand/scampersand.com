@@ -74,10 +74,9 @@ body.landing .flex-center {
     min-height: 100vh;  // in case calc() doesn't work
     min-height: calc(100vh - 54px);  // 54px is mobile nav header
     @media screen and (min-width: 30em) {
-        min-height: calc(100vh - 57px);  // 57px is intermediate nav header
-    }
-    @media screen and (min-width: 65em) {
-        min-height: calc(100vh - 59px);  // 59px is desktop nav header
+        // 57.75px is desktop nav header.
+        // This doesn't change at 65em when the menu items are revealed.
+        min-height: calc(100vh - 57.75px);
     }
 }
 
