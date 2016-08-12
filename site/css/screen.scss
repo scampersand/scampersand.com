@@ -234,12 +234,23 @@ p.intro {
     position: relative;
 }
 
-.bio-overlay,
 .work-overlay {
     position: absolute;
     left: 1.5rem;
     bottom: 1.5rem;
 }
+
+.bio-overlay {
+    position: absolute;
+    width: 100%;
+    height: 22%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
 
 .bio-text {
     flex-grow: 1;  // fill gray to bottom
