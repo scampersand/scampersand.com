@@ -11,16 +11,9 @@ input[type="submit"] {
     border-width: 0;
 }
 
-// TODO needs tweaking after photo is reduced
 div.bio-text,
 li.services-item {
-    padding: 1.5rem;
-    @media (min-width: 36em) and (max-width: 55.9999em) {
-        padding: 4rem;
-    }
-    @media (min-width: 56em) {
-        padding: 2.5rem;
-    }
+    padding: 2.5rem;
 }
 
 input,
