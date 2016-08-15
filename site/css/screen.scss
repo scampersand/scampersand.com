@@ -161,7 +161,7 @@ div.ref-services {
 
 div.contact-location,
 div.contact-social, 
-div.ref-copyright {
+div.ref-social {
     @media (min-width: 48em) {
         @include span(4 last);
     }
