@@ -1,0 +1,13 @@
+// http://browserhacks.com/#hack-b660126302b8b5360308ecedb06f468c
+@mixin only-firefox {
+    @media screen and (-moz-images-in-menus:0) {
+        @content;
+    }
+}
+
+// http://browserstrangeness.bitbucket.org/css_hacks.html
+@mixin only-edge {
+    @supports (-ms-ime-align:auto) {
+        @content;
+    }
+}

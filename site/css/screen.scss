@@ -1,5 +1,6 @@
 @import "susy";
 @import "partials/normalize";
+@import "partials/hacks";
 
 /**
  - Reset
@@ -187,11 +188,13 @@ p.intro {
     display: block;
     margin-bottom: gutter();
     /* gutter() is a percentage which doesn't work on Firefox for vertical
-     * margin on a flex item. This hack applies a different margin on Firefox.
-     * https://bugzilla.mozilla.org/show_bug.cgi?id=958714
-     * http://browserhacks.com/#hack-b660126302b8b5360308ecedb06f468c
+     * margin on a flex item. This hack applies a different margin on Firefox
+     * and Microsoft Edge. https://bugzilla.mozilla.org/show_bug.cgi?id=958714
      */
-    @media screen and (-moz-images-in-menus:0) {
+    @include only-firefox {  // partials/_hacks.scss
+        margin-bottom: 29.531px;  // from Chrome's computed result
+    }
+    @include only-edge {  // partials/_hacks.scss
         margin-bottom: 29.531px;  // from Chrome's computed result
     }
     @media (min-width: 56em) {
