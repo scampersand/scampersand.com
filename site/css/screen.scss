@@ -152,6 +152,16 @@ div.contact-form {
     }
 }
 
+div.contact-map {
+    position: relative;
+    .overlay {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: transparent;
+    }
+}
+
 div.ref-services {
     display: none;
     @media (min-width: 48em) {
