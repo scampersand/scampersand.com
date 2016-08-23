@@ -19,7 +19,8 @@
         text-align: center;
     }
 
-    html.no-flexbox .menu ul {
+    html.no-flexbox .menu ul,
+    html.no-flexbox-vertical-center .menu ul {
         // When flexbox isn't fully supported (in particular this seems to break
         // justify-content:center) then apply a small margin to the top so the
         // menu is pleasantly positioned on iphone 4 and old android.

@@ -50,6 +50,15 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/ramda/0.21.0/ramda.min.js"></script>
 
+        <script>
+            // Mobile safari on iOS 7 (iphone 4) doesn't justify
+            // vertically even though modernizr reports that it supports
+            // flexbox. This hack adds another class to match on.
+            if (navigator.userAgent.match(/(iPad|iPhone);.*CPU.*OS [3-7](_|\b)/i)) {
+                $('html').addClass('no-flexbox-vertical-center');
+            }
+        </script>
+
         <script src="https://use.typekit.net/don3dwd.js"></script>
         <script>
             !function() {
