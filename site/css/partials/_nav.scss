@@ -19,6 +19,14 @@
         text-align: center;
     }
 
+    html.no-flexbox .menu ul {
+        // When flexbox isn't fully supported (in particular this seems to break
+        // justify-content:center) then apply a small margin to the top so the
+        // menu is pleasantly positioned on iphone 4 and old android.
+        // Don't make this too large since we don't know the viewport height.
+        margin-top: 48px;
+    }
+
     .menu li {
         // 27px is 1.5 times the font-size, minus 3px for border
         margin-bottom: 24px;
