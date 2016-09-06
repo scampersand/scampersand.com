@@ -183,7 +183,7 @@ is_docker() {
         echo "is_docker: running outside vagrant?" >&2
         return 1
     fi
-    sudo grep -q :/docker/ /proc/1/cgroup
+    sudo grep -qw docker /proc/1/cgroup
     eval "is_docker() { return $?; }"
     is_docker
 }
