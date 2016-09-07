@@ -2,27 +2,24 @@
 # Start rewrite engine
 # ----------------------------------------------------------------------
 
-# Turning on the rewrite engine is necessary for the following rules and
-# features. FollowSymLinks must be enabled for this to work.
-
-# Some cloud hosting services require RewriteBase to be set: goo.gl/HOcPN
-# If using the h5bp in a subdirectory, use `RewriteBase /foo` instead where
-# 'foo' is your directory.
-
-# If your web host doesn't allow the FollowSymlinks option, you may need to
-# comment it out and use `Options +SymLinksOfOwnerMatch`, but be aware of the
-# performance impact: http://goo.gl/Mluzd
 
 <IfModule mod_rewrite.c>
+  # If your web host doesn't allow the FollowSymlinks option, you may need
+  # to comment it out and use `Options +SymLinksOfOwnerMatch`, but be aware
+  # of the performance impact: http://goo.gl/Mluzd
   Options +FollowSymlinks
-# Options +SymLinksIfOwnerMatch
+  #Options +SymLinksIfOwnerMatch
+
   RewriteEngine On
-# RewriteBase /
+
+  # Some cloud hosting services require RewriteBase to be set:
+  # http://goo.gl/HOcPN
+  #RewriteBase /
 </IfModule>
 
 
 # ----------------------------------------------------------------------
-# Disallow access to next.scampersand.com except from home
+# Disallow access to next.* except from home
 # ----------------------------------------------------------------------
 
 # This would work if Dreamhost were running Apache 2.4 instead of 2.2
@@ -31,7 +28,7 @@
 #</If>
 
 <IfModule mod_rewrite.c>
-  RewriteCond %{HTTP_HOST} next\.scampersand\.com$
+  RewriteCond %{HTTP_HOST} ^next\.|\.next\.
   # home IP
   RewriteCond %{REMOTE_ADDR} !=100.40.40.249
   # crossbrowsertesting.com
