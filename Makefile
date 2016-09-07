@@ -50,12 +50,20 @@ next: production
 	echo 'Disallow: /' >> public/robots.txt
 	rsync -az --exclude=.git --delete-before public/. scampersand@n01se.net:next.scampersand.com/
 
-publish: production
+dream:
 	rsync -az --exclude=.git --delete-before public/. scampersand@n01se.net:scampersand.com/
 
-.ONESHELL: clean
-clean:
-	shopt -s dotglob extglob nullglob
-	rm -rf public/!(.git|.|..)
+ghp:
+	cd public && \
+	git add -A && \
+	( ! git status --porcelain | grep -q . || git commit -m "Deploy from scampersand/scampersand.com" ) && \
+	git push
 
-.FAKE: all production jekyll sass watch serve sync_serve draft dev publish clean
+publish: production
+	$(MAKE) dream
+	$(MAKE) ghp
+
+clean:
+	mv public public.old && mkdir public && mv public.old/.git public && rm -rf public.old
+
+.FAKE: all production jekyll sass watch serve sync_serve draft dev dream ghp publish clean
