@@ -1,0 +1,3 @@
+[submodule "site/_drafts"]
+	path = site/_drafts
+	url = git@gitlab.com:scampersand/scampersand-drafts.git
