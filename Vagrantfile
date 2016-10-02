@@ -1,12 +1,7 @@
 # Load .env.bash -- backticks actually run /bin/sh so run bash inside.
-ENV.update(eval `bash -c '
-before=$(ruby -e "p ENV")
-if [[ -s .env.bash ]]; then
-  set -a; source .env.bash >/dev/null; set +a
-fi
-after=$(ruby -e "p ENV")
-echo "($after.to_a - $before.to_a).to_h"
-'`)
+if File.exist?('vagrant-env.bash')
+  ENV.replace(eval `bash -ac "source vagrant-env.bash >/dev/null; ruby -e 'p ENV'"`)
+end
 
 Vagrant.configure("2") do |config|
 
