@@ -2,11 +2,10 @@
 #
 # Provisioning script for vagrant.
 
-# If there's only one project with requirements and deps in this dir, this is
-# fine:
-PROJ=*
-# otherwise, set the project dir explicitly:
-#PROJ=foo
+# If there's only one project with requirements and deps in VAGRANT_TOP,
+# this is fine, otherwise set VAGRANT_PROJ
+: ${VAGRANT_TOP:=/vagrant}
+: ${VAGRANT_PROJ:=*}
 
 main() {
     if [[ $EUID != 0 ]]; then
@@ -20,9 +19,7 @@ main() {
     as_root
     msg "<-- provision.bash as_root"
 
-    set_vagrant_user
-
-    su $VAGRANT_USER -c "$(printf '%q ' "$0" "$@")"
+    su vagrant -c "$(printf '%q ' "$0" "$@")"
 }
 
 as_root() {
@@ -54,7 +51,7 @@ lxc_postinstall() {
 
     # Make the vagrant uid/gid match the host user
     # so the bind-mounted source area works properly.
-    read uid gid <<<"$(stat -c '%u %g' /home/vagrant/src/.)"
+    read uid gid <<<"$(stat -c '%u %g' "$VAGRANT_TOP")"
     if [[ ! -n $uid ]]; then
         die "Couldn't read uid/gid for vagrant user"
     fi
@@ -77,7 +74,7 @@ install_packages() {
     packages+=( curl rsync )
     packages+=( python-pip python-virtualenv python-dev virtualenv )
     packages+=( ruby-dev bundler )
-    packages+=( mercurial git )
+    packages+=( git )
     packages+=( sudo ssh )
     packages+=( make gcc g++ binutils )
     packages+=( inotify-tools ) # inotifywait
@@ -124,11 +121,18 @@ as_user() {
 
     if [[ $PWD == */vagrant ]]; then
         rm -f .profile
-        cp -avf src/vagrant/skel/. .
-        if [[ -e .ssh/id_rsa.pub ]]; then
-            cp -nv .ssh/{id_rsa.pub,authorized_keys}
-        fi
-        chmod -R go-rw .ssh
+        cat > .bash_profile <<EOT
+source ~/.bashrc
+EOT
+        cat > .bashrc <<EOT
+PATH=~/node_modules/.bin:\$PATH
+[[ -e $VAGRANT_TOP/vagrant-env.bash ]] && \\
+    source $VAGRANT_TOP/vagrant-env.bash
+[[ -e ~/env ]] && source ~/env/bin/activate
+[[ \$- != *i* ]] && return
+PS1='\u@\h:\w\$ '
+cd $VAGRANT_TOP
+EOT
         source .bash_profile
     fi
 
@@ -140,6 +144,13 @@ as_user() {
 user_virtualenv() {
     cd ~
 
+    if ! type virtualenv &>/dev/null; then
+      echo "no virtualenv, skipping python requirements" >&2
+      return
+    fi
+
+    # Always create the virtualenv, even if there's no requirements.txt, since
+    # we also use it to isolate ruby gems.
     if [[ ! -d env ]]; then
         virtualenv env
     fi
@@ -147,6 +158,7 @@ user_virtualenv() {
 
     declare reqs
     if reqs=$(src requirements.txt); then
+        pip install -U pip
         pip install -r "$reqs"
     fi
 }
@@ -157,6 +169,11 @@ pip() {
 
 user_gems() {
     cd ~
+
+    if [[ ! -d env ]]; then
+      echo "no virtualenv, skipping ruby gems" >&2
+      return
+    fi
 
     if ! grep -q GEM_HOME env/bin/activate; then
         echo 'export GEM_HOME="$VIRTUAL_ENV/ruby" PATH="$VIRTUAL_ENV/ruby/bin:$PATH"' >> env/bin/activate
@@ -190,7 +207,7 @@ user_npm() {
 src() {
     # ff only checks one level of nesting, and testing it with -f will only
     # succeed if there was a single match.
-    declare f=src/"$1" ff=$(echo src/$PROJ/"$1")
+    declare f=$VAGRANT_TOP/"$1" ff=$(echo $VAGRANT_TOP/$VAGRANT_PROJ/"$1")
     if [[ -f $f ]]; then
         echo "$f"
     elif [[ -f $ff ]]; then
@@ -239,19 +256,6 @@ is_vbox() {
     sudo dmidecode 2>/dev/null | grep -q VirtualBox
     eval "is_vbox() { return $?; }"
     is_vbox
-}
-
-set_vagrant_user() {
-    if [[ -z $VAGRANT_USER ]]; then
-        if is_docker || is_lxc || is_vbox || getent passwd vagrant >/dev/null; then
-            VAGRANT_USER=vagrant
-        else
-            VAGRANT_USER=$(stat -c %U "$(type -P "$0")")
-        fi
-    fi
-    if ! getent passwd "$VAGRANT_USER" >/dev/null; then
-        die "Invalid VAGRANT_USER=$VAGRANT_USER"
-    fi
 }
 
 #######################################################################
