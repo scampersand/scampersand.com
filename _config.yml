@@ -9,7 +9,9 @@ links:
   aron: https://arongriffis.com
   amy: https://www.linkedin.com/in/amygriffis
 kramdown:
-  smart_quotes: ["apos", "apos", "quot", "quot"]
+  input: Pantsdown
+pants:
+  options: [1, 'named_entities', 'prevent_breaks']
 defaults:
   - scope:
       path: ""
