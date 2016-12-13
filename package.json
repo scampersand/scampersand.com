@@ -2,7 +2,7 @@
   "name": "foo",
   "version": "0.0.0",
   "files": [],
-  "dependencies": {
+  "devDependencies": {
     "browser-sync": "latest",
     "accoutrement-color": "latest",
     "accoutrement-scale": "latest"

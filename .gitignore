@@ -1,7 +1,12 @@
 *.py[cod]
+
 /.sass-cache
-/.vagrant
 /.sync
+/.vagrant
 /node_modules
+
+/site/_drafts
+
+/dev
 /public
 /vagrant-env.bash

@@ -1,9 +1,9 @@
 #!/bin/bash
-#
-# TODO update atom.xml and rss.xml
+
+: ${JEKYLL_DEST:=public}
 
 domain=scampersand.com
-links=$(grep -Eo "https?://$domain/[^<]*" < public/sitemap.xml)
+links=$(grep -Eo "https?://$domain/[^<]*" < $JEKYLL_DEST/sitemap.xml)
 declare -A replacements
 
 for l in $links; do
@@ -45,8 +45,7 @@ done
 cmd=''
 for k in "${!replacements[@]}"; do
     cmd+="s,href=\"$k\",href=\"${replacements[$k]}\",g;"
+    cmd+="s,href=\\(&quot;\\)$k\\1,href=\\1${replacements[$k]}\\1,g;"
+    cmd+="s,>$k<,>${replacements[$k]}<,g;"
 done
-
-find public -name \*.html -print0 | xargs -0r sed -i -e "$cmd"
-
-sed -i -re "/$domain"'\/[^<]/s/(\.html|\/)</</' public/sitemap.xml
+find $JEKYLL_DEST -name '*.html' -o -name '*.xml' -print0 | xargs -0r sed -i -e "$cmd"
