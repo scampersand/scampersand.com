@@ -143,6 +143,24 @@ div.proj-solution {
     @include span(full);
 }
 
+/* when the project includes a visual,
+ * use 3 columns for intro text
+ */
+div.proj-intro {
+    @media (min-width: 56em) {
+        @include span(3);
+    }
+}
+
+/* when there is no accompanying visual,
+ * match the width of the main text
+ */
+div.col-width-main {
+    @media (min-width: 56em) {
+        @include span(5);
+    }
+}
+
 div.proj-problem,
 div.solution-text,
 div.solution-pieces,
@@ -187,12 +205,6 @@ div.contact-location,
 div.ref-social {
     @media (min-width: 56em) {
         @include span(4 last);
-    }
-}
-
-p.intro {
-    @media (min-width: 56em) {
-        @include span(5);
     }
 }
 
