@@ -12,14 +12,6 @@ $f-regular: 400;
 $f-bold: 700;
 $f-black: 900;
 
-$a-thin: 100;
-$a-light: 300;
-$a-regular: 400;
-$a-semibold: 600;
-$a-bold: 700;
-$a-extrabold: 800;
-$a-heavy: 900;
-
 ul {
     list-style: none;
 }
@@ -60,18 +52,12 @@ h4 {
 }
 
 h5 {
-    font-weight: $a-semibold;
+    font-weight: $f-bold;
     text-transform: uppercase;
 }
 
 p.site-wordmark {
     font-weight: $f-black;
-}
-
-p.intro,
-footer p {
-    font-family: "adelle", serif;
-    font-weight: $a-regular;
 }
 
 p.contact-icons {
@@ -87,10 +73,13 @@ p.contact-icons {
 }
 
 label {
-    font-family: "adelle", serif;
     display: block;
 }
 
 input[type="submit"] {
     text-transform: uppercase;
+}
+
+.t-italic {
+    font-style: italic;
 }

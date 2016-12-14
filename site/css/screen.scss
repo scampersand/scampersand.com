@@ -146,18 +146,13 @@ div.proj-name {
     }
 }
 
-div.proj-skills {
-    @media (min-width: 48em) {
-        display: inline-block;
-    }
-}
-
 div.proj-solution {
     @include span(full);
 }
 
 div.proj-problem,
 div.solution-text,
+div.solution-pieces,
 div.proj-image,
 div.proj-video {
     @media (min-width: 48em) {
