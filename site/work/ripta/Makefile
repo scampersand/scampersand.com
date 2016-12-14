@@ -19,7 +19,7 @@ clobber:
 
 $(CO): $C
 
-%.jpg %.png:
+%.jpg:
 	w=$@; w=$${w%%.*}; w=$${w##*-}; \
 	  convert -geometry $$w $^ $@
 
