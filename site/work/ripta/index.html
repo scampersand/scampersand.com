@@ -1,5 +1,5 @@
 ---
-title: Brevi
+title: RIPTA Zoom
 ---
 
 <section class="content">
@@ -16,7 +16,10 @@ title: Brevi
 
             <div class="section-sub">
                 <p class="intro">
-                    {% lipsum 1 3 %}
+                    Scampersand was invited to participate in Hack(RI) as a pro
+                    team. We love our little state--and can't resist a
+                    challenge--so we took a few days off and built an
+                    award-winning demo.
                 </p>
             </div>
 
@@ -32,6 +35,7 @@ title: Brevi
                 </div>
             </div>
 
+            {% comment %}
             <div class="section-sub">
                 <div class="proj-problem">
                     <h3>Problem</h3>
@@ -40,23 +44,49 @@ title: Brevi
                     </p>
                 </div>
             </div>
+            {% endcomment %}
 
             <div class="section-sub">
                 <div class="proj-solution">
                     <div class="solution-text">
-                        <h3>Solution</h3>
+                        <h3>Hacking for Rhode Island</h3>
                         <p>
-                            {% lipsum %}
+                            The <a href="http://www.ripta.com/">RIPTA</a> bus system
+                            radiates from Providence to all corners of the
+                            state. Every day, thousands of riders depend on
+                            RIPTA for their commutes. In 2016 RIPTA upgraded
+                            their available data to include a
+                            <a href="https://developers.google.com/transit/gtfs-realtime/">realtime GTFS API</a>
+                            with bus progress and delay information.
+                            Working with RIPTA,
+                            <a href="http://intracitygeeks.org/">IntraCity Geeks</a> organized a
+                            <a href="http://www.hackri.com/">statewide hackathon</a> to
+                            see what could be built using the new API.
+                        </p>
+                        <p>
+                            What does the data look like? How does it change
+                            over time? We set out to answer these questions by
+                            building an animated visualization of the buses
+                            traveling their routes. Since the API provides
+                            instant but not historical data, we started
+                            collecting the minute-by-minute updates, then used
+                            <a href="https://d3js.org/">D3.js</a> to project the
+                            coordinates on a map.
+                        </p>
+                        <p>
+                            We were thrilled when our hackathon demo won the
+                            <a href="http://hortonworks.com/">Hortonworks</a>
+                            big data award! Head on over to
+                            <a href="http://ripta.scampersand.com/">ripta.scampersand.com</a>
+                            to explore a day in the life of RIPTA.
                         </p>
                     </div>
                     <div class="solution-features">
-                        <h5>Unique Features</h5>
+                        <h5>Hack Notes</h5>
                         <ul class="features-list">
-                            <li>Responsive design</li>
-                            <li>Scalable Heroku deployment</li>
-                            <li>Partner OAuth/API integrations</li>
-                            <li>Payment via Stripe</li>
-                            <li>Analytics &amp; Reporting</li>
+                            <li>D3.js with geo projections</li>
+                            <li>Click to zoom on routes</li>
+                            <li>Fully responsive design</li>
                         </ul>
                     </div>
                 </div>
@@ -64,7 +94,7 @@ title: Brevi
 
             <div class="section-sub">
                 <div class="solution-pieces">
-                    <p class="t-italic">Information Design &bull; UI Desgin &bull; D3.js Development</p>
+                    <p class="t-italic">Information Design &bull; UI Design &bull; D3.js Development</p>
                 </div>
             </div>
 
