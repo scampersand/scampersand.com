@@ -3,12 +3,16 @@ html {
 }
 
 h1, h2 {
-    font-size: 2.5rem;
+    font-size: 2em;
     line-height: 1.25;
     margin-top: 3em;
 
-    @media (min-width: 30em) {
-        font-size: 5rem;
+    @media (min-width: 48em) {
+        font-size: 3em;
+    }
+
+    @media (min-width: 56em) {
+        font-size: 4rem;
     }
 }
 
@@ -19,12 +23,16 @@ h1.landing {
 }
 
 h3 {
-    font-size: 1.5rem;
+    font-size: 1.5em;
     line-height: 1.25;
     margin-bottom: 0.25em;
 
-    @media (min-width: 30em) {
-        font-size: 2rem;
+    @media (min-width: 48em) {
+        font-size: 1.75em;
+    }
+
+    @media (min-width: 56em) {
+        font-size: 2em;
     }
 }
 
@@ -32,35 +40,30 @@ h3.bio {
     margin-bottom: 0;
 }
 
-h3.lrg {
-    font-size: 1.625rem;
-    line-height: 1.25;
-
-    @media (min-width: 30em) {
-        font-size: 2.5rem;
-    }
-}
-
-h4, p {
-    font-size: 1.125rem;
+h4 {
+    font-size: 1.125em;
     line-height: 1.3;
     margin-bottom: 0.65em;
 
-    @media (min-width: 30em) {
-        font-size: 1.5rem;
+    @media (min-width: 48em) {
+        font-size: 1.5em;
     }
 }
 
-h5, li {
+footer h4 {
+    margin-bottom: 0.25em;
+}
+
+.solution-features h4 {
+    margin-bottom: 0;
+}
+
+li {
     font-size: 1.125rem;
 
     @media (min-width: 30em) {
         font-size: 1.375rem;
     }
-}
-
-footer h5 {
-    margin-bottom: 0.25em;
 }
 
 .solution-list li {
@@ -88,17 +91,36 @@ footer h5 {
     }
 }
 
+p {
+    font-size: 1em;
+    line-height: 1.3;
+    margin-bottom: 0.65em;
+
+    @media (min-width: 48em) {
+        font-size: 1.125em;
+    }
+
+    @media (min-width: 56em) {
+        font-size: 1.25em;
+    }
+}
+
 p.landing {
     max-width: 32em;
     line-height: 1.5;
 }
 
 p.intro {
-    font-size: 1.25rem;
-    line-height: 1.3;
+    font-size: 1.125em;
+    line-height: 1.3333;
 
-    @media (min-width: 30em) {
-        font-size: 1.625rem;
+    @media (min-width: 48em) {
+        font-size: 1.5em;
+    }
+
+    @media (min-width: 56em) {
+        font-size: 1.75em;
+        line-height: 1.2142;
     }
 }
 
@@ -132,6 +154,10 @@ label {
     @media (min-width: 30em) {
         font-size: 1.375rem;
     }
+}
+
+.t-upper {
+    text-transform: uppercase;
 }
 
 /**
