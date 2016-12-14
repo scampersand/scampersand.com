@@ -11,7 +11,7 @@ blockquote, h1, h2, h3, h4, h5, h6, p, ul, li, fieldset {
     padding: 0;
 }
 
-img {
+img, video {
     max-width: 100%;
 
     /* auto height preserves ratio when the image is scaled. */
@@ -158,7 +158,8 @@ div.proj-solution {
 
 div.proj-problem,
 div.solution-text,
-div.proj-image {
+div.proj-image,
+div.proj-video {
     @media (min-width: 48em) {
         @include span(5);
     }
