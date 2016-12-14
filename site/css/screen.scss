@@ -7,9 +7,9 @@
  */
 
 blockquote, h1, h2, h3, h4, h5, h6, p, ul, li, fieldset {
-    margin: 0;  
-    padding: 0; 
-}   
+    margin: 0;
+    padding: 0;
+}
 
 img {
     max-width: 100%;
@@ -195,7 +195,7 @@ div.ref-services {
 }
 
 div.contact-location,
-div.contact-social, 
+div.contact-social,
 div.ref-social {
     @media (min-width: 48em) {
         @include span(4 last);
