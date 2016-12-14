@@ -184,7 +184,6 @@ div.ref-services {
 }
 
 div.contact-location,
-div.contact-social,
 div.ref-social {
     @media (min-width: 56em) {
         @include span(4 last);
@@ -253,10 +252,6 @@ p.intro {
     img {
         width: 100%;
     }
-}
-
-.work-title {
-    text-transform: uppercase;
 }
 
 .bio-photo,

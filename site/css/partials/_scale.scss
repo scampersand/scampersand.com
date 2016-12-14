@@ -5,7 +5,7 @@ html {
 h1, h2 {
     font-size: 2em;
     line-height: 1.25;
-    margin-top: 3em;
+    margin-top: 2em;
 
     @media (min-width: 48em) {
         font-size: 3em;
@@ -169,7 +169,16 @@ header {
     padding-bottom: 0.5em;
 }
 
-div.section-header,
+div.section-header {
+    padding-top: 1rem;
+    padding-bottom: 1.3333rem;
+
+    @media (min-width: 48em) {
+        padding-top: 2rem;
+        padding-bottom: 2.6666rem;
+    }
+}
+
 div.section-content {
     padding-top: 1.5rem;
     padding-bottom: 2rem;
@@ -196,8 +205,7 @@ div.section-sub {
 
 div.solution-pieces,
 div.contact-form,
-div.contact-location,
-div.contact-social {
+div.contact-location {
     margin-bottom: 2rem;
 }
 
