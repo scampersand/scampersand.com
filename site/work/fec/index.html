@@ -1,12 +1,12 @@
 ---
-title: Brevi
+title: betaFEC
 ---
 
 <section class="content">
     <div class="section-header">
         <div class="section-container">
             <div class="proj-name">
-                <h2>beta.fec.gov</h2>
+                <h2>betaFEC</h2>
             </div>
         </div>
     </div> <!-- .section-header -->
@@ -16,10 +16,18 @@ title: Brevi
 
             <div class="section-sub">
                 <p class="intro">
-                    {% lipsum 1 3 %}
+                    The Federal Election Commission is responsible for
+                    regulating and reporting campaign finance for the Senate,
+                    House and Presidential races. Working with
+                    <a href="https://18f.gsa.gov/">18F</a>, the FEC is
+                    replacing their
+                    <a href="http://fec.gov/">aging website</a> with a
+                    <a href="http://beta.fec.gov/">new one</a>
+                    built on Django and Wagtail.
                 </p>
             </div>
 
+            {% comment %}
             <div class="section-sub">
                 <div class="proj-image">
                     <img srcset="/work/brevi/brevi_laptop-1417.png 1417w,
@@ -27,12 +35,19 @@ title: Brevi
                          src="/work/brevi/brevi_laptop-708.png">
                 </div>
             </div>
+            {% endcomment %}
 
             <div class="section-sub">
                 <div class="proj-problem">
                     <h3>Problem</h3>
                     <p>
-                        {% lipsum %}
+                        As part of the FEC site overhaul, the 18F team needed
+                        new <a href="https://wagtail.io/">Wagtail</a> templates
+                        for publishing reports, weekly digests and news
+                        releases. The templates needed specific presentation
+                        for typography, images and authorship. Additionally
+                        there would need to be custom Python code and database
+                        tables for associating authors with articles.
                     </p>
                 </div>
             </div>
@@ -42,19 +57,50 @@ title: Brevi
                     <div class="solution-text">
                         <h3>Solution</h3>
                         <p>
-                            {% lipsum %}
+                            The schedule for the project was extremely
+                            short--less than a week--so our first step was to
+                            comprehensively investigate every unknown and
+                            convert it from a risk to a plan. We alternated
+                            between pairing and working individually to maximize
+                            productivity while ensuring there wouldn't be any
+                            miscommunication on the team.
                         </p>
+                        <p>
+                            It quickly became apparent that the biggest
+                            challenge would be coming up with a way to manage
+                            the many-to-many relationship between articles and
+                            authors, something that Django supports but Wagtail
+                            doesn't. We were able to identify a solution that
+                            enabled Django's support for inline relationships to
+                            work seamlessly in the Wagtail admin.
+                        </p>
+                        <p>
+                            A few days later, we filed the pull request: on
+                            time, following project markup and style
+                            conventions, with tests and documentation.
+                            The 18F team was delighted.
+                        </p>
+                        {% comment %}
+                        <p>
+                            At Scampersand we like the phrase "yards after the
+                            catch," referring to the extra distance the receiver
+                            runs after catching the football. On this project,
+                            our YATC was to enable coverage measurement of the
+                            Python tests, to ensure that our new code was being
+                            tested properly.
+                        </p>
+                        {% endcomment %}
                     </div>
+                    {% comment %}
                     <div class="solution-features">
                         <h5>Unique Features</h5>
                         <ul class="features-list">
-                            <li>Responsive design</li>
-                            <li>Scalable Heroku deployment</li>
-                            <li>Partner OAuth/API integrations</li>
-                            <li>Payment via Stripe</li>
-                            <li>Analytics &amp; Reporting</li>
+                            <li>Wagtail CMS</li>
+                            <li>Followed markup and styling conventions</li>
+                            <li>Tight deadline</li>
                         </ul>
                     </div>
+                    {% endcomment %}
                 </div>
             </div>
 
