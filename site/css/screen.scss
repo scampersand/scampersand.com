@@ -133,9 +133,14 @@ div.section-container {
     padding-left: 1em;
     padding-right: 1em;
 
-    @media (min-width: 30em) {
+    @media (min-width: 25em) {
         padding-left: 1.5em;
         padding-right: 1.5em;
+    }
+
+    @media (min-width: 48em) {
+        padding-left: 5em;
+        padding-right: 5em;
     }
 }
 
