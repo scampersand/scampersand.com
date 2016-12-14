@@ -139,13 +139,6 @@ div.section-container {
     }
 }
 
-div.proj-name {
-    @media (min-width: 48em) {
-        display: inline-block;
-        width: span(6);
-    }
-}
-
 div.proj-solution {
     @include span(full);
 }
@@ -155,19 +148,19 @@ div.solution-text,
 div.solution-pieces,
 div.proj-image,
 div.proj-video {
-    @media (min-width: 48em) {
+    @media (min-width: 56em) {
         @include span(5);
     }
 }
 
 div.solution-features {
-    @media (min-width: 48em) {
+    @media (min-width: 56em) {
         @include span(2 wide last);
     }
 }
 
 div.contact-form {
-    @media (min-width: 48em) {
+    @media (min-width: 56em) {
         @include span(4);
     }
 }
@@ -184,7 +177,7 @@ div.contact-map {
 
 div.ref-services {
     display: none;
-    @media (min-width: 48em) {
+    @media (min-width: 56em) {
         display: block;
         @include span(4);
     }
@@ -193,7 +186,7 @@ div.ref-services {
 div.contact-location,
 div.contact-social,
 div.ref-social {
-    @media (min-width: 48em) {
+    @media (min-width: 56em) {
         @include span(4 last);
     }
 }
