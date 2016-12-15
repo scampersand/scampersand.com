@@ -166,6 +166,16 @@ div.col-width-main {
     }
 }
 
+div.proj-header-image,
+div.proj-header-video {
+    @media (min-width: 56em) {
+        @include span(last 5);
+    }
+    @media (min-width: 75em) {
+        margin-top: -180px;
+    }
+}
+
 div.proj-problem,
 div.solution-text,
 div.solution-pieces,
