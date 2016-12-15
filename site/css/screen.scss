@@ -121,11 +121,6 @@ $susy: (
 
 @include border-box-sizing;
 
-main {
-    // from 16 base font size
-    @include container(97.5em);
-}
-
 div.section-container {
     // from 16 base font size
     @include container(75em);
