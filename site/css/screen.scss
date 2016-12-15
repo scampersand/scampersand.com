@@ -163,6 +163,12 @@ div.col-width-main {
 
 div.proj-header-image,
 div.proj-header-video {
+    /* ensure the image or video fully occupies its container, even if we only
+     * have a lower resolution to offer.
+     */
+    img, video {
+        width: 100%;
+    }
     @media (min-width: 56em) {
         @include span(last 5);
     }
