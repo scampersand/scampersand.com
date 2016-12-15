@@ -176,6 +176,23 @@ div.proj-header-video {
     }
 }
 
+/* IE11 tries to play one of the videos and fails, so
+ * the fallback image at the end of the video node doesn't
+ * kick in. Instead we use CSS to hide the video on IE and
+ * display the image.
+ */
+.only-ie {
+    display: none;
+}
+@include only-ie {
+    .not-ie {
+        display: none;
+    }
+    .only-ie {
+        display: block;
+    }
+}
+
 div.proj-problem,
 div.solution-text,
 div.solution-pieces,
