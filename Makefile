@@ -43,6 +43,7 @@ watch:
 
 .PHONY: serve
 serve:
+#	jekyll serve -d $(JEKYLL_DEST) --no-watch --skip-initial-build --host 0 --port 8000
 	cd $(JEKYLL_DEST) && \
 	    browser-sync start -s --port 8000 --files ../.sync --no-notify --no-open --no-ui
 
@@ -111,7 +112,7 @@ _deploy_ghp:
 	    git reset origin/master && \
 	    git add -A && \
 	    if git status --porcelain | grep -q .; then \
-		git commit -m "Deploy from scampersand/scampersand.com"; \
+		git commit -m deploy; \
 	    fi && \
 	    git branch -u origin/master && \
 	    git push
@@ -120,4 +121,8 @@ endif
 
 .PHONY: help
 help:
-	@echo Not very helpful
+	echo >&2
+	echo "#########################################" >&2
+	echo "# Target required (hint: dev or deploy)" >&2
+	echo "#########################################" >&2
+	echo >&2
