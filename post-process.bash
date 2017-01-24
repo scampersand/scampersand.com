@@ -2,8 +2,17 @@
 
 : ${JEKYLL_DEST:=public}
 
-domain=scampersand.com
-links=$(grep -Eo "https?://$domain/[^<]*" < $JEKYLL_DEST/sitemap.xml)
+# Make a copy of sitemap since that's our source for links.
+# We'll touch it again at the end of this run so we can recognize when it's been
+# rebuilt.
+sitemap=$JEKYLL_DEST/sitemap.xml
+if [[ ! -e $sitemap.orig || $sitemap -nt $sitemap.orig ]]; then
+    cp -f $sitemap $sitemap.orig
+fi
+
+# Get the domain and list of links from the sitemap.
+domain=$(awk -F/ '/^url:/{print $3}' _config.yml)
+links=$(grep -Eo "https?://$domain/[^<]*" < $sitemap.orig)
 declare -A replacements
 
 for l in $links; do
@@ -48,4 +57,8 @@ for k in "${!replacements[@]}"; do
     cmd+="s,href=\\(&quot;\\)$k\\1,href=\\1${replacements[$k]}\\1,g;"
     cmd+="s,>$k<,>${replacements[$k]}<,g;"
 done
-find $JEKYLL_DEST -name '*.html' -o -name '*.xml' -print0 | xargs -0r sed -i -e "$cmd"
+find $JEKYLL_DEST \( -name '*.html' -o -name '*.xml' \) -print0 | xargs -0r sed -i -e "$cmd"
+
+# Touch sitemap.xml.orig so we can see when it should be replaced by a newer
+# sitemap.xml
+touch $sitemap.orig
