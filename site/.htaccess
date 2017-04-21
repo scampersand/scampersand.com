@@ -2,7 +2,6 @@
 # Start rewrite engine
 # ----------------------------------------------------------------------
 
-
 <IfModule mod_rewrite.c>
   # If your web host doesn't allow the FollowSymlinks option, you may need
   # to comment it out and use `Options +SymLinksOfOwnerMatch`, but be aware
@@ -19,11 +18,25 @@
 
 
 # ----------------------------------------------------------------------
+# Force HTTPS and non-www in one shot
+# ----------------------------------------------------------------------
+
+<IfModule mod_rewrite.c>
+  # OR has higher priority than implicit AND, so this is:
+  # (!https or www) and (collect the hostname)
+  RewriteCond %{HTTPS} !=on [OR]
+  RewriteCond %{HTTP_HOST} ^www\. [NC]
+  RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+</IfModule>
+
+
+# ----------------------------------------------------------------------
 # Disallow access to next.* except from home
 # ----------------------------------------------------------------------
 
 # This would work if Dreamhost were running Apache 2.4 instead of 2.2
-#<If "%{HTTP_HOST} =~ /next\.scampersand\.com$/i">
+#<If "%{HTTP_HOST} =~ /^next\./i">
 #  Require host jupiter.arongriffis.com
 #</If>
 
@@ -293,48 +306,6 @@ FileETag None
 
 # <IfModule mod_headers.c>
 #   Header set P3P "policyref=\"/w3c/p3p.xml\", CP=\"IDC DSP COR ADM DEVi TAIi PSA PSD IVAi IVDi CONi HIS OUR IND CNT\""
-# </IfModule>
-
-
-# ----------------------------------------------------------------------
-# Suppress or force the "www." at the beginning of URLs
-# ----------------------------------------------------------------------
-
-# The same content should never be available under two different URLs -
-# especially not with and without "www." at the beginning, since this can cause
-# SEO problems (duplicate content). That's why you should choose one of the
-# alternatives and redirect the other one.
-
-# By default option 1 (no "www.") is activated.
-# no-www.org/faq.php?q=class_b
-
-# If you'd prefer to use option 2, just comment out all option 1 lines
-# and uncomment option 2.
-
-# IMPORTANT: NEVER USE BOTH RULES AT THE SAME TIME!
-
-# ----------------------------------------------------------------------
-
-# Option 1:
-# Rewrite "www.example.com -> example.com".
-
-<IfModule mod_rewrite.c>
-  RewriteCond %{HTTPS} !=on
-  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-  RewriteRule ^ http://%1%{REQUEST_URI} [R=301,L]
-</IfModule>
-
-# ----------------------------------------------------------------------
-
-# Option 2:
-# Rewrite "example.com -> www.example.com".
-# Be aware that the following rule might not be a good idea if you use "real"
-# subdomains for certain parts of your website.
-
-# <IfModule mod_rewrite.c>
-#   RewriteCond %{HTTPS} !=on
-#   RewriteCond %{HTTP_HOST} !^www\..+$ [NC]
-#   RewriteRule ^ http://www.%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
 # </IfModule>
 
 
