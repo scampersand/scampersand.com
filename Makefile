@@ -8,7 +8,7 @@ WATCH_DIRS = site
 GHP_REMOTE = git@github.com:scampersand/scampersand.github.io
 NEXT_DEPLOY_DEST = scampersand@carlton.dreamhost.com:next.scampersand.com/
 DREAM_DEPLOY_DEST = scampersand@carlton.dreamhost.com:scampersand.com/
-VAGRANT_MAKE = vagrant ssh -- -t make -C /vagrant
+VAGRANT_MAKE = vagrant status | grep -q '^default *running' && vagrant ssh -- -t make -C /vagrant
 
 export JEKYLL_ENV
 
