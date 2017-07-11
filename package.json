@@ -3,8 +3,12 @@
   "version": "0.0.0",
   "files": [],
   "devDependencies": {
-    "browser-sync": "latest",
     "accoutrement-color": "latest",
-    "accoutrement-scale": "latest"
+    "accoutrement-scale": "latest",
+    "browser-sync": "latest"
+  },
+  "dependencies": {
+    "sassdoc": "^2.3.0",
+    "sassdoc-theme-herman": "^1.0.0-alpha.9"
   }
 }
