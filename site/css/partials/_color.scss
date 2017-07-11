@@ -1,25 +1,59 @@
 @import '../../node_modules/accoutrement-color/sass/color';
+@import '../../node_modules/sassdoc-theme-herman/scss/utilities';
 
-$colors: (
+// Brand Colors
+// ------------
+/// Our brand is defined by our primary brand blue,
+/// and secondary light blue.
+/// @group color
+/// @preview color-palette
+/// @type Map
+$brand-colors: (
+    'brand-blue': hsl(219, 75%, 35%),
+    'brand-lt-blue': hsl(200, 75%, 80%),
+);
+
+// Accent Colors
+// -------------
+/// We use red, green and dark blue as accent
+/// colors.
+/// @group color
+/// @preview color-palette
+/// @type Map
+$accent-colors: (
+    'red': hsl(349, 85%, 51%),
+    'red-RT': hsl(349, 85%, 41%),
+    'green': hsl(128, 52%, 47%),
+    'green-RT': hsl(128, 52%, 37%),
+    'dk-blue': hsl(238, 75%, 14%),
+);
+
+// Neutral Colors
+// --------------
+/// Soft whites and greys round out our
+/// palette.
+/// @group color
+/// @preview color-palette
+/// @type Map
+$neutral-colors: (
+    'off-white-1': hsl(55, 32%, 93%),
+    'off-white-2': hsl(53, 36%, 96%),
+    'off-white-2-RT': hsl(200, 36%, 86%),
     'lt-grey': hsl(0, 0%, 90%),
     'md-grey-soft': hsl(0, 0%, 70%),
     'md-grey': hsl(0, 0%, 60%),
-    'dk-grey': hsl(0, 0%, 30%),
-
-    'lt-blue': hsl(200, 75%, 80%),
-    'md-blue': hsl(219, 75%, 35%),
-    'dk-blue': hsl(238, 75%, 14%),
-    'red': hsl(349, 85%, 51%),
-    'green': hsl(128, 52%, 47%),
-    'off-white-1': hsl(55, 32%, 93%),
-    'off-white-2': hsl(53, 36%, 96%),
-
     'md-grey-RT': hsl(0, 0%, 65%),
+    'dk-grey': hsl(0, 0%, 30%),
     'dk-grey-RT': hsl(0, 0%, 40%),
-    'red-RT': hsl(349, 85%, 41%),
-    'green-RT': hsl(128, 52%, 37%),
-    'off-white-2-RT': hsl(200, 36%, 86%),
 );
+
+@include add-colors($brand-colors, $accent-colors, $neutral-colors);
+
+@include herman-add-colors('brand-colors', $brand-colors);
+@include herman-add-colors('accent-colors', $accent-colors);
+@include herman-add-colors('netural-colors', $neutral-colors);
+
+
 
 /* --- backgrounds ----------------------------- */
 
@@ -33,7 +67,7 @@ main {
 }
 
 body.landing main {
-    background-color: color('md-blue');
+    background-color: color('brand-blue');
 }
 
 header,
@@ -42,7 +76,7 @@ div.section-content {
 }
 
 div.section-header {
-    background-color: color('md-blue');
+    background-color: color('brand-blue');
 }
 
 li.bio-item,
@@ -70,7 +104,7 @@ html {
 }
 
 h1, h2 {
-    color: color('lt-blue');
+    color: color('brand-lt-blue');
 }
 
 h3.highlight {
@@ -78,7 +112,7 @@ h3.highlight {
 }
 
 p.landing {
-    color: color('lt-blue');
+    color: color('brand-lt-blue');
 }
 
 a {
@@ -132,7 +166,7 @@ input, textarea {
 /* --- nav ------------------------------------- */
 
 .menu {
-    background-color: color('md-blue');
+    background-color: color('brand-blue');
     @media (min-width: 65em) {
         background-color: transparent;
     }
