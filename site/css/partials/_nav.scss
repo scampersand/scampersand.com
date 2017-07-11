@@ -1,65 +1,73 @@
-@media screen and (max-width: 64.99999em) {
-    .menu {
-        position: fixed;
-        z-index: 1;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 100%;
-        overflow-x: hidden;
-        display: none;
-        flex-flow: column nowrap;
-        justify-content: center;
-        &.show {  // jquery .toggleClass()
-            display: flex;
-        }
+.menu {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: center;
+    &.show {  // jquery .toggleClass()
+        display: flex;
+    }
+}
+
+.menu ul {
+    text-align: center;
+}
+
+html.no-flexbox .menu ul,
+html.no-flexbox-vertical-center .menu ul {
+    // When flexbox isn't fully supported (in particular this seems to break
+    // justify-content:center) then apply a small margin to the top so the
+    // menu is pleasantly positioned on iphone 4 and old android.
+    // Don't make this too large since we don't know the viewport height.
+    margin-top: 48px;
+
+    @media screen and (min-width: 65em) {
+        margin-top: 0px;
+    }
+}
+
+.menu li {
+    line-height: 1.175;
+    // 27px is 1.5 times the font-size, minus 3px for border
+    margin-bottom: 24px;
+
+    a {
+        border-width: 3px;
+        border-style: none;
     }
 
-    .menu ul {
-        text-align: center;
+    &.current-item a {
+        border-bottom: dotted;
     }
+}
 
-    html.no-flexbox .menu ul,
-    html.no-flexbox-vertical-center .menu ul {
-        // When flexbox isn't fully supported (in particular this seems to break
-        // justify-content:center) then apply a small margin to the top so the
-        // menu is pleasantly positioned on iphone 4 and old android.
-        // Don't make this too large since we don't know the viewport height.
-        margin-top: 48px;
-    }
+.menu-toggle {
+    display: block;
+    float: right;
+    outline: 0;
 
-    .menu li {
-        // 27px is 1.5 times the font-size, minus 3px for border
-        margin-bottom: 24px;
-
-        a {
-            border-width: 3px;
-            border-style: none;
-        }
-
-        &.current-item a {
-            border-bottom: dotted;
-        }
-    }
-
-    .menu-toggle {
-        display: block;
-        float: right;
-        outline: 0;
-
-        &.close {
-            /* absolute position because floating right pushes the
-             * first list item left */
-            position: absolute;
-            top: 16px;
-            right: 16px;
-            display: none;  // jquery .toggle()
-        }
+    &.close {
+        /* absolute position because floating right pushes the
+            * first list item left */
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        display: none;  // jquery .toggle()
     }
 }
 
 @media screen and (min-width: 65em) {
     .menu {
+        position: initial;
+        height: initial;
+        width: initial;
+        flex-flow: initial;
+        justify-content: initial;
         display: block;
         float: right;
         padding-left: 1em;
@@ -78,6 +86,7 @@
             a {
                 padding-left: 8px;
                 border-left: 3px dotted;
+                border-bottom: initial;
             }
         }
     }
