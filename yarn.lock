@@ -13,13 +13,13 @@ accepts@1.3.3, accepts@~1.3.3:
     mime-types "~2.1.11"
     negotiator "0.6.1"
 
-accoutrement-color@latest:
-  version "2.0.1"
-  resolved "https://registry.yarnpkg.com/accoutrement-color/-/accoutrement-color-2.0.1.tgz#3fd2d01d24e1bf9496b2f57b9e720ad198f03fa8"
+accoutrement-color@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/accoutrement-color/-/accoutrement-color-2.1.1.tgz#9a7f2f964edfb0d88bb03d4785287beef0ee39dd"
 
-accoutrement-scale@latest:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/accoutrement-scale/-/accoutrement-scale-2.0.0.tgz#408331477b08143e0b2b1166c0057187dd7529e7"
+accoutrement-scale@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/accoutrement-scale/-/accoutrement-scale-3.1.1.tgz#bb2a49f6e9d7839be48480c84fdd74ca1134ef0f"
 
 acorn-jsx@^3.0.1:
   version "3.0.1"
