@@ -12,6 +12,7 @@
     &.show {  // jquery .toggleClass()
         display: flex;
     }
+    background-color: color('brand-blue');
 
     @media screen and (min-width: 65em) {
         position: initial;
@@ -22,11 +23,13 @@
         display: block;
         float: right;
         padding-left: 1em;
+        background-color: transparent;
     }
 }
 
 .menu ul {
     text-align: center;
+    background-color: transparent;
 
     @media screen and (min-width: 65em) {
         text-align: left;
@@ -48,6 +51,7 @@ html.no-flexbox-vertical-center .menu ul {
 }
 
 .menu li {
+    font-size: 2.5rem;
     line-height: 1.175;
     // 27px is 1.5 times the font-size, minus 3px for border
     margin-bottom: 24px;
@@ -61,10 +65,17 @@ html.no-flexbox-vertical-center .menu ul {
         border-bottom: dotted;
     }
 
+    // this is for small phones in landscape mode
+    @media (max-height: 24em) {
+        font-size: 1.125rem;
+    }
+
     @media screen and (min-width: 65em) {
         display: inline-block;
         margin: 0px 50px 0px 0px;
+        padding-top: 0.5625rem; // align horizontally with wordmark
         padding-left: 8px;
+        font-size: 1.125rem;
 
         &.current-item  a {
             padding-left: 8px;
@@ -86,10 +97,31 @@ html.no-flexbox-vertical-center .menu ul {
     }
 }
 
+.menu a {
+    color: color('off-white-2');
+
+    @media (min-width: 65em) {
+        color: color('dk-grey');
+    }
+}
+
+.menu a:hover {
+    color: color('off-white-2-RT');
+    transition: color linear 0.15s;
+
+    @media (min-width: 65em) {
+        color: color('dk-grey-RT');
+    }
+}
+
 .menu-toggle {
     display: block;
     float: right;
     outline: 0;
+    transition: color linear 0.15s;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    margin-bottom: 0;
 
     &.close {
         /* absolute position because floating right pushes the
@@ -100,7 +132,19 @@ html.no-flexbox-vertical-center .menu ul {
         display: none;  // jquery .toggle()
     }
 
+    @media (min-width: 30em) {
+        font-size: 1.6875rem;
+    }
+
     @media screen and (min-width: 65em) {
         display: none;
     }
+}
+
+.menu-toggle.open {
+    color: color('dk-grey');  // same as wordmark
+}
+
+.menu-toggle.open:hover {
+    color: color('dk-grey-RT');
 }

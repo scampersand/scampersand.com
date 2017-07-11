@@ -54,11 +54,11 @@ footer {
     width: 100%;
 }
 
-@import "partials/nav";
-@import "partials/cards";
 @import "partials/color";
 @import "partials/type";
 @import "partials/scale";
+@import "partials/cards";
+@import "partials/nav";
 
 // https://github.com/philipwalton/flexbugs#3-min-height-on-a-flex-container-wont-apply-to-its-flex-items
 .flex-ie-hack {

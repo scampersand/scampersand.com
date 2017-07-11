@@ -163,30 +163,6 @@ input, textarea {
     border-bottom-color: color('green');
 }
 
-/* --- nav ------------------------------------- */
-
-.menu {
-    background-color: color('brand-blue');
-    @media (min-width: 65em) {
-        background-color: transparent;
-    }
-}
-
-.menu ul {
-    background-color: transparent;
-}
-
-.menu a {
-    color: color('off-white-2');
-    @media (min-width: 65em) {
-        color: color('dk-grey');
-    }
-}
-
-a.menu-toggle.open {
-    color: color('dk-grey');  // same as wordmark
-}
-
 /* --- hovers ---------------------------------- */
 
 a:hover {
@@ -197,23 +173,10 @@ a:hover {
     color: color('md-grey-RT');
 }
 
-.site-wordmark a:hover, .menu-toggle.open:hover {
+.site-wordmark a:hover {
     color: color('dk-grey-RT');
-}
-
-.menu a:hover {
-    color: color('off-white-2-RT');
-    @media (min-width: 65em) {
-        color: color('dk-grey-RT');
-    }
 }
 
 input[type="submit"]:hover {
     background-color: color('green-RT');
-}
-
-/* --- animations ------------------------------ */
-
-.menu a, .menu-toggle {
-    transition: color linear 0.15s;
 }
