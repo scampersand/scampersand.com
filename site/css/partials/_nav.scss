@@ -12,10 +12,26 @@
     &.show {  // jquery .toggleClass()
         display: flex;
     }
+
+    @media screen and (min-width: 65em) {
+        position: initial;
+        height: initial;
+        width: initial;
+        flex-flow: initial;
+        justify-content: initial;
+        display: block;
+        float: right;
+        padding-left: 1em;
+    }
 }
 
 .menu ul {
     text-align: center;
+
+    @media screen and (min-width: 65em) {
+        text-align: left;
+        display: inline-block;
+    }
 }
 
 html.no-flexbox .menu ul,
@@ -44,6 +60,30 @@ html.no-flexbox-vertical-center .menu ul {
     &.current-item a {
         border-bottom: dotted;
     }
+
+    @media screen and (min-width: 65em) {
+        display: inline-block;
+        margin: 0px 50px 0px 0px;
+        padding-left: 8px;
+
+        &.current-item  a {
+            padding-left: 8px;
+            border-left: 3px dotted;
+            border-bottom: initial;
+        }
+    }
+}
+
+.menu li:first-child {  // "Home"
+    @media screen and (min-width: 65em) {
+        display: none;
+    }
+}
+
+.menu li:last-child {
+    @media screen and (min-width: 65em) {
+        margin-right: 0px;
+    }
 }
 
 .menu-toggle {
@@ -59,47 +99,8 @@ html.no-flexbox-vertical-center .menu ul {
         right: 16px;
         display: none;  // jquery .toggle()
     }
-}
 
-@media screen and (min-width: 65em) {
-    .menu {
-        position: initial;
-        height: initial;
-        width: initial;
-        flex-flow: initial;
-        justify-content: initial;
-        display: block;
-        float: right;
-        padding-left: 1em;
-    }
-
-    .menu ul {
-        display: inline-block;
-    }
-
-    .menu li {
-        display: inline-block;
-        margin: 0px 50px 0px 0px;
-        padding-left: 8px;
-
-        &.current-item {
-            a {
-                padding-left: 8px;
-                border-left: 3px dotted;
-                border-bottom: initial;
-            }
-        }
-    }
-
-    .menu li:first-child {  // "Home"
-        display: none;
-    }
-
-    .menu li:last-child {
-        margin-right: 0px;
-    }
-
-    .menu-toggle {
+    @media screen and (min-width: 65em) {
         display: none;
     }
 }
