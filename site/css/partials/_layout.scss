@@ -10,24 +10,32 @@ html, body {
     height: 100%;
 }
 
+body {
+    background-color: color('lt-grey');
+}
+
 main {
     position: relative;
     min-height: 100%;  // of body
     padding-bottom: 12em;  // sufficient for footer
+    background-color: color('off-white-2');
 }
 
 body.landing main {
     padding-bottom: 0px;  // no footer on landing
+    background-color: color('brand-blue');
 }
 
 header {
     padding-top: 1em;
     padding-bottom: 0.5em;
+    background-color: color('off-white-2');
 }
 
 div.section-header {
     padding-top: 1rem;
     padding-bottom: 1.3333rem;
+    background-color: color('brand-blue');
 
     @media (min-width: 48em) {
         padding-top: 2rem;
@@ -38,6 +46,7 @@ div.section-header {
 div.section-content {
     padding-top: 1.5rem;
     padding-bottom: 2rem;
+    background-color: color('off-white-2');
 
     @media (min-width: 30em) {
         padding-top: 3rem;
@@ -55,6 +64,7 @@ footer {
     width: 100%;
     padding-top: 1.5rem;
     padding-bottom: 2rem;
+    background-color: color('dk-blue');
 
     @media (min-width: 30em) {
         padding-top: 2.25rem;

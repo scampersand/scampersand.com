@@ -55,34 +55,6 @@ $neutral-colors: (
 
 
 
-/* --- backgrounds ----------------------------- */
-
-body {
-    background-color: color('lt-grey');
-}
-
-main {
-    // same as div.section-content
-    background-color: color('off-white-2');
-}
-
-body.landing main {
-    background-color: color('brand-blue');
-}
-
-header,
-div.section-content {
-    background-color: color('off-white-2');
-}
-
-div.section-header {
-    background-color: color('brand-blue');
-}
-
-footer {
-    background-color: color('dk-blue');
-}
-
 /* --- text ------------------------------------ */
 
 html {
