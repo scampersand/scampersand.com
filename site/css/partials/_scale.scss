@@ -77,20 +77,6 @@ p.landing {
     line-height: 1.5;
 }
 
-p.intro {
-    font-size: 1.125em;
-    line-height: 1.3333;
-
-    @media (min-width: 48em) {
-        font-size: 1.5em;
-    }
-
-    @media (min-width: 56em) {
-        font-size: 1.75em;
-        line-height: 1.2142;
-    }
-}
-
 p.thanks {
     margin-bottom: 3.9em;
 }
