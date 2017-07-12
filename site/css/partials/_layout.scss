@@ -72,6 +72,10 @@ footer {
     }
 }
 
+footer h4 {
+    margin-bottom: 0.25em;
+}
+
 // Project page
 // ============
 
@@ -138,6 +142,10 @@ div.solution-pieces {
     }
 }
 
+div.solution-pieces {
+    margin-bottom: 2rem;
+}
+
 div.solution-features {
     @media (min-width: 56em) {
         @include span(2 wide last);
@@ -148,8 +156,18 @@ div.solution-features {
 // ============
 
 div.contact-form {
+    margin-bottom: 2rem;
+
     @media (min-width: 56em) {
         @include span(4);
+    }
+}
+
+div.contact-location {
+    margin-bottom: 2rem;
+
+    @media (min-width: 56em) {
+        @include span(4 last);
     }
 }
 
@@ -167,13 +185,25 @@ div.ref-services {
     display: none;
     @media (min-width: 56em) {
         display: block;
+        margin-bottom: 1.5rem;
+
         @include span(4);
     }
 }
 
-div.contact-location,
+.ref-services li {
+    margin-bottom: 0;
+}
+
 div.ref-social {
     @media (min-width: 56em) {
         @include span(4 last);
     }
+}
+
+// Thanks page
+// ===========
+
+p.thanks {
+    margin-bottom: 3.9em;
 }
