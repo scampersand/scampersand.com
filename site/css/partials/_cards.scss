@@ -1,8 +1,10 @@
 li.bio-item,
 li.services-item {
     border-radius: 5px;
-    border-style: dotted;
     border-width: 3px;
+    border-style: dotted;
+    border-color: color('md-grey-soft');
+    background-color: white;
 }
 
 div.bio-text,
@@ -12,4 +14,17 @@ li.services-item {
     @media (min-width: 48em) {
         padding: 2.5rem;
     }
+}
+
+div.bio-text {
+    background-color: color('lt-grey');
+}
+
+div.bio-overlay {
+    color: color('dk-grey');
+}
+
+div.work-overlay {
+    &, a { color: white; }
+    color: white;
 }

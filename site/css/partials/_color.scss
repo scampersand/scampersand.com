@@ -79,15 +79,6 @@ div.section-header {
     background-color: color('brand-blue');
 }
 
-li.bio-item,
-li.services-item {
-    background-color: white;
-}
-
-div.bio-text {
-    background-color: color('lt-grey');
-}
-
 footer {
     background-color: color('dk-blue');
 }
@@ -122,23 +113,8 @@ a {
     color: color('dk-grey');
 }
 
-div.work-overlay {
-    &, a { color: white; }
-    color: white;
-}
-
-div.bio-overlay {
-    color: color('dk-grey');
-}
-
 footer {
     color: color('md-grey');
-}
-
-/* --- ui components --------------------------- */
-
-li.bio-item, li.services-item {
-    border-color: color('md-grey-soft');
 }
 
 /* --- hovers ---------------------------------- */
