@@ -1,3 +1,12 @@
+// Simple bulleted list
+// ====================
+ul.solution-list {
+    list-style: square;
+    margin-left: 1.5em;
+}
+
+// Ruled list
+// ==========
 .solution-features h4,
 .features-list li {
     border: 0;
