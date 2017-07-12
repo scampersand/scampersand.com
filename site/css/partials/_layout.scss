@@ -1,0 +1,63 @@
+/* Force main to take at least the height of the viewport,
+ * especially for applying a background color on the landing.
+ * See http://stackoverflow.com/a/17555766/347386
+ * but we're using body height 100% because nesting min-height doesn't work, see
+ * http://stackoverflow.com/q/16043519/347386
+ * The SO answer says using body height 100% will "leave a gap beneath the fold,
+ * which is usually undesirable" but I couldn't find anything wrong.
+ */
+html, body {
+    height: 100%;
+}
+
+main {
+    position: relative;
+    min-height: 100%;  // of body
+    padding-bottom: 12em;  // sufficient for footer
+}
+
+body.landing main {
+    padding-bottom: 0px;  // no footer on landing
+}
+
+header {
+    padding-top: 1em;
+    padding-bottom: 0.5em;
+}
+
+div.section-header {
+    padding-top: 1rem;
+    padding-bottom: 1.3333rem;
+
+    @media (min-width: 48em) {
+        padding-top: 2rem;
+        padding-bottom: 2.6666rem;
+    }
+}
+
+div.section-content {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+
+    @media (min-width: 30em) {
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+    }
+}
+
+div.section-sub {
+    margin-bottom: 2rem;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+
+    @media (min-width: 30em) {
+        padding-top: 2.25rem;
+        padding-bottom: 3rem;
+    }
+}
