@@ -92,11 +92,6 @@ footer {
     background-color: color('dk-blue');
 }
 
-input[type="submit"] {
-    //background-color: color('red');
-    background-color: color('green');
-}
-
 /* --- text ------------------------------------ */
 
 html {
@@ -136,10 +131,6 @@ div.bio-overlay {
     color: color('dk-grey');
 }
 
-input[type="submit"] {
-    color: white;
-}
-
 footer {
     color: color('md-grey');
 }
@@ -147,14 +138,6 @@ footer {
 /* --- ui components --------------------------- */
 
 li.bio-item, li.services-item {
-    border-color: color('md-grey-soft');
-}
-
-fieldset {
-    border-color: transparent;
-}
-
-input, textarea {
     border-color: color('md-grey-soft');
 }
 
@@ -175,8 +158,4 @@ a:hover {
 
 .site-wordmark a:hover {
     color: color('dk-grey-RT');
-}
-
-input[type="submit"]:hover {
-    background-color: color('green-RT');
 }

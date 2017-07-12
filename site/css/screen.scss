@@ -18,14 +18,6 @@ img, video {
     height: auto;
 }
 
-input, textarea {
-    width: 100%;
-}
-
-input[type="submit"] {
-    width: 33%;
-}
-
 /**
  - Vertical layout
  */
@@ -58,6 +50,7 @@ footer {
 @import "partials/type";
 @import "partials/scale";
 @import "partials/cards";
+@import "partials/form";
 @import "partials/nav";
 
 // https://github.com/philipwalton/flexbugs#3-min-height-on-a-flex-container-wont-apply-to-its-flex-items

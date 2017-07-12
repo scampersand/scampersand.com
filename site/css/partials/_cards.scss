@@ -1,14 +1,8 @@
 li.bio-item,
-li.services-item,
-input,
-textarea {
+li.services-item {
     border-radius: 5px;
     border-style: dotted;
     border-width: 3px;
-}
-
-input[type="submit"] {
-    border-width: 0;
 }
 
 div.bio-text,
@@ -18,11 +12,6 @@ li.services-item {
     @media (min-width: 48em) {
         padding: 2.5rem;
     }
-}
-
-input,
-textarea {
-    padding: 1rem;
 }
 
 .solution-features h4,

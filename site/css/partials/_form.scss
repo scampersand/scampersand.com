@@ -1,0 +1,29 @@
+fieldset {
+    border-color: transparent;
+}
+
+label {
+    line-height: 1.19;
+}
+
+input,
+textarea {
+    width: 100%;
+    border-color: color('md-grey-soft');
+    border-radius: 5px;
+    border-style: dotted;
+    border-width: 3px;
+    padding: 1rem;
+}
+
+input[type="submit"] {
+    width: 33%;
+    border-width: 0;
+    text-transform: uppercase;
+    background-color: color('green');
+    color: white;
+}
+
+input[type="submit"]:hover {
+    background-color: color('green-RT');
+}
