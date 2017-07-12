@@ -32,9 +32,9 @@
     @extend .cards;
 }
 
-/// Bio card
+// Bio card
+// ========
 //
-// Markup
 // <li class="bio-item">
 //     <div class="bio-photo">
 //         <div class="bio-overlay">
@@ -49,6 +49,8 @@
 //     </div>
 // </li>
 //
+/// A bio card is a combination card with both image
+/// and text.
 /// @group components
 .bio-item {
     @extend .card;
@@ -99,6 +101,19 @@
     }
 }
 
+// Service card
+// ============
+//
+// <li class="services-item">
+//     <h3>Service name</h3>
+//     <h3 class="highlight">&#8212;</h3>
+//     <p class="services">
+//       Service description
+//     </p>
+// </li>
+//
+/// A service card is a simple text-only card.
+/// @group components
 .services-item {
     @extend .card;
 
@@ -115,20 +130,25 @@
     }
 }
 
+// Work card
+// =========
+//
+// <li class="work-item">
+//     <a href="#">
+//         <div class="work-photo">
+//             <div class="work-overlay">
+//                 <h3>Project title</h3>
+//                 <p>Project short description</p>
+//             </div>
+//             <img />
+//         </div>
+//     </a>
+// </li>
+//
+/// A work card is an image card with a text overlay.
+/// @group components
 .work-item {
     @extend .card;
-}
-
-.work-item {
-    /* bio images should always fill their container.
-     * This allows img sizes attribute to affect what image
-     * in the srcset is fetched, without affecting the
-     * presentation. Possibly this should be a handled
-     * globally somehow.
-     */
-    img {
-        width: 100%;
-    }
 }
 
 .work-photo {
@@ -142,4 +162,8 @@
 
     &, a { color: white; }
     color: white;
+}
+
+.work-photo img {
+    width: 100%;
 }
