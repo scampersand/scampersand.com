@@ -32,15 +32,36 @@
     @extend .cards;
 }
 
-.services-item,
-.work-item {
-    @extend .card;
-}
-
 .bio-item {
     @extend .card;
     display: flex;  // so .bio-text can fill to bottom
     flex-direction: column;
+
+    border-radius: 5px;
+    border-width: 3px;
+    border-style: dotted;
+    border-color: color('md-grey-soft');
+    background-color: white;
+}
+
+.services-item {
+    @extend .card;
+
+    border-radius: 5px;
+    border-width: 3px;
+    border-style: dotted;
+    border-color: color('md-grey-soft');
+    background-color: white;
+
+    padding: 1.75rem;
+
+    @media (min-width: 48em) {
+        padding: 2.5rem;
+    }
+}
+
+.work-item {
+    @extend .card;
 }
 
 .bio-item,
@@ -65,6 +86,9 @@
     position: absolute;
     left: 1.5rem;
     bottom: 1.5rem;
+
+    &, a { color: white; }
+    color: white;
 }
 
 .bio-overlay {
@@ -76,41 +100,16 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    color: color('dk-grey');
 }
 
 .bio-text {
+    background-color: color('lt-grey');
     flex-grow: 1;  // fill gray to bottom
-}
 
-
-
-li.bio-item,
-li.services-item {
-    border-radius: 5px;
-    border-width: 3px;
-    border-style: dotted;
-    border-color: color('md-grey-soft');
-    background-color: white;
-}
-
-div.bio-text,
-li.services-item {
     padding: 1.75rem;
 
     @media (min-width: 48em) {
         padding: 2.5rem;
     }
-}
-
-div.bio-text {
-    background-color: color('lt-grey');
-}
-
-div.bio-overlay {
-    color: color('dk-grey');
-}
-
-div.work-overlay {
-    &, a { color: white; }
-    color: white;
 }
