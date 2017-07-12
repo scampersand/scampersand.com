@@ -32,6 +32,24 @@
     @extend .cards;
 }
 
+/// Bio card
+//
+// Markup
+// <li class="bio-item">
+//     <div class="bio-photo">
+//         <div class="bio-overlay">
+//             <h3 class="bio">Name</h3>
+//             <h4>Title</h4>
+//         </div>
+//         <img />
+//     </div>
+//     <div class="bio-text">
+//         <p>Bio content</p>
+//         <p class="bio-icons"></p>
+//     </div>
+// </li>
+//
+/// @group components
 .bio-item {
     @extend .card;
     display: flex;  // so .bio-text can fill to bottom
@@ -42,6 +60,43 @@
     border-style: dotted;
     border-color: color('md-grey-soft');
     background-color: white;
+}
+
+.bio-photo {
+    position: relative;
+}
+
+.bio-overlay {
+    position: absolute;
+    width: 100%;
+    height: 22%;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: color('dk-grey');
+}
+
+/* bio images should always fill their container.
+ * This allows img sizes attribute to affect what image
+ * in the srcset is fetched, without affecting the
+ * presentation. Possibly this should be a handled
+ * globally somehow.
+ */
+.bio-photo img {
+    width: 100%;
+}
+
+.bio-text {
+    background-color: color('lt-grey');
+    flex-grow: 1;  // fill gray to bottom
+
+    padding: 1.75rem;
+
+    @media (min-width: 48em) {
+        padding: 2.5rem;
+    }
 }
 
 .services-item {
@@ -64,7 +119,6 @@
     @extend .card;
 }
 
-.bio-item,
 .work-item {
     /* bio images should always fill their container.
      * This allows img sizes attribute to affect what image
@@ -77,7 +131,6 @@
     }
 }
 
-.bio-photo,
 .work-photo {
     position: relative;
 }
@@ -89,27 +142,4 @@
 
     &, a { color: white; }
     color: white;
-}
-
-.bio-overlay {
-    position: absolute;
-    width: 100%;
-    height: 22%;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    color: color('dk-grey');
-}
-
-.bio-text {
-    background-color: color('lt-grey');
-    flex-grow: 1;  // fill gray to bottom
-
-    padding: 1.75rem;
-
-    @media (min-width: 48em) {
-        padding: 2.5rem;
-    }
 }
