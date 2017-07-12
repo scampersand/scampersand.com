@@ -16,12 +16,6 @@ h1, h2 {
     }
 }
 
-h1.landing {
-    max-width: 12em;
-    margin-top: 0;  // enable flexbox-based vert centering
-    margin-bottom: 0.625em;
-}
-
 h3 {
     font-size: 1.5em;
     line-height: 1.25;
@@ -70,11 +64,6 @@ p, .solution-list li, .ref-services li {
 
 .ref-services li {
     margin-bottom: 0;
-}
-
-p.landing {
-    max-width: 32em;
-    line-height: 1.5;
 }
 
 p.thanks {
