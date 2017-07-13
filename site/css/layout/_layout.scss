@@ -32,7 +32,7 @@ header {
     background-color: color('off-white-2');
 }
 
-div.section-content {
+.section-content {
     padding-top: 1.5rem;
     padding-bottom: 2rem;
     background-color: color('off-white-2');
@@ -40,6 +40,15 @@ div.section-content {
     @media (min-width: 30em) {
         padding-top: 3rem;
         padding-bottom: 4rem;
+    }
+}
+
+.section-content-generous {
+    @extend .section-content;
+    padding-bottom: 3rem;
+
+    @media (min-width: 30em) {
+        padding-bottom: 6rem;
     }
 }
 
@@ -119,20 +128,14 @@ div.proj-header-video {
     }
 }
 
-div.proj-solution {
+.grid-full {
     @include span(full);
 }
 
-div.proj-problem,
-div.solution-text,
-div.solution-pieces {
+.grid-main {
     @media (min-width: 56em) {
         @include span(5);
     }
-}
-
-div.solution-pieces {
-    margin-bottom: 2rem;
 }
 
 div.solution-features {
