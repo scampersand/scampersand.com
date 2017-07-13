@@ -57,13 +57,6 @@ div.section-container {
     }
 }
 
-/* clear any floated children in galleries */
-div.section-sub:after {
-    content: '';
-    clear: both;
-    display: block;
-}
-
 @import "partials/color";
 @import "partials/type";
 @import "partials/scale";

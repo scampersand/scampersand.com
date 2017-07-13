@@ -52,10 +52,6 @@ header {
     }
 }
 
-div.section-sub {
-    margin-bottom: 2rem;
-}
-
 footer {
     position: absolute;
     bottom: 0;
@@ -126,6 +122,17 @@ div.proj-header-video {
     .only-ie {
         display: block;
     }
+}
+
+.grid-row {
+    margin-bottom: 2rem;
+}
+
+/* clear any floated children */
+.grid-row:after {
+    content: '';
+    clear: both;
+    display: block;
 }
 
 .grid-full {
