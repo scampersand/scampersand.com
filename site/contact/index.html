@@ -25,7 +25,7 @@ nav_prio: 40
                 </p>
             </div>
             <div class="section-sub">
-                <div class="contact-form">
+                <div class="grid-half-left">
                     <form class="contact" action="https://formspree.io/{{site.email}}"
                         method="POST">
                         <input type="hidden" name="_subject" value="Hello!">
@@ -48,7 +48,7 @@ nav_prio: 40
                         <input type="submit" value="Send">
                     </form>
                 </div>
-                <div class="contact-location">
+                <div class="grid-half-right large-screen-only">
                     <h3 class="section t-upper">Our Location</h3>
                     <div class="contact-map">
                         <!-- width/height default to desktop display, esp since we can't predict values for mobile -->
@@ -97,25 +97,27 @@ nav_prio: 40
 
 <footer>
     <div class="section-container">
-        <div class="ref-services">
-            <ul class="list-simple">
-                <li><h4>Services</h4></li>
-                <li>Web Application Development</li>
-                <li>Design &amp; User Experience</li>
-                <li>API Integration</li>
-                <li>Deployment, Scaling &amp; Security</li>
-            </ul>
-        </div>
-        <div class="ref-social">
-            <ul class="list-simple">
-                <li><h4>Follow Us</h4></li>
-                <li>
-                    <p class="contact-icons">
-                        <a href="https://twitter.com/scampersandco"><i class="fa fa-twitter-square"></i></a>
-                        <a href="https://github.com/scampersand"><i class="fa fa-github-square"></i></a>
-                        <a href="https://www.linkedin.com/company/scampersand"><i class="fa fa-linkedin-square"></i></a>
-                    </p>
-                </li>
+        <div class="section-sub">
+            <div class="grid-half-left large-screen-only">
+                <ul class="list-simple">
+                    <li><h4>Services</h4></li>
+                    <li>Web Application Development</li>
+                    <li>Design &amp; User Experience</li>
+                    <li>API Integration</li>
+                    <li>Deployment, Scaling &amp; Security</li>
+                </ul>
+            </div>
+            <div class="grid-half-right">
+                <ul class="list-simple">
+                    <li><h4>Follow Us</h4></li>
+                    <li>
+                        <p class="contact-icons">
+                            <a href="https://twitter.com/scampersandco"><i class="fa fa-twitter-square"></i></a>
+                            <a href="https://github.com/scampersand"><i class="fa fa-github-square"></i></a>
+                            <a href="https://www.linkedin.com/company/scampersand"><i class="fa fa-linkedin-square"></i></a>
+                        </p>
+                    </li>
+            </div>
         </div>
     </div>
 </footer>

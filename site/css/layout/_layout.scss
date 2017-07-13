@@ -144,24 +144,29 @@ div.proj-header-video {
     }
 }
 
-// Contact page
-// ============
-
-div.contact-form {
-    margin-bottom: 2rem;
-
+.grid-half-left {
     @media (min-width: 56em) {
         @include span(4);
     }
 }
 
-div.contact-location {
-    margin-bottom: 2rem;
-
+.grid-half-right {
     @media (min-width: 56em) {
         @include span(4 last);
     }
 }
+
+.large-screen-only {
+    display: none;
+
+    @media (min-width: 56em) {
+        display: block;
+    }
+}
+
+
+// Contact page
+// ============
 
 div.contact-map {
     position: relative;
@@ -170,22 +175,6 @@ div.contact-map {
         height: 100%;
         width: 100%;
         background: transparent;
-    }
-}
-
-div.ref-services {
-    display: none;
-    @media (min-width: 56em) {
-        display: block;
-        margin-bottom: 1.5rem;
-
-        @include span(4);
-    }
-}
-
-div.ref-social {
-    @media (min-width: 56em) {
-        @include span(4 last);
     }
 }
 
