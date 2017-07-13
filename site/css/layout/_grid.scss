@@ -1,0 +1,72 @@
+$susy: (
+    // debug: (image: show),
+    global-box-sizing: border-box,
+    columns: 8,
+);
+
+@include border-box-sizing;
+
+div.section-container {
+    // from 16 base font size
+    @include container(75em);
+
+    padding-left: 1em;
+    padding-right: 1em;
+
+    @media (min-width: 25em) {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+
+    @media (min-width: 48em) {
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+}
+
+.grid-row {
+    margin-bottom: 2rem;
+}
+
+/* clear any floated children */
+.grid-row:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.grid-full {
+    @include span(full);
+}
+
+.grid-main {
+    @media (min-width: 56em) {
+        @include span(5);
+    }
+}
+
+.grid-sidebar {
+    @media (min-width: 56em) {
+        @include span(2 wide last);
+    }
+}
+
+.grid-half-left {
+    @media (min-width: 56em) {
+        @include span(4);
+    }
+}
+
+.grid-half-right {
+    @media (min-width: 56em) {
+        @include span(4 last);
+    }
+}
+
+.large-screen-only {
+    display: none;
+
+    @media (min-width: 56em) {
+        display: block;
+    }
+}

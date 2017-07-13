@@ -27,40 +27,11 @@ ul {
     list-style: none;
 }
 
-/**
- - Columns
- */
-
-$susy: (
-    // debug: (image: show),
-    global-box-sizing: border-box,
-    columns: 8,
-);
-
-@include border-box-sizing;
-
-div.section-container {
-    // from 16 base font size
-    @include container(75em);
-
-    padding-left: 1em;
-    padding-right: 1em;
-
-    @media (min-width: 25em) {
-        padding-left: 1.5em;
-        padding-right: 1.5em;
-    }
-
-    @media (min-width: 48em) {
-        padding-left: 5em;
-        padding-right: 5em;
-    }
-}
-
 @import "partials/color";
 @import "partials/type";
 @import "partials/scale";
 
+@import "layout/grid";
 @import "layout/layout";
 @import "layout/slab";
 @import "layout/landing";
