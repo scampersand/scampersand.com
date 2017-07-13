@@ -32,17 +32,6 @@ header {
     background-color: color('off-white-2');
 }
 
-div.section-header {
-    padding-top: 1rem;
-    padding-bottom: 1.3333rem;
-    background-color: color('brand-blue');
-
-    @media (min-width: 48em) {
-        padding-top: 2rem;
-        padding-bottom: 2.6666rem;
-    }
-}
-
 div.section-content {
     padding-top: 1.5rem;
     padding-bottom: 2rem;

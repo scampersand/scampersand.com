@@ -1,0 +1,10 @@
+.slab {
+    padding-top: 1rem;
+    padding-bottom: 1.3333rem;
+    background-color: color('brand-blue');
+
+    @media (min-width: 48em) {
+        padding-top: 2rem;
+        padding-bottom: 2.6666rem;
+    }
+}
