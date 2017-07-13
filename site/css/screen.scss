@@ -68,11 +68,11 @@ div.section-sub:after {
 @import "partials/type";
 @import "partials/scale";
 
-@import "partials/layout";
+@import "layout/layout";
+@import "layout/landing";
 
 @import "components/callout";
 @import "components/cards";
 @import "components/form";
-@import "components/landing";
 @import "components/lists";
 @import "components/nav";
