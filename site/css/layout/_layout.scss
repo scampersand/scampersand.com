@@ -138,7 +138,7 @@ div.proj-header-video {
     }
 }
 
-div.solution-features {
+.grid-sidebar {
     @media (min-width: 56em) {
         @include span(2 wide last);
     }

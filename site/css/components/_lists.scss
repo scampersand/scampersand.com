@@ -7,23 +7,20 @@ ul.solution-list {
 
 // Ruled list
 // ==========
-.solution-features h4,
 .features-list li {
     border: 0;
     border-bottom: 2px solid color('green');
     padding-bottom: 0.5rem;
     padding-top: 0.5rem;
-}
 
-.solution-features h4 {
-    margin-bottom: 0;
-}
-
-.features-list li {
     font-size: 1.125em;
     line-height: 1.3;
 
     @media (min-width: 48em) {
         font-size: 1.375em;
     }
+}
+
+.features-list h4 {
+    margin-bottom: 0;
 }
