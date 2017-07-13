@@ -1,13 +1,21 @@
-// Simple bulleted list
-// ====================
-ul.solution-list {
+// Basic bulleted list
+// ===================
+.list-bulleted {
     list-style: square;
     margin-left: 1.5em;
 }
 
-// Ruled list
-// ==========
-.features-list li {
+// Simple list with header
+// =======================
+.list-simple li {
+    margin-bottom: 0;
+}
+
+// Ruled list with header
+// ======================
+.list-ruled li {
+    margin-bottom: 0;
+
     border: 0;
     border-bottom: 2px solid color('green');
     padding-bottom: 0.5rem;
@@ -21,6 +29,6 @@ ul.solution-list {
     }
 }
 
-.features-list h4 {
+.list-ruled h4 {
     margin-bottom: 0;
 }

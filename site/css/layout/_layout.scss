@@ -183,10 +183,6 @@ div.ref-services {
     }
 }
 
-.ref-services li {
-    margin-bottom: 0;
-}
-
 div.ref-social {
     @media (min-width: 56em) {
         @include span(4 last);
@@ -194,7 +190,7 @@ div.ref-social {
 }
 
 p.contact-icons {
-    font-size: 200%;
+    font-size: 2rem;
 }
 
 // Thanks page
