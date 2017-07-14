@@ -11,7 +11,7 @@ html, body {
 }
 
 body {
-    background-color: color('lt-grey');
+    color: color('dk-grey');
 }
 
 header {
@@ -32,6 +32,14 @@ header .menu-toggle {
     }
 }
 
+header .site-wordmark a {
+    color: color('dk-grey');
+}
+
+header .site-wordmark a:hover {
+    color: color('dk-grey-RT');
+}
+
 main {
     position: relative;
     min-height: 100%;  // of body
@@ -48,6 +56,7 @@ main {
     max-width: 12em;
     margin-top: 0;  // enable flexbox-based vert centering
     margin-bottom: 0.625em;
+    color: color('brand-lt-blue');
 }
 
 .landing p {
