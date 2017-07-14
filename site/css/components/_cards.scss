@@ -29,7 +29,7 @@
 // Bio card
 // ========
 //
-// <li class="bio-item">
+// <li class="bio-card">
 //     <div class="bio-photo">
 //         <div class="bio-overlay">
 //             <h3 class="bio">Name</h3>
@@ -46,7 +46,7 @@
 /// A bio card is a combination card with both image
 /// and text.
 /// @group components
-.bio-item {
+.bio-card {
     @extend .card;
     display: flex;  // so .bio-text can fill to bottom
     flex-direction: column;
@@ -107,7 +107,7 @@
 // Service card
 // ============
 //
-// <li class="services-item">
+// <li class="services-card">
 //     <h3>Service name</h3>
 //     <h3 class="highlight">&#8212;</h3>
 //     <p class="services">
@@ -117,7 +117,7 @@
 //
 /// A service card is a simple text-only card.
 /// @group components
-.services-item {
+.services-card {
     @extend .card;
 
     border-radius: 5px;
@@ -133,14 +133,14 @@
     }
 }
 
-.services-item .highlight {
+.services-card .highlight {
     color: color('green');
 }
 
 // Work card
 // =========
 //
-// <li class="work-item">
+// <li class="work-card">
 //     <a href="#">
 //         <div class="work-photo">
 //             <div class="work-overlay">
@@ -154,7 +154,7 @@
 //
 /// A work card is an image card with a text overlay.
 /// @group components
-.work-item {
+.work-card {
     @extend .card;
 }
 
