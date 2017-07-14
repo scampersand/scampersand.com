@@ -31,21 +31,3 @@ header {
     padding-bottom: 0.5em;
     background-color: color('off-white-2');
 }
-
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    padding-top: 1.5rem;
-    padding-bottom: 2rem;
-    background-color: color('dk-blue');
-
-    @media (min-width: 30em) {
-        padding-top: 2.25rem;
-        padding-bottom: 3rem;
-    }
-}
-
-footer h4 {
-    margin-bottom: 0.25em;
-}
