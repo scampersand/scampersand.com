@@ -11,14 +11,6 @@ blockquote, h1, h2, h3, h4, h5, h6, p, ul, li, fieldset {
     padding: 0;
 }
 
-img, video {
-    max-width: 100%;
-
-    /* auto height preserves ratio when the image is scaled. */
-    height: auto;
-}
-
-
 a {
     text-decoration: none;
 }
@@ -41,4 +33,5 @@ ul {
 @import "components/form";
 @import "components/icons";
 @import "components/lists";
+@import "components/media";
 @import "components/nav";
