@@ -1,19 +1,7 @@
 @import "susy";
 @import "partials/normalize";
 @import "partials/hacks";
-
-/**
- - Reset
- */
-
-blockquote, h1, h2, h3, h4, h5, h6, p, ul, li, fieldset {
-    margin: 0;
-    padding: 0;
-}
-
-ul {
-    list-style: none;
-}
+@import "partials/reset";
 
 @import "partials/color";
 @import "partials/type";
