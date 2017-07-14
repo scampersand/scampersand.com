@@ -53,14 +53,3 @@ p, li {
         font-size: 1.25rem;
     }
 }
-
-p.site-wordmark, a.menu-toggle {
-    font-size: 1.5rem;
-
-    line-height: 1.25;
-    margin-bottom: 0;
-
-    @media (min-width: 30em) {
-        font-size: 1.6875rem;
-    }
-}
