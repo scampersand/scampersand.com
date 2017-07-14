@@ -6,7 +6,7 @@ $susy: (
 
 @include border-box-sizing;
 
-div.section-container {
+.container {
     // from 16 base font size
     @include container(75em);
 

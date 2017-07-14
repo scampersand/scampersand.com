@@ -27,24 +27,24 @@ body.landing main {
 .flex-item-wrapper {
     /*
     h1.landing and p.landing both have max-width constraints. Normally
-    div.section-container would still occupy the full width available and the
-    auto margins on right and left would center the block on the page. In other
-    words, the width of div.section-container shouldn't be determined by its
-    content but rather by the available space.
+    .container would still occupy the full width available and the auto
+    margins on right and left would center the block on the page. In other
+    words, the width of .container should not be determined by its content
+    but rather by the available space.
 
-    However when div.section-container is a flex item--meaning the direct child
-    of a flex box--then the calculations changes. Instead of occupying width
-    available, its width corresponds to the width of its h1 and p content. The
-    result is that the susy container appears indented rather than flush left
-    aligned with the top bar content.
+    However when .container is a flex item--meaning the direct child of
+    a flex box--then the calculations changes. Instead of occupying width
+    available, its width corresponds to the width of its h1 and p content.
+    The result is that the susy container appears indented rather than
+    flush left aligned with the top bar content.
 
     The first workaround was to put flexbox inside the susy container, see
     55e067d. However that results in bad rendering on iphone 4 and old android
     browser.
 
     This new workaround adds div.flex-item-wrapper which seems to iron out the
-    cross-width calculation on the flex box. This way div.section-container is
-    no longer a flex item itself and spans the intended width.
+    cross-width calculation on the flex box. This way .container is no
+    longer a flex item itself and spans the intended width.
     */
 }
 
