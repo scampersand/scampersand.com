@@ -70,37 +70,6 @@ footer h4 {
     margin-bottom: 0.25em;
 }
 
-// Project page
-// ============
-
-/* when the project includes a visual,
- * use 3 columns for intro text
- */
-div.proj-intro {
-    @media (min-width: 56em) {
-        @include span(3);
-    }
-}
-
-/* when there is no accompanying visual,
- * match the width of the main text
- */
-div.col-width-main {
-    @media (min-width: 56em) {
-        @include span(5);
-    }
-}
-
-div.proj-header-image,
-div.proj-header-video {
-    @media (min-width: 56em) {
-        @include span(last 5);
-    }
-    @media (min-width: 75em) {
-        margin-top: -180px;
-    }
-}
-
 // Thanks page
 // ===========
 

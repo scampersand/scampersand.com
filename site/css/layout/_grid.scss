@@ -39,9 +39,24 @@ div.section-container {
     @include span(full);
 }
 
+/* when the project includes a visual,
+ * use 3 columns for intro text
+ */
+.grid-callout {
+    @media (min-width: 56em) {
+        @include span(3);
+    }
+}
+
 .grid-main {
     @media (min-width: 56em) {
         @include span(5);
+    }
+}
+
+.grid-main-left {
+    @media (min-width: 56em) {
+        @include span(last 5);
     }
 }
 
