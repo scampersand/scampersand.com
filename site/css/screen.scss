@@ -1,11 +1,11 @@
 @import "susy";
-@import "partials/normalize";
-@import "partials/hacks";
-@import "partials/reset";
+@import "config/normalize";
+@import "config/hacks";
+@import "config/reset";
 
-@import "partials/color";
-@import "partials/type";
-@import "partials/scale";
+@import "config/color";
+@import "config/type";
+@import "config/scale";
 
 @import "layout/grid";
 @import "layout/base";
