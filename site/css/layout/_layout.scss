@@ -32,26 +32,6 @@ header {
     background-color: color('off-white-2');
 }
 
-.section-content {
-    padding-top: 1.5rem;
-    padding-bottom: 2rem;
-    background-color: color('off-white-2');
-
-    @media (min-width: 30em) {
-        padding-top: 3rem;
-        padding-bottom: 4rem;
-    }
-}
-
-.section-content-generous {
-    @extend .section-content;
-    padding-bottom: 3rem;
-
-    @media (min-width: 30em) {
-        padding-bottom: 6rem;
-    }
-}
-
 footer {
     position: absolute;
     bottom: 0;
@@ -68,11 +48,4 @@ footer {
 
 footer h4 {
     margin-bottom: 0.25em;
-}
-
-// Thanks page
-// ===========
-
-p.thanks {
-    margin-bottom: 3.9em;
 }

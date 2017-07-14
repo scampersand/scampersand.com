@@ -1,0 +1,25 @@
+.content-basic {
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    background-color: color('off-white-2');
+
+    @media (min-width: 30em) {
+        padding-top: 3rem;
+        padding-bottom: 4rem;
+    }
+}
+
+.content-prose {
+    @extend .content-basic;
+    padding-bottom: 3rem;
+
+    @media (min-width: 30em) {
+        padding-bottom: 6rem;
+    }
+}
+
+.content-message {
+    @extend .content-basic;
+
+    padding-bottom: 9rem;
+}
