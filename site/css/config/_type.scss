@@ -1,9 +1,5 @@
-// Body Font
-// ---------
-/// Our primary font is Foco.
-/// @group fonts
 html {
-    font-family: "foco", sans-serif;
+    font-family: $sans-serif;
 
     font-variant-numeric: lining-nums;
     -moz-font-feature-settings: "lnum";
@@ -11,35 +7,30 @@ html {
     font-feature-settings: "lnum";
 }
 
-$f-light: 300;
-$f-regular: 400;
-$f-bold: 700;
-$f-black: 900;
-
 h1 {
-    font-weight: $f-black;
+    font-weight: $sans-black;
 }
 
 h2 {
-    font-weight: $f-black;
+    font-weight: $sans-black;
 }
 
 h3 {
-    font-weight: $f-bold;
+    font-weight: $sans-bold;
 }
 
 h4 {
-    font-weight: $f-bold;
+    font-weight: $sans-bold;
 }
 
 .site-wordmark {
-    font-weight: $f-black;
+    font-weight: $sans-black;
 }
 
 .menu li {
-    font-weight: $f-black;
+    font-weight: $sans-black;
     @media (min-width: 65em) {
-        font-weight: $f-bold;
+        font-weight: $sans-bold;
     }
 }
 
