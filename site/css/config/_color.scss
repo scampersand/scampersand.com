@@ -22,9 +22,9 @@ $brand-colors: (
 /// @type Map
 $accent-colors: (
     'red': hsl(349, 85%, 51%),
-    'red-RT': hsl(349, 85%, 41%),
+    'red-dark': 'red' ('darken': 10%),
     'green': hsl(128, 52%, 47%),
-    'green-RT': hsl(128, 52%, 37%),
+    'green-dark': 'green' ('darken': 10%),
     'dk-blue': hsl(238, 75%, 14%),
 );
 
@@ -36,15 +36,14 @@ $accent-colors: (
 /// @preview color-palette
 /// @type Map
 $neutral-colors: (
-    'off-white-1': hsl(55, 32%, 93%),
-    'off-white-2': hsl(53, 36%, 96%),
+    'off-white': hsl(53, 36%, 96%),
     'off-white-2-RT': hsl(200, 36%, 86%),
     'lt-grey': hsl(0, 0%, 90%),
-    'md-grey-soft': hsl(0, 0%, 70%),
+    'md-grey-soft': 'md-grey' ('lighten': 10%),
     'md-grey': hsl(0, 0%, 60%),
-    'md-grey-RT': hsl(0, 0%, 65%),
+    'md-grey-RT': 'md-grey' ('darken': 5%),
     'dk-grey': hsl(0, 0%, 30%),
-    'dk-grey-RT': hsl(0, 0%, 40%),
+    'dk-grey-RT': 'dk-grey' ('darken': 10%),
 );
 
 @include add-colors($brand-colors, $accent-colors, $neutral-colors);

@@ -17,7 +17,7 @@ body {
 header {
     padding-top: 1em;
     padding-bottom: 0.5em;
-    background-color: color('off-white-2');
+    background-color: color('off-white');
 }
 
 header .site-wordmark,
@@ -45,7 +45,7 @@ main {
     position: relative;
     min-height: 100%;  // of body
     padding-bottom: 12em;  // sufficient for footer
-    background-color: color('off-white-2');
+    background-color: color('off-white');
 }
 
 .landing main {

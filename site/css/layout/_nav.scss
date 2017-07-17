@@ -103,7 +103,7 @@ html.no-flexbox-vertical-center .menu ul {
 }
 
 .menu a {
-    color: color('off-white-2');
+    color: color('off-white');
 
     @media (min-width: $nav-switch) {
         color: color('dk-grey');
