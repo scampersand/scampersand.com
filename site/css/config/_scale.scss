@@ -2,54 +2,75 @@ html {
     font-size: 100%;
 }
 
-h1, h2 {
-    font-size: 2rem;
-    line-height: 1.25;
-    margin-top: 2em;
+@mixin heading($level) {
 
-    @media (min-width: 48em) {
-        font-size: 3rem;
-    }
-
-    @media (min-width: 56em) {
-        font-size: 4rem;
-    }
-}
-
-h3 {
-    font-size: 1.5rem;
-    line-height: 1.25;
-    margin-bottom: 0.25em;
-
-    @media (min-width: 48em) {
-        font-size: 1.75rem;
-    }
-
-    @media (min-width: 56em) {
-        font-size: 2rem;
-    }
-}
-
-h4 {
-    font-size: 1.125rem;
-    line-height: 1.3;
-    margin-bottom: 0.65em;
-
-    @media (min-width: 48em) {
-        font-size: 1.5rem;
-    }
-}
-
-p, li {
-    font-size: 1rem;
-    line-height: 1.3;
-    margin-bottom: 0.65em;
-
-    @media (min-width: 48em) {
+    @if $level == standard {
         font-size: 1.125rem;
+        line-height: 1.3;
+        margin-bottom: 0.65em;
+
+        @media (min-width: 48em) {
+            font-size: 1.5rem;
+        }
     }
 
-    @media (min-width: 56em) {
-        font-size: 1.25rem;
+    @if $level == large {
+        font-size: 1.5rem;
+        line-height: 1.25;
+        margin-bottom: 0.25em;
+
+        @media (min-width: 48em) {
+            font-size: 1.75rem;
+        }
+
+        @media (min-width: 56em) {
+            font-size: 2rem;
+        }
+    }
+
+    @if $level == display {
+        font-size: 2rem;
+        line-height: 1.25;
+        margin-top: 2em;
+
+        @media (min-width: 48em) {
+            font-size: 3rem;
+        }
+
+        @media (min-width: 56em) {
+            font-size: 4rem;
+        }
+    }
+
+}
+
+@mixin text($level) {
+
+    @if $level == standard {
+        font-size: 1rem;
+        line-height: 1.3;
+        margin-bottom: 0.65em;
+
+        @media (min-width: 48em) {
+            font-size: 1.125rem;
+        }
+
+        @media (min-width: 56em) {
+            font-size: 1.25rem;
+        }
+    }
+
+    @if $level == large {
+        font-size: 1.125em;
+        line-height: 1.3333;
+
+        @media (min-width: 48em) {
+            font-size: 1.5em;
+        }
+
+        @media (min-width: 56em) {
+            font-size: 1.75em;
+            line-height: 1.2142;
+        }
     }
 }

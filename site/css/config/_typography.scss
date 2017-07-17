@@ -8,19 +8,31 @@ html {
 }
 
 h1 {
+    @include heading(display);
     font-weight: $sans-black;
 }
 
 h2 {
+    @include heading(display);
     font-weight: $sans-black;
 }
 
 h3 {
+    @include heading(large);
     font-weight: $sans-bold;
 }
 
 h4 {
+    @include heading(standard);
     font-weight: $sans-bold;
+}
+
+p, li {
+    @include text(standard);
+}
+
+.t-large {
+    @include text(large);
 }
 
 .t-italic {
