@@ -74,3 +74,14 @@ html {
         }
     }
 }
+
+@mixin icon($level) {
+
+    @if $level == standard {
+        font-size: 1rem;
+    }
+
+    @if $level == large {
+        font-size: 2rem;
+    }
+}

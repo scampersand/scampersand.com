@@ -1,5 +1,5 @@
 .contact-icons {
-    font-size: 2rem;
+    @include icon(large);
 }
 
 .contact-icons a {
