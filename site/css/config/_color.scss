@@ -52,3 +52,10 @@ $neutral-colors: (
 @include herman-add-colors('brand-colors', $brand-colors);
 @include herman-add-colors('accent-colors', $accent-colors);
 @include herman-add-colors('netural-colors', $neutral-colors);
+
+@mixin grey-dotted-border {
+    border-radius: 5px;
+    border-width: 3px;
+    border-style: dotted;
+    border-color: color('md-grey-soft');
+}

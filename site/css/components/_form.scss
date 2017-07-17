@@ -16,11 +16,8 @@ label {
 input,
 textarea {
     width: 100%;
-    border-color: color('md-grey-soft');
-    border-radius: 5px;
-    border-style: dotted;
-    border-width: 3px;
     padding: 1rem;
+    @include grey-dotted-border;
 }
 
 input[type="submit"] {

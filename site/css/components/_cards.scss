@@ -51,10 +51,7 @@
     display: flex;  // so .bio-text can fill to bottom
     flex-direction: column;
 
-    border-radius: 5px;
-    border-width: 3px;
-    border-style: dotted;
-    border-color: color('md-grey-soft');
+    @include grey-dotted-border;
     background-color: white;
 }
 
@@ -120,10 +117,7 @@
 .services-card {
     @extend .card;
 
-    border-radius: 5px;
-    border-width: 3px;
-    border-style: dotted;
-    border-color: color('md-grey-soft');
+    @include grey-dotted-border;
     background-color: white;
 
     padding: 1.75rem;
