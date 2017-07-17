@@ -111,9 +111,6 @@ html.no-flexbox-vertical-center .menu ul {
 }
 
 .menu a:hover {
-    color: color('off-white-2-RT');
-    transition: color linear 0.15s;
-
     @media (min-width: $nav-switch) {
         color: color('dk-grey-RT');
     }
