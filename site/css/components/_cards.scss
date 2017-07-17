@@ -1,6 +1,6 @@
 .cards {
     display: block;
-    @media (min-width: 56em) {
+    @media (min-width: $multi-column) {
         display: flex;
         flex-flow: row wrap;
         align-items: stretch;  /* default */
@@ -21,7 +21,7 @@
     @include only-edge {  // partials/_hacks.scss
         margin-bottom: 29.531px;  // from Chrome's computed result
     }
-    @media (min-width: 56em) {
+    @media (min-width: $multi-column) {
         width: span(4);
     }
 }
@@ -96,7 +96,7 @@
 
     padding: 1.75rem;
 
-    @media (min-width: 48em) {
+    @media (min-width: $tablet) {
         padding: 2.5rem;
     }
 }
@@ -122,7 +122,7 @@
 
     padding: 1.75rem;
 
-    @media (min-width: 48em) {
+    @media (min-width: $tablet) {
         padding: 2.5rem;
     }
 }

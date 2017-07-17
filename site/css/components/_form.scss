@@ -2,7 +2,7 @@ fieldset {
     border-color: transparent;
     margin-bottom: 0.75em;
 
-    @media (min-width: 30em) {
+    @media (min-width: $mobile-large) {
         margin-bottom: 1rem;
     }
 }

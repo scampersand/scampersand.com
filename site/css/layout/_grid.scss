@@ -18,7 +18,7 @@ $susy: (
         padding-right: 1.5em;
     }
 
-    @media (min-width: 48em) {
+    @media (min-width: $tablet) {
         padding-left: 5em;
         padding-right: 5em;
     }
@@ -43,37 +43,37 @@ $susy: (
  * use 3 columns for intro text
  */
 .grid-callout {
-    @media (min-width: 56em) {
+    @media (min-width: $multi-column) {
         @include span(3);
     }
 }
 
 .grid-main {
-    @media (min-width: 56em) {
+    @media (min-width: $multi-column) {
         @include span(5);
     }
 }
 
 .grid-main-left {
-    @media (min-width: 56em) {
+    @media (min-width: $multi-column) {
         @include span(last 5);
     }
 }
 
 .grid-sidebar {
-    @media (min-width: 56em) {
+    @media (min-width: $multi-column) {
         @include span(2 wide last);
     }
 }
 
 .grid-half-left {
-    @media (min-width: 56em) {
+    @media (min-width: $multi-column) {
         @include span(4);
     }
 }
 
 .grid-half-right {
-    @media (min-width: 56em) {
+    @media (min-width: $multi-column) {
         @include span(4 last);
     }
 }
@@ -81,7 +81,7 @@ $susy: (
 .large-screen-only {
     display: none;
 
-    @media (min-width: 56em) {
+    @media (min-width: $multi-column) {
         display: block;
     }
 }

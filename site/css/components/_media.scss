@@ -13,7 +13,7 @@ img, video {
         width: 100%;
     }
 
-    @media (min-width: 75em) {
+    @media (min-width: $wide-screen) {
         margin-top: -180px;
     }
 }

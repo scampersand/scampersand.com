@@ -3,7 +3,7 @@
     padding-bottom: 2rem;
     background-color: color('off-white-2');
 
-    @media (min-width: 30em) {
+    @media (min-width: $mobile-large) {
         padding-top: 3rem;
         padding-bottom: 4rem;
     }
@@ -13,7 +13,7 @@
     @extend .content-basic;
     padding-bottom: 3rem;
 
-    @media (min-width: 30em) {
+    @media (min-width: $mobile-large) {
         padding-bottom: 6rem;
     }
 }

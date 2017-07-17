@@ -7,7 +7,7 @@ footer {
     background-color: color('dk-blue');
     color: color('md-grey');
 
-    @media (min-width: 30em) {
+    @media (min-width: $mobile-large) {
         padding-top: 2.25rem;
         padding-bottom: 3rem;
     }

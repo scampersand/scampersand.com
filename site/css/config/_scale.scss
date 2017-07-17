@@ -9,7 +9,7 @@ html {
         line-height: 1.3;
         margin-bottom: 0.65em;
 
-        @media (min-width: 48em) {
+        @media (min-width: $tablet) {
             font-size: 1.5rem;
         }
     }
@@ -19,11 +19,11 @@ html {
         line-height: 1.25;
         margin-bottom: 0.25em;
 
-        @media (min-width: 48em) {
+        @media (min-width: $tablet) {
             font-size: 1.75rem;
         }
 
-        @media (min-width: 56em) {
+        @media (min-width: $multi-column) {
             font-size: 2rem;
         }
     }
@@ -33,11 +33,11 @@ html {
         line-height: 1.25;
         margin-top: 2em;
 
-        @media (min-width: 48em) {
+        @media (min-width: $tablet) {
             font-size: 3rem;
         }
 
-        @media (min-width: 56em) {
+        @media (min-width: $multi-column) {
             font-size: 4rem;
         }
     }
@@ -51,11 +51,11 @@ html {
         line-height: 1.3;
         margin-bottom: 0.65em;
 
-        @media (min-width: 48em) {
+        @media (min-width: $tablet) {
             font-size: 1.125rem;
         }
 
-        @media (min-width: 56em) {
+        @media (min-width: $multi-column) {
             font-size: 1.25rem;
         }
     }
@@ -64,11 +64,11 @@ html {
         font-size: 1.125em;
         line-height: 1.3333;
 
-        @media (min-width: 48em) {
+        @media (min-width: $tablet) {
             font-size: 1.5em;
         }
 
-        @media (min-width: 56em) {
+        @media (min-width: $multi-column) {
             font-size: 1.75em;
             line-height: 1.2142;
         }

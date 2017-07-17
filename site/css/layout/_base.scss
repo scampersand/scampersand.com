@@ -27,7 +27,7 @@ header .menu-toggle {
     line-height: 1.25;
     margin-bottom: 0;
 
-    @media (min-width: 30em) {
+    @media (min-width: $mobile-large) {
         font-size: 1.6875rem;
     }
 }
@@ -80,7 +80,7 @@ main {
     padding-bottom: 2em;  // maintains centering
     min-height: 100vh;  // in case calc() doesn't work
     min-height: calc(100vh - 54px);  // 54px is mobile nav header
-    @media screen and (min-width: 30em) {
+    @media screen and (min-width: $mobile-large) {
         // 57.75px is desktop nav header.
         // This doesn't change at 65em when the menu items are revealed.
         min-height: calc(100vh - 57.75px);

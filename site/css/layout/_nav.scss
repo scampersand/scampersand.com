@@ -16,7 +16,7 @@
     }
     background-color: color('brand-blue');
 
-    @media screen and (min-width: 65em) {
+    @media (min-width: $nav-switch) {
         position: initial;
         height: initial;
         width: initial;
@@ -33,7 +33,7 @@
     text-align: center;
     background-color: transparent;
 
-    @media screen and (min-width: 65em) {
+    @media (min-width: $nav-switch) {
         text-align: left;
         display: inline-block;
     }
@@ -47,7 +47,7 @@ html.no-flexbox-vertical-center .menu ul {
     // Don't make this too large since we don't know the viewport height.
     margin-top: 48px;
 
-    @media screen and (min-width: 65em) {
+    @media (min-width: $nav-switch) {
         margin-top: 0px;
     }
 }
@@ -74,7 +74,7 @@ html.no-flexbox-vertical-center .menu ul {
         font-size: 1.125rem;
     }
 
-    @media screen and (min-width: 65em) {
+    @media (min-width: $nav-switch) {
         display: inline-block;
         margin: 0px 50px 0px 0px;
         padding-top: 0.5625rem; // align horizontally with wordmark
@@ -91,13 +91,13 @@ html.no-flexbox-vertical-center .menu ul {
 }
 
 .menu li:first-child {  // "Home"
-    @media screen and (min-width: 65em) {
+    @media (min-width: $nav-switch) {
         display: none;
     }
 }
 
 .menu li:last-child {
-    @media screen and (min-width: 65em) {
+    @media (min-width: $nav-switch) {
         margin-right: 0px;
     }
 }
@@ -105,7 +105,7 @@ html.no-flexbox-vertical-center .menu ul {
 .menu a {
     color: color('off-white-2');
 
-    @media (min-width: 65em) {
+    @media (min-width: $nav-switch) {
         color: color('dk-grey');
     }
 }
@@ -114,7 +114,7 @@ html.no-flexbox-vertical-center .menu ul {
     color: color('off-white-2-RT');
     transition: color linear 0.15s;
 
-    @media (min-width: 65em) {
+    @media (min-width: $nav-switch) {
         color: color('dk-grey-RT');
     }
 }
@@ -137,11 +137,11 @@ html.no-flexbox-vertical-center .menu ul {
         display: none;  // jquery .toggle()
     }
 
-    @media (min-width: 30em) {
+    @media (min-width: $mobile-large) {
         font-size: 1.6875rem;
     }
 
-    @media screen and (min-width: 65em) {
+    @media (min-width: $nav-switch) {
         display: none;
     }
 }
