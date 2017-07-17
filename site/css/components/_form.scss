@@ -9,13 +9,8 @@ fieldset {
 
 label {
     display: block;
-    font-size: 1rem;
     line-height: 1.19;
     margin-bottom: 0.25em;
-
-    @media (min-width: 30em) {
-        font-size: 1.375rem;
-    }
 }
 
 input,
