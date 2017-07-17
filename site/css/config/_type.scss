@@ -23,17 +23,6 @@ h4 {
     font-weight: $sans-bold;
 }
 
-.site-wordmark {
-    font-weight: $sans-black;
-}
-
-.menu li {
-    font-weight: $sans-black;
-    @media (min-width: 65em) {
-        font-weight: $sans-bold;
-    }
-}
-
 .t-italic {
     font-style: italic;
 }
