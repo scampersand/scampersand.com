@@ -36,7 +36,8 @@ $accent-colors: (
 /// @preview color-palette
 /// @type Map
 $neutral-colors: (
-    'off-white': hsl(53, 36%, 96%),
+    'bright-white': hsl(0, 0%, 100%),
+    'soft-white': hsl(53, 36%, 96%),
     'lt-grey': hsl(0, 0%, 90%),
     'md-grey-soft': 'md-grey' ('lighten': 10%),
     'md-grey': hsl(0, 0%, 60%),
