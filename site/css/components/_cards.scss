@@ -45,7 +45,6 @@
 //
 /// A bio card is a combination card with both image
 /// and text.
-/// @group components
 .bio-card {
     @extend .card;
     display: flex;  // so .bio-text can fill to bottom
@@ -113,7 +112,6 @@
 // </li>
 //
 /// A service card is a simple text-only card.
-/// @group components
 .services-card {
     @extend .card;
 
@@ -147,7 +145,6 @@
 // </li>
 //
 /// A work card is an image card with a text overlay.
-/// @group components
 .work-card {
     @extend .card;
 }

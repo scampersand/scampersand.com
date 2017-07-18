@@ -5,9 +5,6 @@
 // ------------
 /// Our brand is defined by our primary brand blue,
 /// and secondary light blue.
-/// @group color
-/// @preview color-palette
-/// @type Map
 $brand-colors: (
     'brand-blue': hsl(219, 75%, 35%),
     'brand-lt-blue': hsl(200, 75%, 80%),
@@ -17,9 +14,6 @@ $brand-colors: (
 // -------------
 /// We use red, green and dark blue as accent
 /// colors.
-/// @group color
-/// @preview color-palette
-/// @type Map
 $accent-colors: (
     'red': hsl(349, 85%, 51%),
     'red-dark': 'red' ('darken': 10%),
@@ -32,9 +26,6 @@ $accent-colors: (
 // --------------
 /// Soft whites and greys round out our
 /// palette.
-/// @group color
-/// @preview color-palette
-/// @type Map
 $neutral-colors: (
     'bright-white': hsl(0, 0%, 100%),
     'soft-white': hsl(53, 36%, 96%),
