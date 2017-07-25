@@ -1,12 +1,12 @@
 /// Site navigation
 .menu {
-    position: fixed;
     z-index: 1;
+    position: fixed;
     left: 0;
     top: 0;
     height: 100%;
     width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
     display: none;
     flex-flow: column nowrap;
     justify-content: center;
@@ -16,11 +16,12 @@
     background-color: color('brand-blue');
 
     @media (min-width: $nav-switch) {
-        position: initial;
-        height: initial;
-        width: initial;
-        flex-flow: initial;
-        justify-content: initial;
+        z-index: auto;
+        position: static;
+        height: auto;
+        width: auto;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
         display: block;
         float: right;
         padding-left: 1em;
