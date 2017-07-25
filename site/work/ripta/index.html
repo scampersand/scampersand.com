@@ -3,48 +3,50 @@ title: RIPTA Zoom
 ---
 
 <section class="content">
-    <div class="section-header">
-        <div class="section-container">
+    <div class="slab">
+        <div class="container">
             <div class="proj-name">
                 <h2 class="t-upper">RIPTA Zoom</h2>
             </div>
         </div>
-    </div> <!-- .section-header -->
+    </div> <!-- .slab -->
 
-    <div class="section-content">
-        <div class="section-container">
+    <div class="content-prose">
+        <div class="container">
 
-            <div class="section-sub">
-                <div class="proj-intro">
-                    <p class="intro">
+            <div class="grid-row">
+                <div class="grid-callout">
+                    <p class="t-large">
                         Scampersand was invited to participate in Hack(RI) as a pro
                         team. We love our little state--and can't resist a
                         challenge--so we took a few days off and built an
                         award-winning demo.
                     </p>
                 </div>
-                <div class="proj-header-video">
-                    {% comment %}
-                        IE11 tries to play one of the videos and fails, so
-                        the fallback image at the end of the video node doesn't
-                        kick in. Instead we use CSS to hide the video on IE and
-                        display the image.
-                    {% endcomment %}
-                    <video class="not-ie" autoplay loop>
-                        <source src="/work/ripta/scampersand-ripta-zoom-708.webm" type='video/webm; codecs="vp9"'><!-- chrome and newer firefox -->
-                        <source src="/work/ripta/scampersand-ripta-zoom-708.ogv" type='video/ogg; codecs="theora"'><!-- older firefox -->
-                        <source src="/work/ripta/scampersand-ripta-zoom-708.high.mp4" type='video/mp4; codecs="avc1.640029"'><!-- safari, ipad 2 and later -->
-                        <source src="/work/ripta/scampersand-ripta-zoom-708.main.mp4" type='video/mp4; codecs="avc1.4D401F"'><!-- iphone 4 -->
-                        <source src="/work/ripta/scampersand-ripta-zoom-708.main.mp4"><!-- https://www.broken-links.com/2010/07/08/making-html5-video-work-on-android-phones/ -->
-                        <img src="/work/ripta/scampersand-ripta-zoom-450.gif">
-                    </video>
-                    <img class="only-ie" src="/work/ripta/scampersand-ripta-zoom-450.gif">
+                <div class="grid-main-left">
+                    <div class="media-container">
+                        {% comment %}
+                            IE11 tries to play one of the videos and fails, so
+                            the fallback image at the end of the video node doesn't
+                            kick in. Instead we use CSS to hide the video on IE and
+                            display the image.
+                        {% endcomment %}
+                        <video class="not-ie" autoplay loop>
+                            <source src="/work/ripta/scampersand-ripta-zoom-708.webm" type='video/webm; codecs="vp9"'><!-- chrome and newer firefox -->
+                            <source src="/work/ripta/scampersand-ripta-zoom-708.ogv" type='video/ogg; codecs="theora"'><!-- older firefox -->
+                            <source src="/work/ripta/scampersand-ripta-zoom-708.high.mp4" type='video/mp4; codecs="avc1.640029"'><!-- safari, ipad 2 and later -->
+                            <source src="/work/ripta/scampersand-ripta-zoom-708.main.mp4" type='video/mp4; codecs="avc1.4D401F"'><!-- iphone 4 -->
+                            <source src="/work/ripta/scampersand-ripta-zoom-708.main.mp4"><!-- https://www.broken-links.com/2010/07/08/making-html5-video-work-on-android-phones/ -->
+                            <img src="/work/ripta/scampersand-ripta-zoom-450.gif">
+                        </video>
+                        <img class="only-ie" src="/work/ripta/scampersand-ripta-zoom-450.gif">
+                    </div>
                 </div>
             </div>
 
             {% comment %}
-            <div class="section-sub">
-                <div class="proj-problem">
+            <div class="grid-row">
+                <div class="grid-main">
                     <h3>Problem</h3>
                     <p>
                         {% lipsum %}
@@ -53,9 +55,9 @@ title: RIPTA Zoom
             </div>
             {% endcomment %}
 
-            <div class="section-sub">
-                <div class="proj-solution">
-                    <div class="solution-text">
+            <div class="grid-row">
+                <div class="grid-full">
+                    <div class="grid-main">
                         <h3>Hacking for Rhode Island</h3>
                         <p>
                             The <a href="http://www.ripta.com/">RIPTA</a> bus system
@@ -88,9 +90,9 @@ title: RIPTA Zoom
                             to explore a day in the life of RIPTA.
                         </p>
                     </div>
-                    <div class="solution-features">
-                        <h4 class="t-upper">Hack Notes</h4>
-                        <ul class="features-list">
+                    <div class="grid-sidebar">
+                        <ul class="list-ruled">
+                            <li><h4 class="t-upper">Hack Notes</h4></li>
                             <li>D3.js with geo projections</li>
                             <li>Click to zoom on routes</li>
                             <li>Fully responsive design</li>
@@ -99,18 +101,18 @@ title: RIPTA Zoom
                 </div>
             </div>
 
-            <div class="section-sub">
-                <div class="solution-pieces">
+            <div class="grid-row">
+                <div class="grid-main">
                     <p class="t-italic">Information Design &bull; UI Design &bull; D3.js Development</p>
                 </div>
             </div>
 
-        </div> <!-- .section-container -->
-    </div> <!-- .section-content -->
+        </div> <!-- .container -->
+    </div> <!-- .content-prose -->
 </section>
 
 <footer role="nav">
-    <div class="section-container">
+    <div class="container">
         <h3><a href="/work/fec">Next Project: betaFEC&nbsp;&rarr;</a></h3>
     </div>
 </footer>

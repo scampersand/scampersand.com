@@ -9,23 +9,23 @@ nav_prio: 40
 {% endcomment %}
 
 <section class="content">
-    <div class="section-header">
-        <div class="section-container">
+    <div class="slab">
+        <div class="container">
             <h2 class="t-upper">Contact Us</h2>
         </div>
-    </div> <!-- .section-header -->
+    </div> <!-- .slab -->
 
-    <div class="section-content">
-        <div class="section-container">
-            <div class="section-sub">
-                <p class="intro">
+    <div class="content-basic">
+        <div class="container">
+            <div class="grid-row">
+                <p class="t-large">
                     Tell us about your project, ask us questions, figure
                     out if we're the right fit. We'd love to be in touch,
                     by email or over a cup of coffee.
                 </p>
             </div>
-            <div class="section-sub">
-                <div class="contact-form">
+            <div class="grid-row">
+                <div class="grid-half-left">
                     <form class="contact" action="https://formspree.io/{{site.email}}"
                         method="POST">
                         <input type="hidden" name="_subject" value="Hello!">
@@ -48,9 +48,9 @@ nav_prio: 40
                         <input type="submit" value="Send">
                     </form>
                 </div>
-                <div class="contact-location">
+                <div class="grid-half-right large-screen-only">
                     <h3 class="section t-upper">Our Location</h3>
-                    <div class="contact-map">
+                    <div class="map-container">
                         <!-- width/height default to desktop display, esp since we can't predict values for mobile -->
                         <div class="overlay"></div>
                         <iframe class="map" width="409" height="272" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d743.229655930909!2d-71.38850097074915!3d41.830050397994064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e4452bff321d05%3A0x58d2d4aa47906f4b!2sAngell+St+%26+Wayland+Ave%2C+Providence%2C+RI+02906!5e0!3m2!1sen!2sus!4v1481815541054" frameborder="0" style="border:0" allowfullscreen></iframe>
@@ -60,7 +60,7 @@ nav_prio: 40
                         // been clicked, then allow all pointer events through the
                         // overlay to the iframe.
                         // http://stackoverflow.com/questions/21992498
-                        $('.contact-map .overlay').click(function(e) {
+                        $('.map-container .overlay').click(function(e) {
                             $(e.target).css('pointer-events', 'none');
                         });
 
@@ -68,7 +68,7 @@ nav_prio: 40
                         // span()--and set the iframe size accordingly.
                         $(function() {
                             var $body = $('body'),
-                                $div = $('.contact-map'),
+                                $div = $('.map-container'),
                                 $iframe = $('iframe.map'),
                                 oldAttrs = {};
                             function resizeMap() {
@@ -90,31 +90,36 @@ nav_prio: 40
                         });
                     </script>
                 </div>
-            </div> <!-- .section-sub -->
-        </div> <!-- .section-container -->
-    </div> <!-- .section-content -->
+            </div> <!-- .grid-row -->
+        </div> <!-- .container -->
+    </div> <!-- .content-basic -->
 </section>
 
 <footer>
-    <div class="section-container">
-        <div class="ref-services">
-            <h4>Services</h4>
-            <ul>
-                <li>Web Application Development</li>
-                <li>Design &amp; User Experience</li>
-                <li>API Integration</li>
-                <li>Deployment, Scaling &amp; Security</li>
-            </ul>
+    <div class="container">
+        <div class="grid-row">
+            <div class="grid-half-left large-screen-only">
+                <ul class="list-simple">
+                    <li><h4>Services</h4></li>
+                    <li>Web Application Development</li>
+                    <li>Design &amp; User Experience</li>
+                    <li>API Integration</li>
+                    <li>Deployment, Scaling &amp; Security</li>
+                </ul>
+            </div>
+            <div class="grid-half-right">
+                <ul class="list-simple">
+                    <li><h4>Follow Us</h4></li>
+                    <li>
+                        <p class="contact-icons">
+                            <a href="https://twitter.com/scampersandco"><i class="fa fa-twitter-square"></i></a>
+                            <a href="https://github.com/scampersand"><i class="fa fa-github-square"></i></a>
+                            <a href="https://www.linkedin.com/company/scampersand"><i class="fa fa-linkedin-square"></i></a>
+                        </p>
+                    </li>
+            </div>
         </div>
-        <div class="ref-social">
-            <h4>Follow Us</h4>
-            <p class="contact-icons">
-                <a href="https://twitter.com/scampersandco"><i class="fa fa-twitter-square"></i></a>
-                <a href="https://github.com/scampersand"><i class="fa fa-github-square"></i></a>
-                <a href="https://www.linkedin.com/company/scampersand"><i class="fa fa-linkedin-square"></i></a>
-            </p>
-        </div>
-    </div>
+    </div> <!-- .container -->
 </footer>
 
 <script>

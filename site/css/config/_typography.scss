@@ -1,0 +1,48 @@
+html {
+    font-family: $sans-serif;
+
+    font-variant-numeric: lining-nums;
+    -moz-font-feature-settings: "lnum";
+    -webkit-font-feature-settings: "lnum";
+    font-feature-settings: "lnum";
+}
+
+h1 {
+    @include heading(display);
+    font-weight: $sans-black;
+}
+
+h2 {
+    @include heading(display);
+    font-weight: $sans-black;
+}
+
+h3 {
+    @include heading(large);
+    font-weight: $sans-bold;
+}
+
+h4 {
+    @include heading(standard);
+    font-weight: $sans-bold;
+}
+
+label {
+    @include heading(standard);
+}
+
+p, li {
+    @include text(standard);
+}
+
+.t-large {
+    @include text(large);
+}
+
+.t-italic {
+    font-style: italic;
+}
+
+.t-upper {
+    text-transform: uppercase;
+}

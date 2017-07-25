@@ -1,0 +1,152 @@
+/// Site navigation
+.menu {
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    display: none;
+    flex-flow: column nowrap;
+    justify-content: center;
+    &.show {  // jquery .toggleClass()
+        display: flex;
+    }
+    background-color: color('brand-blue');
+
+    @media (min-width: $nav-switch) {
+        z-index: auto;
+        position: static;
+        height: auto;
+        width: auto;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        display: block;
+        float: right;
+        padding-left: 1em;
+        background-color: transparent;
+    }
+}
+
+.menu ul {
+    text-align: center;
+    background-color: transparent;
+
+    @media (min-width: $nav-switch) {
+        text-align: left;
+        display: inline-block;
+    }
+}
+
+html.no-flexbox .menu ul,
+html.no-flexbox-vertical-center .menu ul {
+    // When flexbox isn't fully supported (in particular this seems to break
+    // justify-content:center) then apply a small margin to the top so the
+    // menu is pleasantly positioned on iphone 4 and old android.
+    // Don't make this too large since we don't know the viewport height.
+    margin-top: 48px;
+
+    @media (min-width: $nav-switch) {
+        margin-top: 0px;
+    }
+}
+
+.menu li {
+    font-weight: $sans-black;
+    font-size: 2.5rem;
+    line-height: 1.175;
+    // 27px is 1.5 times the font-size, minus 3px for border
+    margin-bottom: 24px;
+    text-transform: uppercase;
+
+    a {
+        border-width: 3px;
+        border-style: none;
+    }
+
+    &.current-item a {
+        border-bottom: dotted;
+    }
+
+    // this is for small phones in landscape mode
+    @media (max-height: 24em) {
+        font-size: 1.125rem;
+    }
+
+    @media (min-width: $nav-switch) {
+        display: inline-block;
+        margin: 0px 50px 0px 0px;
+        padding-top: 0.5625rem; // align horizontally with wordmark
+        padding-left: 8px;
+        font-size: 1.125rem;
+        font-weight: $sans-bold;
+
+        &.current-item  a {
+            padding-left: 8px;
+            border-left: 3px dotted;
+            border-bottom: initial;
+        }
+    }
+}
+
+.menu li:first-child {  // "Home"
+    @media (min-width: $nav-switch) {
+        display: none;
+    }
+}
+
+.menu li:last-child {
+    @media (min-width: $nav-switch) {
+        margin-right: 0px;
+    }
+}
+
+.menu a {
+    color: color('soft-white');
+
+    @media (min-width: $nav-switch) {
+        color: color('dk-grey');
+    }
+}
+
+.menu a:hover {
+    @media (min-width: $nav-switch) {
+        color: color('dk-grey-RT');
+    }
+}
+
+.menu-toggle {
+    display: block;
+    float: right;
+    outline: 0;
+    transition: color linear 0.15s;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    margin-bottom: 0;
+
+    &.close {
+        /* absolute position because floating right pushes the
+            * first list item left */
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        display: none;  // jquery .toggle()
+    }
+
+    @media (min-width: $mobile-large) {
+        font-size: 1.6875rem;
+    }
+
+    @media (min-width: $nav-switch) {
+        display: none;
+    }
+}
+
+.menu-toggle.open {
+    color: color('dk-grey');  // same as wordmark
+}
+
+.menu-toggle.open:hover {
+    color: color('dk-grey-RT');
+}

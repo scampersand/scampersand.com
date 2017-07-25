@@ -1,0 +1,33 @@
+fieldset {
+    border-color: transparent;
+    margin-bottom: 0.75em;
+
+    @media (min-width: $mobile-large) {
+        margin-bottom: 1rem;
+    }
+}
+
+label {
+    display: block;
+    line-height: 1.19;
+    margin-bottom: 0.25em;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 1rem;
+    @include grey-dotted-border;
+}
+
+input[type="submit"] {
+    width: 33%;
+    border-width: 0;
+    text-transform: uppercase;
+    background-color: color('green');
+    color: color('bright-white');
+}
+
+input[type="submit"]:hover {
+    background-color: color('green-dark');
+}

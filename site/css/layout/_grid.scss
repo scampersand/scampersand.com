@@ -1,0 +1,87 @@
+$susy: (
+    // debug: (image: show),
+    global-box-sizing: border-box,
+    columns: 8,
+);
+
+@include border-box-sizing;
+
+.container {
+    // from 16 base font size
+    @include container(75em);
+
+    padding-left: 1em;
+    padding-right: 1em;
+
+    @media (min-width: $mobile-large) {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+
+    @media (min-width: $tablet) {
+        padding-left: 5em;
+        padding-right: 5em;
+    }
+}
+
+.grid-row {
+    margin-bottom: 2rem;
+}
+
+/* clear any floated children */
+.grid-row:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+.grid-full {
+    @include span(full);
+}
+
+/* when the project includes a visual,
+ * use 3 columns for intro text
+ */
+.grid-callout {
+    @media (min-width: $multi-column) {
+        @include span(3);
+    }
+}
+
+.grid-main {
+    @media (min-width: $multi-column) {
+        @include span(5);
+    }
+}
+
+.grid-main-left {
+    @media (min-width: $multi-column) {
+        @include span(last 5);
+    }
+}
+
+.grid-sidebar {
+    @media (min-width: $multi-column) {
+        @include span(2 wide last);
+    }
+}
+
+.grid-half-left {
+    @media (min-width: $multi-column) {
+        @include span(4);
+    }
+}
+
+.grid-half-right {
+    @media (min-width: $multi-column) {
+        @include span(4 last);
+    }
+}
+
+.large-screen-only {
+    display: none;
+
+    @media (min-width: $multi-column) {
+        display: block;
+    }
+}

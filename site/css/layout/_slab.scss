@@ -1,0 +1,14 @@
+.slab {
+    padding-top: 1rem;
+    padding-bottom: 1.3333rem;
+    background-color: color('brand-blue');
+
+    @media (min-width: $tablet) {
+        padding-top: 2rem;
+        padding-bottom: 2.6666rem;
+    }
+}
+
+.slab h2 {
+    color: color('brand-lt-blue');
+}

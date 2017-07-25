@@ -1,0 +1,11 @@
+.contact-icons {
+    @include icon(large);
+}
+
+.contact-icons a {
+    color: color('md-grey');
+}
+
+.contact-icons a:hover {
+    color: color('md-grey-RT');
+}

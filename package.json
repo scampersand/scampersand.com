@@ -1,10 +1,11 @@
 {
-  "name": "foo",
-  "version": "0.0.0",
+  "name": "scampersand.com",
+  "version": "1.0.0",
   "files": [],
   "devDependencies": {
-    "browser-sync": "latest",
-    "accoutrement-color": "latest",
-    "accoutrement-scale": "latest"
-  }
+    "accoutrement-color": "^2.1.1",
+    "accoutrement-scale": "^3.1.1",
+    "browser-sync": "latest"
+  },
+  "dependencies": {}
 }
