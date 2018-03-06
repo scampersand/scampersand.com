@@ -12,15 +12,17 @@ nav_prio: 40
     <div class="content-basic">
         <div class="container">
             <div class="grid-row">
-                <h2 class="t-upper">Contact Us</h2>
-                <p class="t-large">
-                    Tell us about your project, ask us questions, figure
-                    out if we're the right fit. We'd love to be in touch,
-                    by email or over a cup of coffee.
-                </p>
+                <div class="grid-three-quarters">
+                    <h2 class="t-upper">Contact Us</h2>
+                    <p class="t-large">
+                        Tell us about your project, ask us questions, figure
+                        out if we're the right fit. We'd love to be in touch,
+                        by email or over a cup of coffee.
+                    </p>
+                </div>
             </div>
             <div class="grid-row">
-                <div class="grid-half-left">
+                <div class="grid-main">
                     <form class="contact" action="https://formspree.io/{{site.email}}"
                         method="POST">
                         <input type="hidden" name="_subject" value="Hello!">
@@ -42,48 +44,6 @@ nav_prio: 40
                         <input type="text" name="_gotcha" style="display:none">
                         <input type="submit" value="Send">
                     </form>
-                </div>
-                <div class="grid-half-right large-screen-only">
-                    <h3 class="section t-upper">Our Location</h3>
-                    <div class="map-container">
-                        <!-- width/height default to desktop display, esp since we can't predict values for mobile -->
-                        <div class="overlay"></div>
-                        <iframe class="map" width="409" height="272" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d743.229655930909!2d-71.38850097074915!3d41.830050397994064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e4452bff321d05%3A0x58d2d4aa47906f4b!2sAngell+St+%26+Wayland+Ave%2C+Providence%2C+RI+02906!5e0!3m2!1sen!2sus!4v1481815541054" frameborder="0" style="border:0" allowfullscreen></iframe>
-                    </div>
-                    <script>
-                        // Don't zoom the iframe with the mouse wheel until it's
-                        // been clicked, then allow all pointer events through the
-                        // overlay to the iframe.
-                        // http://stackoverflow.com/questions/21992498
-                        $('.map-container .overlay').click(function(e) {
-                            $(e.target).css('pointer-events', 'none');
-                        });
-
-                        // Detect the size of the enclosing div--which is set by
-                        // span()--and set the iframe size accordingly.
-                        $(function() {
-                            var $body = $('body'),
-                                $div = $('.map-container'),
-                                $iframe = $('iframe.map'),
-                                oldAttrs = {};
-                            function resizeMap() {
-                                var bodyWidth = $body.width(),
-                                    divWidth = $div.width(),
-                                    ratio = divWidth > bodyWidth / 2 ? 1 : 1,
-                                    mapWidth = Math.floor(divWidth * ratio),
-                                    mapHeight = Math.floor(mapWidth * 1 / 2),
-                                    newAttrs = {
-                                        width: mapWidth,
-                                        height: mapHeight,
-                                    };
-                                if (! R.equals(newAttrs, oldAttrs)) {
-                                    $iframe.attr(newAttrs);
-                                    oldAttrs = newAttrs;
-                                }
-                            }
-                            setInterval(resizeMap, 300);
-                        });
-                    </script>
                 </div>
             </div> <!-- .grid-row -->
         </div> <!-- .container -->

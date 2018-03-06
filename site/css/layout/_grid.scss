@@ -78,6 +78,12 @@ $susy: (
     }
 }
 
+.grid-three-quarters {
+    @media (min-width: $multi-column) {
+        @include span(6);
+    }
+}
+
 .large-screen-only {
     display: none;
 
