@@ -13,7 +13,7 @@
     &.show {  // jquery .toggleClass()
         display: flex;
     }
-    background-color: color('brand-blue');
+    background-color: color('white');
 
     @media (min-width: $nav-switch) {
         z-index: auto;
@@ -103,16 +103,16 @@ html.no-flexbox-vertical-center .menu ul {
 }
 
 .menu a {
-    color: color('soft-white');
+    color: color('black');
 
     @media (min-width: $nav-switch) {
-        color: color('dk-grey');
+        color: color('black');
     }
 }
 
 .menu a:hover {
     @media (min-width: $nav-switch) {
-        color: color('dk-grey-RT');
+        color: color('brand-blue');
     }
 }
 
@@ -144,9 +144,9 @@ html.no-flexbox-vertical-center .menu ul {
 }
 
 .menu-toggle.open {
-    color: color('dk-grey');  // same as wordmark
+    color: color('black');  // same as wordmark
 }
 
 .menu-toggle.open:hover {
-    color: color('dk-grey-RT');
+    color: color('brand-blue');
 }

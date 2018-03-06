@@ -3,9 +3,9 @@ a {
 }
 
 a {
-    color: color('red');
+    color: color('brand-blue');
 }
 
 a:hover {
-    color: color('red-dark');
+    color: color('brand-blue' ('lighten': 10%));
 }

@@ -24,10 +24,10 @@ input[type="submit"] {
     width: 33%;
     border-width: 0;
     text-transform: uppercase;
-    background-color: color('green');
-    color: color('bright-white');
+    background-color: color('brand-blue');
+    color: color('white');
 }
 
 input[type="submit"]:hover {
-    background-color: color('green-dark');
+    background-color: color('blue');
 }

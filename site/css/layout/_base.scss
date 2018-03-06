@@ -11,13 +11,13 @@ html, body {
 }
 
 body {
-    color: color('dk-grey');
+    color: color('black');
 }
 
 header {
     padding-top: 1em;
     padding-bottom: 0.5em;
-    background-color: color('soft-white');
+    background-color: color('white');
 }
 
 header .site-wordmark,
@@ -33,37 +33,37 @@ header .menu-toggle {
 }
 
 header .site-wordmark a {
-    color: color('dk-grey');
+    color: color('black');
     font-weight: $sans-black;
 }
 
 header .site-wordmark a:hover {
-    color: color('dk-grey-RT');
+    color: color('brand-blue');
 }
 
 main {
     position: relative;
     min-height: 100%;  // of body
     padding-bottom: 12em;  // sufficient for footer
-    background-color: color('soft-white');
+    background-color: color('white');
 }
 
 .landing main {
     padding-bottom: 0px;  // no footer on landing
-    background-color: color('brand-blue');
+    background-color: color('white');
 }
 
 .landing h1 {
     max-width: 12em;
     margin-top: 0;  // enable flexbox-based vert centering
     margin-bottom: 0.625em;
-    color: color('brand-lt-blue');
+    color: color('black');
 }
 
 .landing p {
     max-width: 32em;
     line-height: 1.5;
-    color: color('brand-lt-blue');
+    color: color('black');
 }
 
 // https://github.com/philipwalton/flexbugs#3-min-height-on-a-flex-container-wont-apply-to-its-flex-items
