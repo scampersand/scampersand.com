@@ -27,7 +27,8 @@ h4 {
     font-weight: $sans-bold;
 }
 
-p, li, label {
+p, li, label,
+input[type="submit"] {
     @include text(standard);
 }
 
