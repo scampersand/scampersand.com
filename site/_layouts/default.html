@@ -21,17 +21,22 @@ body_class: ""
     </main>
 
     <script>
-        $(function() {
+        $(function () {
             var $main = $('main'),
                 $footer = $('footer'),
-                emSize = parseFloat($('html').css('font-size'));
-            if ($footer.length) {
+                emSize = parseFloat($('html').css('font-size'))
+            if ($footer.length && $footer.css('display') !== 'none') {
                 function adjustMainPadding() {
-                    var footerHeight = $('footer').height();
+                    var footerHeight = $('footer').height()
                     $main.css('padding-bottom', footerHeight + emSize * 2)
                 }
-                setInterval(adjustMainPadding, 300);
+                setInterval(adjustMainPadding, 300)
+                adjustMainPadding()
+                // The footer is invisible by default, so that it
+                // doesn't jump around the page. The first time we
+                // calculate the padding, go ahead and reveal the footer.
+                $footer.css('visibility', 'visible')
             }
-        });
+        })
     </script>
 </body>
