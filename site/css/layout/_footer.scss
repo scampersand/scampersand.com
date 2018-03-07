@@ -20,3 +20,7 @@ footer {
 footer h4 {
     margin-bottom: 0.25em;
 }
+
+body.landing footer {
+    display: none;
+}
