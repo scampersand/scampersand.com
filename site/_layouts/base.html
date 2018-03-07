@@ -61,12 +61,15 @@
 
         <script src="https://use.typekit.net/don3dwd.js"></script>
         <script>
-            !function() {
+            $(document).on('typekitReveal', function () {
+                // Make sure body is available when this runs.
+                $(function() {
+                    $('body').fadeIn(300)  // default 400
+                })
+            })
+            ;(function() {
                 function reveal() {
-                    // Make sure body is available when this runs.
-                    $(function() {
-                        $('body').fadeIn(300);  // default 400
-                    });
+                    $(document).trigger('typekitReveal')
                 }
                 try {
                     // https://helpx.adobe.com/typekit/using/font-events.html
@@ -74,11 +77,11 @@
                         async: true,
                         active: reveal,
                         inactive: reveal
-                    });
+                    })
                 } catch(e) {
-                    reveal();
+                    reveal()
                 }
-            }();
+            })()
         </script>
 
         <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
