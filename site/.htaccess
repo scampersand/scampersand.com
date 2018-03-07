@@ -55,7 +55,7 @@
 <IfModule mod_rewrite.c>
   RewriteCond %{HTTP_HOST} ^next\.|\.next\.
   # home IP
-  RewriteCond %{REMOTE_ADDR} !=100.40.40.249
+  RewriteCond %{REMOTE_ADDR} !=100.40.103.87
   # crossbrowsertesting.com
   RewriteCond %{REMOTE_ADDR} !=216.37.72.238
   RewriteRule .* - [F]
