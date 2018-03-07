@@ -25,6 +25,7 @@
         display: block;
         float: right;
         padding-left: 1em;
+        padding-bottom: 1em;
         background-color: transparent;
     }
 }
@@ -54,18 +55,19 @@ html.no-flexbox-vertical-center .menu ul {
 
 .menu li {
     font-weight: $sans-black;
-    font-size: 2.5rem;
+    font-size: 2rem;
     line-height: 1.175;
-    // 27px is 1.5 times the font-size, minus 3px for border
-    margin-bottom: 24px;
+    margin-bottom: 41px; // 1.5 * font-size - (3px border, 4px padding)
 
     a {
         border-width: 3px;
         border-style: none;
+        padding-bottom: 4px;
     }
 
     &.current-item a {
-        border-bottom: dotted;
+        border-bottom-style: solid;
+        border-bottom-color: color('brand-blue');
     }
 
     // this is for small phones in landscape mode
@@ -80,12 +82,6 @@ html.no-flexbox-vertical-center .menu ul {
         padding-left: 8px;
         font-size: 1.125rem;
         font-weight: $sans-bold;
-
-        &.current-item  a {
-            padding-left: 8px;
-            border-left: 3px dotted;
-            border-bottom: initial;
-        }
     }
 }
 
@@ -103,10 +99,6 @@ html.no-flexbox-vertical-center .menu ul {
 
 .menu a {
     color: color('black');
-
-    @media (min-width: $nav-switch) {
-        color: color('black');
-    }
 }
 
 .menu a:hover {
