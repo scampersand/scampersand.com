@@ -12,10 +12,6 @@ img, video {
     img, video {
         width: 100%;
     }
-
-    @media (min-width: $wide-screen) {
-        margin-top: -180px;
-    }
 }
 
 /* IE11 tries to play one of the videos and fails, so
