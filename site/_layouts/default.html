@@ -21,22 +21,25 @@ body_class: ""
     </main>
 
     <script>
-        $(function () {
-            var $main = $('main'),
-                $footer = $('footer'),
-                emSize = parseFloat($('html').css('font-size'))
-            if ($footer.length && $footer.css('display') !== 'none') {
+        $(document).on('typekitReveal', function () {
+            // ensure body is available
+            $(function () {
+                var $main = $('main'),
+                    $footer = $('footer'),
+                    emSize = parseFloat($('html').css('font-size'))
+
                 function adjustMainPadding() {
-                    var footerHeight = $('footer').height()
+                    var footerHeight = $footer.height()
                     $main.css('padding-bottom', footerHeight + emSize * 2)
                 }
-                setInterval(adjustMainPadding, 300)
+
+                // adjust immediately since we're triggered by
+                // typekitReveal custom event.
                 adjustMainPadding()
-                // The footer is invisible by default, so that it
-                // doesn't jump around the page. The first time we
-                // calculate the padding, go ahead and reveal the footer.
-                $footer.css('visibility', 'visible')
-            }
+
+                // adjust continuously in case things change on the page.
+                setInterval(adjustMainPadding, 300)
+            })
         })
     </script>
 </body>
