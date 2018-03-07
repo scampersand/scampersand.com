@@ -14,6 +14,15 @@ html {
         }
     }
 
+    @if $level == medium {
+        font-size: 1.5rem;
+        margin-bottom: 0.25em;
+
+        @media (min-width: $tablet) {
+            font-size: 1.875rem;
+        }
+    }
+
     @if $level == large {
         font-size: 1.75rem;
         line-height: 1.25;
