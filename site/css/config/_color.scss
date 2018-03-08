@@ -11,12 +11,9 @@ $brand-colors: (
 $neutral-colors: (
     'white': hsl(0, 0%, 100%),
     'soft-white': hsl(53, 36%, 96%),
-    'lt-grey': hsl(0, 0%, 90%),
-    'md-grey-soft': 'md-grey' ('lighten': 10%),
+    'lt-grey': hsl(0, 0%, 80%),
     'md-grey': hsl(0, 0%, 60%),
-    'md-grey-RT': 'md-grey' ('darken': 5%),
     'dk-grey': hsl(0, 0%, 30%),
-    'dk-grey-RT': 'dk-grey' ('darken': 10%),
     'black': hsl(0, 0%, 0%),
 );
 
@@ -26,5 +23,5 @@ $neutral-colors: (
     border-radius: 5px;
     border-width: 3px;
     border-style: dotted;
-    border-color: color('md-grey-soft');
+    border-color: color('md-grey' ('lighten': 10%));
 }
