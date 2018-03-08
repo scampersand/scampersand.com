@@ -3,9 +3,9 @@
 }
 
 .contact-icons a {
-    color: color('md-grey');
+    color: color('lt-grey');
 }
 
 .contact-icons a:hover {
-    color: color('md-grey-RT');
+    color: color('lt-grey' ('lighten': 10%));
 }

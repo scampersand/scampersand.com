@@ -3,13 +3,13 @@ footer {
     bottom: 0;
     width: 100%;
     padding-top: 1.5rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
     background-color: color('dk-grey');
-    color: color('white');
+    color: color('lt-grey');
 
     @media (min-width: $mobile-large) {
         padding-top: 2.25rem;
-        padding-bottom: 3rem;
+        padding-bottom: 1.5rem;
     }
 }
 
