@@ -55,6 +55,14 @@ html {
 
 @mixin text($level) {
 
+    @if $level == small {
+        font-size: 0.875rem;
+
+        @media (min-width: $tablet) {
+            font-size: 1rem;
+        }
+    }
+
     @if $level == standard {
         font-size: 1rem;
         line-height: 1.3;

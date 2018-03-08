@@ -39,3 +39,7 @@ input[type="submit"] {
 .t-upper {
     text-transform: uppercase;
 }
+
+.t-small {
+    @include text(small);
+}
