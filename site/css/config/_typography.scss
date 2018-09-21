@@ -27,13 +27,26 @@ h4 {
     font-weight: $sans-bold;
 }
 
+a {
+    font-size: 2rem;
+}
+
 p, li, label,
 input[type="submit"] {
     @include text(standard);
 }
 
+.t-bold {
+    font-weight: bold;
+}
+
 .t-italic {
     font-style: italic;
+}
+
+.t-underline {
+    padding-bottom: 3px;
+    border-bottom: 4px solid color('brand-gold');
 }
 
 .t-upper {

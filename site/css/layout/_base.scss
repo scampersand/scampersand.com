@@ -22,14 +22,10 @@ header {
 
 header .site-wordmark,
 header .menu-toggle {
-    font-size: 1.5rem;
+    font-size: 2rem;
 
-    line-height: 1.25;
+    line-height: 1;
     margin-bottom: 0;
-
-    @media (min-width: $mobile-large) {
-        font-size: 1.6875rem;
-    }
 }
 
 header .site-wordmark a {
@@ -38,7 +34,7 @@ header .site-wordmark a {
 }
 
 header .site-wordmark a:hover {
-    color: color('brand-blue');
+    color: color('black');
 }
 
 main {

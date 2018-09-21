@@ -11,6 +11,20 @@
     margin-bottom: 0;
 }
 
+// Inline lists
+// =======================
+.list-inline > li {
+    display: inline-block;
+    margin-right: 1.5rem;
+}
+.list-inline > li:last-child {
+    margin-right: 0;
+}
+
+.list-inline.generous > li {
+    margin-right: 6rem;
+}
+
 // Ruled list with header
 // ======================
 .list-ruled li {
