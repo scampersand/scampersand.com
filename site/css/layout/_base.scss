@@ -30,7 +30,8 @@ header .menu-toggle {
 
 header .site-wordmark a {
     color: color('black');
-    font-weight: $sans-black;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 header .site-wordmark a:hover {
