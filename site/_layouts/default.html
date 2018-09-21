@@ -7,7 +7,6 @@ body_class: ""
     <main role="main">
         <header>
             <div class="container">
-                {% include nav.html %}
                 <div class="site-wordmark"><a href="/">Scampersand</a></div>
             </div>
         </header>
@@ -18,27 +17,6 @@ body_class: ""
             and let pants handle it.
         {% endcomment %}
         {{content|replace:'–','--'|pants}}
-        <footer>
-            <div class="container">
-                <div class="grid-row">
-                    <div class="grid-half-left">
-                        <h4>Scampersand</h4>
-                        <p class="t-small">Providence, RI</p>
-                    </div>
-                    <div class="grid-half-right">
-                        <ul class="list-simple">
-                            <li>
-                                <p class="contact-icons">
-                                    <a href="https://twitter.com/scampersandco"><i class="fa fa-twitter-square"></i></a>
-                                    <a href="https://github.com/scampersand"><i class="fa fa-github-square"></i></a>
-                                    <a href="https://www.linkedin.com/company/scampersand"><i class="fa fa-linkedin-square"></i></a>
-                                </p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div> <!-- .container -->
-        </footer>
     </main>
 
     <script>
