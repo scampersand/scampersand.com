@@ -12,6 +12,7 @@ h1 {
     font-weight: normal;
 }
 
+/*
 h2 {
     @include heading(large);
     font-weight: normal;
@@ -27,13 +28,14 @@ h4 {
     font-weight: normal;
 }
 
-a {
-    font-size: 2rem;
-}
-
-p, li, label,
+p, label,
 input[type="submit"] {
     @include text(standard);
+}
+*/
+
+li, a {
+    @include heading(display-alt);
 }
 
 .t-bold {
