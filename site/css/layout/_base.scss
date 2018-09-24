@@ -63,6 +63,11 @@ main {
     color: color('black');
 }
 
+.content-main {
+    margin-top: 6rem;
+    margin-bottom: 3rem;
+}
+
 // https://github.com/philipwalton/flexbugs#3-min-height-on-a-flex-container-wont-apply-to-its-flex-items
 .flex-ie-hack {
     display: flex;
