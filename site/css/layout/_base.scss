@@ -22,23 +22,20 @@ header {
 
 header .site-wordmark,
 header .menu-toggle {
-    font-size: 1.5rem;
+    font-size: 2rem;
 
-    line-height: 1.25;
+    line-height: 1;
     margin-bottom: 0;
-
-    @media (min-width: $mobile-large) {
-        font-size: 1.6875rem;
-    }
 }
 
 header .site-wordmark a {
     color: color('black');
-    font-weight: $sans-black;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 header .site-wordmark a:hover {
-    color: color('brand-blue');
+    color: color('black');
 }
 
 main {
@@ -64,6 +61,11 @@ main {
     max-width: 32em;
     line-height: 1.5;
     color: color('black');
+}
+
+.content-main {
+    margin-top: 6rem;
+    margin-bottom: 3rem;
 }
 
 // https://github.com/philipwalton/flexbugs#3-min-height-on-a-flex-container-wont-apply-to-its-flex-items

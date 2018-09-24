@@ -54,7 +54,7 @@ html.no-flexbox-vertical-center .menu ul {
 }
 
 .menu li {
-    font-weight: $sans-black;
+    font-weight: bold;
     font-size: 2rem;
     line-height: 1.175;
     margin-bottom: 41px; // 1.5 * font-size - (3px border, 4px padding)
@@ -81,7 +81,7 @@ html.no-flexbox-vertical-center .menu ul {
         padding-top: 0.5625rem; // align horizontally with wordmark
         padding-left: 8px;
         font-size: 1.125rem;
-        font-weight: $sans-bold;
+        font-weight: bold;
     }
 }
 

@@ -9,31 +9,46 @@ html {
 
 h1 {
     @include heading(display);
-    font-weight: $sans-black;
+    font-weight: normal;
 }
 
+/*
 h2 {
     @include heading(large);
-    font-weight: $sans-black;
+    font-weight: normal;
 }
 
 h3 {
     @include heading(medium);
-    font-weight: $sans-bold;
+    font-weight: normal;
 }
 
 h4 {
     @include heading(standard);
-    font-weight: $sans-bold;
+    font-weight: normal;
 }
 
-p, li, label,
+p, label,
 input[type="submit"] {
     @include text(standard);
+}
+*/
+
+li, a {
+    @include heading(display-alt);
+}
+
+.t-bold {
+    font-weight: bold;
 }
 
 .t-italic {
     font-style: italic;
+}
+
+.t-underline {
+    padding-bottom: 3px;
+    border-bottom: 4px solid color('brand-gold');
 }
 
 .t-upper {
